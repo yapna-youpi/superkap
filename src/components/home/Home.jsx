@@ -9,7 +9,7 @@ function Home() {
             <section id="hero" className="d-flex flex-column justify-content-center align-items-center">
                 <div className="container" data-aos="fade-in">
                 <h1>Welcome to Superkap</h1>
-                <h2>Buy and sell your cryptocurrencies instantly and for less</h2>
+                <h2>Buy, sell and trading your cryptocurrencies instantly and for less</h2>
                 <div className="d-flex align-items-center">
                     <i className="bx bxs-right-arrow-alt get-started-icon"></i>
                     <a href="#about" className="btn-get-started scrollto">Get Started</a>

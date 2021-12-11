@@ -118,7 +118,7 @@
     background: none;
     font-size: 16px;
     padding: 0 20px;
-    background: #1bac91;
+    background: var(--sk-green);
     color: #fff;
     transition: 0.3s;
     border-radius: 0 4px 4px 0;
@@ -127,7 +127,7 @@
     outline: none;
   }
   #footer .footer-top .footer-newsletter form input[type=submit]:hover {
-    background: #14806c;
+    background: var(--sk-greenhover);
   }
   #footer .copyright {
     text-align: center;

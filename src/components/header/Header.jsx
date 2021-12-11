@@ -23,11 +23,11 @@ function Header() {
                         <li><a className="nav-link scrollto" href="#services">Superkap Crypto</a></li>
                         <li><a className="nav-link scrollto " href="#portfolio">Immobilier</a></li>
                         <li><a className="nav-link scrollto" href="#team">Academy</a></li>
-                        <li className="dropdown"><a href="#"><span>User</span> <i className="bi bi-chevron-down"></i></a>
+                        <li className="dropdown"><a href="#"><span style={{textDecoration: 0}}>User</span> <i className="bi bi-chevron-down"></i></a>
                             <ul className='text-center'>
                                 <a href="#"><li>Login Superkap</li></a>
-                                <a href="#"><li><span>SingUp</span> <i className="bi bi-chevron-right"></i></li></a>
-                                <a href="#"><li><span>SignOut</span><i class="bi bi-alarm-fill text-warning" style={{ fontSize: 50 }}></i></li></a>
+                                <a href="#"><li><span>SingUp</span></li></a>
+                                <a href="#"><li><span>SignOut</span></li></a>
                             </ul>
                         </li>
                         <li><a className="nav-link scrollto" href="#contact">Support</a></li>
