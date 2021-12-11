@@ -6,10 +6,10 @@
 }
 .trade .trade-left{
     width: 55%;
+    text-align: center;
 }
 .trade .trade-right{
-    width: 40%;
-    height: 400px;
+    display: none;
     
 }
 .crypto .btn-crypto{
@@ -46,5 +46,13 @@
     }
     .trade .trade-left dl{
         padding-left: 35px;
+    }
+    .trade .trade-right{
+        width: 40%;
+        height: 400px;
+    }
+    .trade .trade-left{
+        width: 55%;
+        text-align: left;
     }
 }
