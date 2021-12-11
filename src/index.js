@@ -5,7 +5,7 @@ import App from './App';
 import Popper from '@popperjs/core';
 
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import  'bootstrap/dist/css/bootstrap.min.css' ;
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './index.css';
 import reportWebVitals from './reportWebVitals';

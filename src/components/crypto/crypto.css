@@ -1,0 +1,50 @@
+.crypto .banner{
+    width: 100%;
+}
+.trade{
+    display: block;
+}
+.trade .trade-left{
+    width: 55%;
+}
+.trade .trade-right{
+    width: 40%;
+    height: 400px;
+    
+}
+.crypto .btn-crypto{
+    padding: 4px 45px;
+    border: 1px solid var(--sk-orange);
+    color: var(--sk-orange);
+    border-radius: 50px;
+}
+.crypto .btn-crypto:hover{
+    color: var(--sk-green);
+}
+
+/*-------------site grand ecran-------------*/
+@media (min-width: 992px) {
+    .crypto .banner-content{
+        width: 100%;
+        background: #FDFC47;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #24FE41, #FDFC47);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    }
+    .crypto .banner{
+        width: 90%;
+        margin: 0 auto 20px auto;
+        border-bottom-right-radius: 8px ;
+        border-bottom-left-radius: 8px;
+        border-radius: 10px; 
+    }   
+    .trade{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 75px;
+        padding: auto 20px;
+    }
+    .trade .trade-left dl{
+        padding-left: 35px;
+    }
+}

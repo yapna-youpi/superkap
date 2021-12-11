@@ -6,7 +6,7 @@ function Home() {
     return (
         <div className='home'>
                 {/* -- banner section-- */}
-            <section id="hero" className="d-flex flex-column justify-content-center align-items-center">
+            <section className="hero d-flex flex-column justify-content-center align-items-center">
                 <div className="container" data-aos="fade-in">
                 <h1>Welcome to Superkap</h1>
                 <h2>Buy, sell and trading your cryptocurrencies instantly and for less</h2>
@@ -17,53 +17,94 @@ function Home() {
                 </div>
             </section>
 
-            <main id="main">
+            <main id="main" >
 
                     {/* -- why buy crypto -- */}
                 <section id="why-us" className="why-us">
                 <div className="container">
 
-                    <div className="row">
-                    <div className="col-xl-4 col-lg-5" data-aos="fade-up">
-                        <div className="content">
-                        <h3>Why Choose Flexor for your company website?</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
-                        </p>
-                        <div className="text-center">
-                            <a href="#" className="more-btn">Learn More <i className="bx bx-chevron-right"></i></a>
+                    <div className="main1">
+                        <div className="info1">
+                            <div className="content">
+                                <h3>Why Choose SUPERKAP for yours Services</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                                </p>
+                                <div className="text-center">
+                                    <a href="#" className="more-btn">Learn More <i className="bx bx-chevron-right"></i></a>
+                                </div>
+                            </div>
                         </div>
+                        <div className="info2-content">
+                            <div className="info2">
+                                <span className="icon-info2"></span>
+                                <div className="info2-right">
+                                    <h3>SUPERKAP IMMO</h3>
+                                    <p>facilite vos transactions immobilières avec la Crypto</p>
+                                    <span><i>i</i></span>
+                                </div>
+                            </div>
+                            <div className="info2">
+                                <span className="icon-info2"></span>
+                                <div className="info2-right">
+                                    <h3>SUPERKAP ACADEMY</h3>
+                                    <p>forme et finance la formation des jeunes, puis les emploie dans les secteurs clé.</p>
+                                    <span><i>i</i></span>
+                                </div>
+                            </div>
+                            <div className="info2">
+                                <span className="icon-info2"></span>
+                                <div className="info2-right">
+                                    <h3>SUPERKAP Business</h3>
+                                    <p>est une plateforme de e-commerce, de vente en ligne qui accepte les Crypto et le cash lors de la vente de différents articles.</p>
+                                    <span><i>i</i></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="col-xl-8 col-lg-7 d-flex">
-                        <div className="icon-boxes d-flex flex-column justify-content-center">
-                        <div className="row">
-                            <div className="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                            <div className="icon-box mt-4 mt-xl-0">
-                                <i className="bx bx-receipt"></i>
-                                <h4>Corporis voluptates sit</h4>
-                                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                            </div>
-                            </div>
-                            <div className="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                            <div className="icon-box mt-4 mt-xl-0">
-                                <i className="bx bx-cube-alt"></i>
-                                <h4>Ullamco laboris ladore pan</h4>
-                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                            </div>
-                            </div>
-                            <div className="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                            <div className="icon-box mt-4 mt-xl-0">
-                                <i className="bx bx-images"></i>
-                                <h4>Labore consequatur</h4>
-                                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+
+                    {/* <div className="row main1">
+                        <div className="info1 col-xl-4 col-lg-5" data-aos="fade-up">
+                            <div className="content">
+                            <h3>Why Choose SUPERKAP for your company website?</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                            </p>
+                            <div className="text-center">
+                                <a href="#" className="more-btn">Learn More <i className="bx bx-chevron-right"></i></a>
                             </div>
                             </div>
                         </div>
+                        <div className="col-xl-8 col-lg-7 d-flex">
+                            <div className="icon-boxes d-flex flex-column justify-content-center" >
+                            <div className="row">
+                                <div className="info2 col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                                    <div className="icon-box mt-4 mt-xl-0">
+                                        <i className="bx bx-receipt"></i>
+                                        <h4>Corporis voluptates sit</h4>
+                                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                                    </div>
+                                </div>
+                                <div className="info2 col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                                    <div className="icon-box mt-4 mt-xl-0">
+                                        <i className="bx bx-cube-alt"></i>
+                                        <h4>Ullamco laboris ladore pan</h4>
+                                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                                    </div>
+                                </div>
+                                <div className="info2 col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                                    <div className="icon-box mt-4 mt-xl-0">
+                                        <i className="bx bx-images"></i>
+                                        <h4>Labore consequatur</h4>
+                                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
                         </div>
-                    </div>
-                    </div>
+                    </div> */}
 
                 </div>
                 </section>

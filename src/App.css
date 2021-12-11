@@ -10,6 +10,7 @@ root
 :root{
   --sk-green: #00a654;
   --sk-greenhover:#048d48;
+  --sk-greenLight:#7bed9f;
   --sk-orange: #f79323;
   --sk-black: #000;
   --sk-gray: rgba(22,22,22,0.7);
@@ -24,7 +25,6 @@ body {
 
 a {
   color: var(--sk-vert);
-  text-decoration: none;
 }
 
 a:hover {

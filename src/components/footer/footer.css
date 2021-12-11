@@ -12,7 +12,7 @@
   }
   #footer .footer-top {
     background: #0c1817;
-    border-bottom: 1px solid #18302c;
+    border-bottom: 1px solid orange;
     padding: 60px 0 30px 0;
   }
   #footer .footer-top .footer-info {
@@ -47,7 +47,7 @@
     transition: 0.3s;
   }
   #footer .footer-top .social-links a:hover {
-    background: #1bac91;
+    background: var(--sk-green);
     color: #fff;
     text-decoration: none;
   }
@@ -68,7 +68,7 @@
   }
   #footer .footer-top .footer-links ul i {
     padding-right: 2px;
-    color: #4ae3c6;
+    color: var(--sk-green);
     font-size: 18px;
     line-height: 1;
   }
@@ -87,7 +87,7 @@
     line-height: 1;
   }
   #footer .footer-top .footer-links ul a:hover {
-    color: #34dfbf;
+    color: var(--sk-green);
   }
   /* #footer .footer-top .footer-newsletter form {
     margin-top: 30px;
@@ -138,4 +138,10 @@
     text-align: center;
     font-size: 13px;
     color: #fff;
+  }
+  #footer .logo{
+    color: var(--sk-orange);
+  }
+  #footer .fot-link:hover{
+      color: var(--sk-orange);
   }

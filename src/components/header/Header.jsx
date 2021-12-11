@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link, useHistory } from 'react-router-dom'
+
 
 import './header.css'
 
@@ -11,23 +13,21 @@ function Header() {
                 <div className="container d-flex justify-content-between">
 
                     <div className="logo">
-                        <h1><a href="index.html">Superkap</a></h1>
-                        {/*-- Uncomment below if you prefer to use an image logo --*/}
-                        {/*-- <a href="index.html"><img src="assets/img/logo.png" alt="" className="img-fluid"></a> */}
+                        <h1><a href="#">Superkap</a></h1>
                     </div>
 
                     <nav id="navbar" className="navbar">
                         <ul>
-                        <li><a className="nav-link scrollto active" href="#hero">Home</a></li>
-                        <li><a className="nav-link scrollto" href="#about">Business</a></li>
-                        <li><a className="nav-link scrollto" href="#services">Superkap Crypto</a></li>
-                        <li><a className="nav-link scrollto " href="#portfolio">Immobilier</a></li>
-                        <li><a className="nav-link scrollto" href="#team">Academy</a></li>
+                        <li><Link className="nav-link scrollto active" to="/">Home</Link></li>
+                        <li><Link className="nav-link scrollto" to="/Business">Business</Link></li>
+                        <li><Link className="nav-link scrollto" to="/Crypto">Superkap Crypto</Link></li>
+                        <li><Link className="nav-link scrollto " to="/Immo">Immobilier</Link></li>
+                        <li><Link className="nav-link scrollto" to="/Academy">Academy</Link></li>
                         <li className="dropdown"><a href="#"><span style={{textDecoration: 0}}>User</span> <i className="bi bi-chevron-down"></i></a>
                             <ul className='text-center'>
-                                <a href="#"><li>Login Superkap</li></a>
-                                <a href="#"><li><span>SingUp</span></li></a>
-                                <a href="#"><li><span>SignOut</span></li></a>
+                                <Link to="/Login"><li>Login Superkap</li></Link>
+                                <Link to="/SignUp"><li><span>SingUp</span></li></Link>
+                                <Link to="#"><li><span>SignOut</span></li></Link>
                             </ul>
                         </li>
                         <li><a className="nav-link scrollto" href="#contact">Support</a></li>

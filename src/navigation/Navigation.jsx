@@ -1,15 +1,15 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route, useHistory, Redirect } from 'react-router-dom'
 
-import Header from '../components/header/Header'
-import Home from '../components/home/Home'
-import Crypto from '../components/crypto/Crypto'
+import Header from '../components/header/Header.jsx'
+import Home from '../components/home/Home.jsx'
+import Crypto from '../components/crypto/Crypto.jsx'
 import Immo from '../components/immo/Immo.jsx'
-import Business from '../components/business/Business'
-import Academy from '../components/academy/Academy'
+import Business from '../components/business/Business.jsx'
+import Academy from '../components/academy/Academy.jsx'
 import Login from '../components/login/Login.jsx'
-import Signup from '../components/signup/Signup'
-import Help from '../components/help/Help'
+import Signup from '../components/signup/Signup.jsx'
+import Help from '../components/help/Help.jsx'
 import Footer from '../components/footer/Footer'
 
 function Navigation() {
