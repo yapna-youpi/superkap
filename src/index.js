@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
+import 'bootstrap/dist/js/bootstrap.bundle.js'
 import Popper from '@popperjs/core';
 
 import 'bootstrap/dist/js/bootstrap.bundle.min';

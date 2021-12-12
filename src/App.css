@@ -21,6 +21,8 @@ root
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  scrollbar-width: 5px; /* "auto" or "thin" */
+  scrollbar-color: var(--sk-green) var(--sk-orange); /* scroll thumb and track */
 }
 
 a {

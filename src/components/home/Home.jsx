@@ -1,5 +1,8 @@
 import React from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
+import { GiWorld } from 'react-icons/gi'
+import { MdSchool } from 'react-icons/md'
+import { IoBusiness } from 'react-icons/io5'
 
 import './home.css'
 
@@ -40,7 +43,7 @@ function Home() {
                         <div className="info2-content">
                             <div className="info2">
                                 <span className="icon-info2">
-                                    <i className="bx bxs-right-arrow-alt get-started-icon"><HiArrowNarrowRight/></i>
+                                    <i className="bx bxs-right-arrow-alt get-started-icon"><GiWorld/></i>
                                 </span>
                                 <div className="info2-right">
                                     <h5>SUPERKAP IMMO</h5>
@@ -52,7 +55,7 @@ function Home() {
                             </div>
                             <div className="info2">
                                 <span className="icon-info2">
-                                    <i className="bx bxs-right-arrow-alt get-started-icon"><HiArrowNarrowRight/></i>
+                                    <i className="bx bxs-right-arrow-alt get-started-icon"><MdSchool/></i>
                                 </span>
                                 <div className="info2-right">
                                     <h5>SUPERKAP ACADEMY</h5>
@@ -64,7 +67,7 @@ function Home() {
                             </div>
                             <div className="info2">
                                 <span className="icon-info2">
-                                    <i className="bx bxs-right-arrow-alt get-started-icon"><HiArrowNarrowRight/></i>
+                                    <i className="bx bxs-right-arrow-alt get-started-icon"><IoBusiness/></i>
                                 </span>
                                 <div className="info2-right">
                                     <h5>SUPERKAP Business</h5>

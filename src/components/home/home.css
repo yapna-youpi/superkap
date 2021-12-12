@@ -163,6 +163,9 @@
       z-index: 5;
       box-shadow: 10px 2px 15px rgba(0, 0, 0, 0.1);
     }
+    .home .btn-get-started{
+      background-color: var(--sk-gray);
+    }
     
   }
 
