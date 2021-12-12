@@ -14,9 +14,9 @@ function Footer() {
                             <div className="footer-info">
                                 <h3 className='logo'>Superkap</h3>
                                 <p>
-                                    A108 Adam Street <br/>
-                                    NY 535022, USA<br/><br/>
-                                    <strong>Phone:</strong> +1 5589 55488 55<br/>
+                                    polyclinic tsinga <br/>
+                                    yaounde-II arr<br/><br/>
+                                    <strong>Phone:</strong> +237 698215858<br/>
                                     <strong>Email:</strong> info@example.com<br/>
                                 </p>
                                 <div className="social-links mt-3">
@@ -66,13 +66,9 @@ function Footer() {
 
             <div className="container">
                 <div className="copyright">
-                    &copy; Copyright21 <strong><span>superkap</span></strong>. All Rights Reserved
+                    &copy; Copyright21 <strong><span>Superkap</span></strong>. All Rights Reserved
                 </div>
                 <div className="credits">
-                    {/* <!-- All the links in the footer should remain intact. -->
-                    <!-- You can delete the links only if you purchased the pro version. -->
-                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/ --> */}
                     Designed by <a href="#">BlackCoders</a>
                 </div>
             </div>

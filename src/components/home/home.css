@@ -46,11 +46,15 @@
     font-size: 24px;
   }
   .hero .get-started-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 24px;
-    background: #ff5821;
-    padding: 14px;
+    background: var(--sk-orange);
+    width: 48px;
+    padding: 12px;
     color: #fff;
-    border-radius: 50px;
+    border-radius: 50%;
     position: relative;
     z-index: 5;
     box-shadow: 10px 2px 15px rgba(0, 0, 0, 0.1);
@@ -71,9 +75,7 @@
     z-index: 4;
   }
   .home .main1{
-    border: 1px solid #000;
     margin-top: 100px;
-    
   }
   .hero .btn-get-started:hover {
     background: var(--sk-orange)
@@ -89,6 +91,9 @@
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+  }
+  .home a{
+    text-decoration: none;
   }
 
   /*--------------site mode tablette-----------*/
@@ -108,19 +113,44 @@
       margin-bottom: 30px;
     }
     .home .main1{
-      border: 1px solid #000;
       margin-top: 120px;
-      
     }
     .main1 .info1{
       padding: 15px;
       border: 1px solid #000;
       display: inline-block;
+      width:120%;
     }
     .main1  .info2-content .info2{
-      padding: 15px;
-      border: 1px solid red;
+      width: 33%;
+      padding: 0px;
       margin: 2px;
+      display: flex;
+    }
+    .main1  .info2-content .icon-info{
+      display: inline-block;
+      justify-content: space-between;
+      background: var(--sk-orange);
+      width: 48px;
+      padding: 12px;
+      color: #fff;
+      border-radius: 50%;
+      box-shadow: 10px 2px 15px rgba(0, 0, 0, 0.1);
+    }
+    .main1 .info2-content .info2 .get-started-icon{
+      margin-right: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      background: #3D9828;
+      width: 40px;
+      padding: 7px;
+      color: #fff;
+      border-radius: 50%;
+      position: relative;
+      z-index: 5;
+      box-shadow: 10px 2px 15px rgba(0, 0, 0, 0.1);
     }
     
   }
@@ -131,19 +161,13 @@
       background-attachment: fixed;
     }
     .home .main1{
-      border: 1px solid #000;
-      margin-top: 150px;
+      margin-top: 200px;
       display: flex;
     }
     .main1 .info1{
       padding: 15px;
-      border: 1px solid #000;
-      display: inline-block;
-    }
-    .main1  .info2-content .main1 .info1{
-      padding: 15px;
-      border: 1px solid #000;
-      display: inline-block;
+      border: 2px solid var(--sk-orange);
+      width: 50%;
     }
     .main1  .info2-content {
       display: flex;
@@ -151,9 +175,13 @@
       justify-content: center;
     }
     .main1  .info2-content .info2{
-      padding: 15px;
-      border: 1px solid red;
+      padding: 0 15px 0 5px;
       margin: 2px;
+      width: 70%;
+    }
+    .home .home-section1{
+      width: 92%;
+      margin: 15px auto;
     }
   }
 

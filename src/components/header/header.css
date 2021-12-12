@@ -28,16 +28,20 @@
     margin: 0;
     max-height: 40px;
   }
-  @media (min-width: 992px) {
+  @media only screen and (min-width: 992px) {
     #header {
       height: 60px;
     }
-    .navbar .dropdown .dropdown ul {
+    .navbar .dropdown ul {
       left: -90%;
     }
     .navbar .dropdown .dropdown:hover > ul {
       left: -100%;
     }
+    
+  }
+  #header .navbar .dropdown .ul li{
+    color: var(--sk-green);
   }
   
   /*--------------------------------------------------------------
@@ -114,6 +118,11 @@
   }
   .navbar .dropdown ul li {
     min-width: 200px;
+    color: var(--sk-green);
+  }
+  .navbar .dropdown ul li:hover {
+    min-width: 200px;
+    color: var(--sk-orange);
   }
   .navbar .dropdown ul a {
     padding: 10px 20px;
