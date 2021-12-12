@@ -95,6 +95,17 @@
   .home a{
     text-decoration: none;
   }
+  .home .btn-get-started{
+    background-color: var(--sk-orange);
+  }
+  .web-service-block {
+    text-align: center;
+    padding: 10px 15px;
+    transition: all .5s ease-in-out;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 10px;
+  }
 
   /*--------------site mode tablette-----------*/
   @media (min-width: 768px){
@@ -183,6 +194,14 @@
       width: 92%;
       margin: 15px auto;
     }
+    .web-service-block {
+      text-align: center;
+      padding: 35px 25px;
+      transition: all .5s ease-in-out;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      margin-bottom: 10px;
+    }
   }
 
   
@@ -206,15 +225,6 @@
     top: 0px;
     width: 100%;
     height: 100%;
-  }
-  
-  .web-service-block {
-    text-align: center;
-    padding: 35px 25px;
-    transition: all .5s ease-in-out;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    margin-bottom: 10px;
   }
   
   .web-service-block i {

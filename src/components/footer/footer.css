@@ -89,13 +89,6 @@
   #footer .footer-top .footer-links ul a:hover {
     color: var(--sk-green);
   }
-  /* #footer .footer-top .footer-newsletter form {
-    margin-top: 30px;
-    background: #fff;
-    padding: 6px 10px;
-    position: relative;
-    border-radius: 4px 0 0 4px;
-  } */
   #footer .footer-top .footer-newsletter form {
     margin-top: 30px;
     background: #fff;
@@ -144,4 +137,18 @@
   }
   #footer .fot-link:hover{
       color: var(--sk-orange);
+  }
+  @media only  screen and (max-width: 768px) {
+    #footer .footer-info,.footer-links{
+      text-align:  center;
+    }
+    #footer ul li a{
+      text-align: center;
+    }
+    #footer .footer-top .footer-links ul li {
+      padding: 0 0;
+      display: block;
+      align-items: center;
+    }
+    
   }

@@ -1,55 +1,62 @@
 
-
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
 #header {
-    height: 70px;
-    transition: all 0.5s;
-    z-index: 997;
-    background: #000;
+  height: 70px;
+  transition: all 0.5s;
+  z-index: 997;
+  background: #000;
+}
+#header .logo {
+  display: flex;
+  align-items: center;
+  color: var(--sk-orange);
+}
+#header .logo h1 a{
+  margin: auto 0;
+  color: var(--sk-orange);
+  text-decoration: none;
+}
+#header ul {
+    display: none;
+}
+#header .navbar .mobile-nav-toggle{
+  display: block;
+  color: white;
+  font-size: 30px;
+} 
+
+
+/*
+  * Desktop Navigation 
+  */
+@media only screen and (min-width: 768px) {
+
+  #header .navbar{
+    display: block;
   }
-  #header .logo h1 a {
+  #header ul {
+      display: flex;
+  }
+  #header .navbar .mobile-nav-toggle{
+    display: none;
+    color: white;
     font-size: 30px;
-    margin: 0;
-    padding: 6px 0;
-    line-height: 1;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: var(--sk-orange);
-    text-transform: uppercase;
   }
-  #header .logo h1 a, #header .logo h1 a:hover {
-    color: var(--sk-orange);
-    text-decoration: none;
+
+
+
+  #header {
+    height: 60px;
   }
-  #header .logo img {
-    padding: 0;
-    margin: 0;
-    max-height: 40px;
+  .navbar .dropdown ul {
+    left: -90%;
   }
-  @media only screen and (min-width: 992px) {
-    #header {
-      height: 60px;
-    }
-    .navbar .dropdown ul {
-      left: -90%;
-    }
-    .navbar .dropdown .dropdown:hover > ul {
-      left: -100%;
-    }
-    
+  .navbar .dropdown .dropdown:hover > ul {
+    left: -100%;
   }
+
   #header .navbar .dropdown .ul li{
     color: var(--sk-green);
   }
-  
-  /*--------------------------------------------------------------
-  # Navigation Menu
-  --------------------------------------------------------------*/  
-  /*
-  * Desktop Navigation 
-  */
   .navbar {
     padding: 0;
   }
@@ -64,7 +71,7 @@
     position: relative;
   }
   .navbar > ul > li + li {
-    margin-left: 30px;
+    margin-left: 14px;
   }
   .navbar a, .navbar a:focus {
     display: flex;
@@ -152,3 +159,12 @@
     left: 100%;
     visibility: visible;
   }
+  .bi-chevron-down::before {
+    transform: translateY(4px)!important;
+  }
+}
+@media only screen and (min-width: 992px){
+  .navbar > ul > li + li {
+    margin-left: 30px;
+  }
+}
