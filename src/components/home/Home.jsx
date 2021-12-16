@@ -82,7 +82,7 @@ function Home() {
                 </div>
                 </section>
 
-                <section className='services' id='services'>
+                {/* <section className='services' id='services'>
                     <div className="section-heading">
                         <h2>Web Services</h2>
                         <p>Rapoo can be used to create anything from a small marketing page to a sophisticated website.</p>
@@ -135,7 +135,7 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
             </main>
         </div>
     )
