@@ -10,6 +10,8 @@ import Academy from '../components/academy/Academy.jsx'
 import Login from '../components/login/Login.jsx'
 import Signup from '../components/signup/Signup.jsx'
 import Help from '../components/help/Help.jsx'
+import Buy from '../components/buy/Buy'
+import Sell from '../components/sell/Sell'
 import Footer from '../components/footer/Footer'
 
 function Navigation() {
@@ -25,6 +27,8 @@ function Navigation() {
                     <Route exact path='/Academy'  component={Academy} />
                     <Route exact path='/Login'  component={Login} />
                     <Route exact path='/Signup'  component={Signup} />
+                    <Route exact path='/Buy'  component={Buy} />
+                    <Route exact path='/Sell'  component={Sell} />
                     <Route exact path='/Help'  component={Help} />
                     <Redirect path="/" />
                 </Switch>
