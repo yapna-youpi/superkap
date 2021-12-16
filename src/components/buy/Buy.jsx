@@ -26,7 +26,6 @@ function Buy() {
 								<label class="label" for="name">Numero Telephone</label>
 								<input type="text" class="form-control" placeholder="Telephone" required/>
 							</div>
-                             <input className="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="" />
                             <div className="wthree-text">
                                 <label className="anim">
                                     <input type="checkbox" className="checkbox" required="" />
@@ -34,7 +33,7 @@ function Buy() {
                                 </label>
                                 <div className="clear"> </div>
                             </div>
-                            <input type="submit" value="SIGNUP" />
+                            <input type="submit" value="BUY" />
                         </form>
                         <p>Don't have an Account? <a href="#"> Login Now!</a></p>
                     </div>

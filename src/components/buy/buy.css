@@ -103,6 +103,10 @@ Author: blackCoders
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
+    z-index: 5;
+  }
+  body{
+      z-index: 1;
   }
   
   h1 {
