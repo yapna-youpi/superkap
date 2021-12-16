@@ -140,7 +140,7 @@
   /*--styling services--*/
 .home #services{
 position: relative;
-background: url("../../assets/6.jpg") no-repeat 50% 50%;
+background: url("./assets/fem.jpg") no-repeat 50% 50%;
 background-image: linear-gradient(30deg, rgba(121, 110, 255, 0.95) 0%, rgba(33, 200, 122, 0.95) 100%);
 background-size: cover;
 }

@@ -2,9 +2,9 @@ import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 
 import './crypto.css'
-import img1 from '../../assets/tof2.jpeg'
-import img2 from '../../assets/6.jpg'
-import tof from '../../assets/tof1.png'
+import img2 from './assets/tof2.jpeg'
+import img1 from './assets/fem.jpg'
+import tof from './assets/tof1.png'
 
 function Crypto() {
     return (
@@ -74,6 +74,17 @@ function Crypto() {
                 <div className="trade-right">
                     <p><img src={tof} alt='image crypto' /></p>
                 </div>
+            </div>
+            <div className="partners">
+                <ul>
+                    <li className='partner1'>1</li>
+                    <li className='partner1'>2</li>
+                    <li className='partner1'>3</li>
+                    <li className='partner1'>4</li>
+                    <li className='partner1'>5</li>
+                    <li className='partner1'>6</li>
+                    <li className='partner1'>7</li>
+                </ul>
             </div>
             <div className="credit">
                 <div className="credit-left">
