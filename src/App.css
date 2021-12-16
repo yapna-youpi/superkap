@@ -1,6 +1,4 @@
 /**
-* 
-* Template
 * Author: BlackCoders
 */
 
@@ -14,6 +12,7 @@ root
   --sk-orange: #f79323;
   --sk-black: #000;
   --sk-gray: rgba(22,22,22,0.7);
+  --sk-white:#ffffff;
 }
 /*--------------------------------------------------------------
 # General

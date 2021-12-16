@@ -100,14 +100,75 @@
   }
   .web-service-block {
     text-align: center;
-    padding: 10px 15px;
+    padding: 20px 15px;
     transition: all .5s ease-in-out;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     margin-bottom: 10px;
+    margin-top: 35px;
   }
-
-  /*--------------site mode tablette-----------*/
+  .main1 .info1 .content{
+    padding: 25px;
+    margin: 0 20px;
+  }
+  .main1 .info1 .content h3{
+    padding: 10px 0px;
+     
+  }
+  .main1 .info2-content .info2{
+    padding: 0 25px;
+    text-align: center;
+    border: 1px solid yellowgreen;
+    margin: 35px 45px;
+  }
+  .main1 .info2-content .info2 .get-started-icon{
+    margin-right: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background: #3D9828;
+    width: 40px;
+    padding: 7px;
+    color: #fff;
+    border-radius: 50%;
+    position: relative;
+    z-index: 5;
+    box-shadow: 10px 2px 15px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+  }
+  /*--styling services--*/
+.home #services{
+position: relative;
+background: url("../../assets/6.jpg") no-repeat 50% 50%;
+background-image: linear-gradient(30deg, rgba(121, 110, 255, 0.95) 0%, rgba(33, 200, 122, 0.95) 100%);
+background-size: cover;
+}
+.home #services .section-heading{
+    color: var(--sk-white);
+    margin: 0 25px;
+    padding: 0 45px 25px 45ps;
+  
+    text-align: center;
+}
+.home #services .row1,.row2{
+  color: var(--sk-white);
+  margin: 0px 25px;
+  padding: 0px 45px;
+  text-align: center;
+}
+  
+  .home .more-btn{
+    padding: 7px 45px;
+    border: 1px solid var(--sk-green);
+    color: var(--sk-green);
+    border-radius: 50px;
+  }
+  .home .more-btn:hover{
+    background-color: #3D9828;;
+    color: var(--sk-white);
+  }
+ /* --------------site mode tablette-----------*/
   @media (min-width: 768px){
     .hero {
       margin-bottom: -150px;
@@ -128,7 +189,7 @@
     }
     .main1 .info1{
       padding: 15px;
-      border: 1px solid #000;
+      
       display: inline-block;
       width:120%;
     }
@@ -138,6 +199,21 @@
       margin: 2px;
       display: flex;
     }
+  .main1 .info1 .content{
+    padding: initial;
+    margin: initial;
+  }
+  .main1 .info1 .content h3{
+    padding: initial;
+     
+  }
+  .main1 .info2-content .info2{
+    padding: initial;
+    text-align: center;
+    border:initial;
+    margin: initial;
+  }
+
     .main1  .info2-content .icon-info{
       display: inline-block;
       justify-content: space-between;
@@ -166,7 +242,52 @@
     .home .btn-get-started{
       background-color: var(--sk-gray);
     }
-    
+    .home #services{
+    position: relative;
+    /* background: url("../../assets/6.jpg") no-repeat 50% 50%;
+    background-image: linear-gradient(30deg, rgba(121, 110, 255, 0.95) 0%, rgba(33, 200, 122, 0.95) 100%); */
+    background-size: cover;
+    background-color: #239827;
+    }
+    .home #services .section-heading{
+        color: var(--sk-white);
+        margin: 0px 25px;
+        padding: 0 45px 25px 45px;
+        
+        text-align: center;
+    }
+    .home #services .row1,.row2{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: var(--sk-white);
+  
+      text-align: center;
+    }
+    .home #services .row1 .web-service-block{
+      
+      text-align: center;
+      padding: 35px 25px;
+      transition: all .5s ease-in-out;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .home #services .row2 .web-service-block{
+      text-align: center;
+      padding: 35px 25px;
+      height: 200px;
+      transition: all .5s ease-in-out;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .home #services .row1 .web-service-block:hover{
+        color: initial;
+        background-color: var(--sk-white);
+    }
+    .home #services .row2 .web-service-block:hover{
+      color: initial;
+      background-color: var(--sk-white);
+    }
   }
 
   /*----------site mode grand ecran----------*/
@@ -197,76 +318,7 @@
       width: 92%;
       margin: 15px auto;
     }
-    .web-service-block {
-      text-align: center;
-      padding: 35px 25px;
-      transition: all .5s ease-in-out;
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      margin-bottom: 10px;
-    }
-  }
 
-  
-
-
-
-/*----------------------
- WEB SERVICES
------------------------*/
-#services-2 {
-    position: relative;
-    background: url("../../assets/6.jpg") no-repeat fixed 50% 50%;
-    background-image: linear-gradient(30deg, rgba(121, 110, 255, 0.95) 0%, rgba(33, 200, 122, 0.95) 100%);
-    background-size: cover;
-  }
-  
-  #services-2:before {
-    position: absolute;
-    content: "";
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .web-service-block i {
-    font-size: 70px;
-    margin-bottom: 30px;
-    display: block;
-    color: #fff;
-  }
-  
-  .web-service-block h3 {
-    color: #fff;
-  }
-  
-  .web-service-block p {
-    color: #eee;
-    margin-top: 15px;
-  }
-  
-  .web-service-block:hover {
-    background: #fff;
-    border-color: transparent;
-  }
-  
-  .web-service-block:hover i {
-    color: #21c87a;
-  }
-  
-  .web-service-block:hover h3 {
-    color: #111;
-  }
-  
-  .web-service-block:hover p {
-    color: #111;
-  }
-  
-  .service-img {
-    margin-bottom: -200px;
-    border: 10px solid #fff;
-    z-index: 9999;
   }
 
 

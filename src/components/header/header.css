@@ -18,6 +18,9 @@
 #header ul {
     display: none;
 }
+#header .list-open{
+  display: block;
+} 
 #header .navbar .mobile-nav-toggle{
   display: block;
   color: white;

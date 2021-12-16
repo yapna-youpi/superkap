@@ -1,3 +1,145 @@
-.login{
-    margin-top: 100px;
+.bg-login{
+    background-color: #f8f9fd;
+    padding: 120px 0 30px 0
+}
+
+.login .login-left{
+    margin: 30px auto;
+    padding: 12px;
+    text-align: left;
+    width: 85%;
+    background-color: #ffffff;
+    border: 1px solid #000;
+}
+.login .login-left .login-title{
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+.login .login-head{
+    text-align: center;
+    padding: 25px auto;
+    line-height: 55px;
+}
+.login .social-media{
+    display: none!important;
+}
+.login .login-form .label{
+    display: none;
+}
+.login input{
+    margin: 22px auto;
+    border-radius: 50px!important;
+}
+.login .form-control:focus{
+    border-color: yellowgreen!important;
+    box-shadow: 0 0 0 0.25rem rgba(77, 240, 71, 0.25)!important;
+}
+.login .btn-succes{
+    background: #2dd143;  /* Chrome 10-25, Safari 5.1-6 */
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    margin-top: 15px;
+    border-radius: 50px!important;
+}
+.login .login-down{
+    display: flex;justify-content: space-around;
+    padding: 0 auto;
+    margin: 20px auto;
+}
+.login .login-right{
+    display: none!important;
+}
+.login a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@media only screen and (min-width:768px){
+    .bg-login{
+        background-color: #f8f9fd;
+        padding: 120px 0 40px 0;
+    }
+    .login{
+        display: flex;
+        width: 80%;
+        padding-top: 0;
+        background-color: var(--sk-white);
+        margin: 0px auto;
+    }
+    .login .login-left{
+        margin: 0 auto;
+        border: none;
+        padding: 20px;
+        width: 60%;
+    }
+    .login .login-right{
+        display: flex!important;
+        width: 40%;
+        align-items: center;
+        justify-content: center;
+        background: #2dd143; 
+        color: var(--sk-white);
+    }
+    .login .social-media{
+        display: flex!important;
+        align-items: center;
+        padding-top: 12px;
+    }
+    .login .login-form .label{
+        display: block;
+    }
+    .login .login-right{
+        display: block;
+    }
+    .login .login-head{
+        display: flex;
+        text-align: left;
+        justify-content: space-between;
+        padding: 25px auto;
+        line-height: 55px;
+    }
+    .login .social-media .social-icon {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        font-size: 16px;
+        margin-right: 5px;
+        border-radius: 50%; 
+    }
+    .login .social-media .social-icon:hover {
+        background: #2dd143;
+        color: var(--sk-white);
+    }
+    .login .btn-white{
+        cursor: pointer;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        font-size: 15px;
+        padding: 10px 20px;
+        border-radius: 50px;
+        border: 1px solid #fff;
+        background: transparent;
+        color: #fff;
+    }
+    .login .btn-white:hover{
+        background-color: var(--sk-white);
+        color: initial;
+    }
+    .login input{
+         margin: 10px auto;
+        border-radius: 8px!important; 
+
+       
+    }
+
+    @media only screen and (min-width:992px){
+        .login{
+            display: flex;
+            width: 65%;
+        }
+    }
+
 }
