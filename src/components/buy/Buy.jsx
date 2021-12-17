@@ -4,30 +4,32 @@ import './buy.css'
 
 function Buy() {
 
-    const [state, setState]=useState({amount: "", frees: "", crypto: "Bitcoin", paymentMod: "", wallet: "", names: ""})
+    const [state, setState]=useState({amount: "", fees: "", crypto: "Bitcoin", payment: "CB", wallet: "", names: ""})
     const [transaction, setTransaction]=useState(null)
 
     const handleChange=(target)=>{
         setState({...state, [target.name]: target.value})
     }
     const handleSubmit=(e)=>{
+        console.log(state)
         e.preventDefault()
         fetch("https://admin-superkap.herokuapp.com/transactions.json", {
             "method": "POST",
             "headers": {
                 "Content-Type": "application/json"
             },
-            "body": {
+            "body": JSON.stringify({
                 "montant": state.amount,
                 "frais": state.amount*0.1,
                 "crypto": state.crypto,
-                "mode_paiement": "MM",
+                "mode_paiement": state.payment,
                 "adresse_crypto": state.wallet,
                 "type_transaction": "Achat"
-            }
+            })
         })
         .then(response => response.json()).then(data=>{
             console.log("the data ", data)
+            setTransaction(data)
         })
         .catch(err => {
             console.error("an error are occur ", err);
@@ -39,7 +41,7 @@ function Buy() {
     return (
         <div className='buy'>
             <div className="main-w3layouts wrapper">
-                <h1>Buy Bitcoins</h1>
+                <h1>Acheter de la crypto</h1>
                 { !transaction ? (<div className="main-agileinfo">
                     <div className="agileits-top">
                         <form action="#" method="post" className='form-group' onSubmit={(e)=>handleSubmit(e)} >
@@ -62,19 +64,19 @@ function Buy() {
 							</div>
                             <div className="form-group my-4">
                                 <label className='label' for="select">choix de la crypto</label>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Bitcoin</option>
-                                    <option value="1">Usdt</option>
-                                    <option value="2">another</option>
+                                <select class="form-select" name="crypto" aria-label="Default select example" onChange={(e)=>handleChange(e.target)}>
+                                    <option value="Bitcoin" selected>Bitcoin</option>
+                                    <option value="Usdt">Usdt</option>
+                                    <option value="another">another</option>
                                 </select>
                             </div>
                             <div className="form-group my-4">
-                            <label className='label' for="select">Mode de paiement</label>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Carte de credit</option>
-                                    <option value="1">Mtn Mobile Money</option>
-                                    <option value="2">Orange Money</option>
-                                    <option value="3">another</option>
+                                <label className='label' for="select">Mode de paiement</label>
+                                <select class="form-select" name="payment" aria-label="Default select example" onChange={(e)=>handleChange(e.target)}>
+                                    <option value="CB" selected>Carte de credit</option>
+                                    <option value="Mtn">Mtn Mobile Money</option>
+                                    <option value="Orange">Orange Money</option>
+                                    <option value="another">another</option>
                                 </select>
                             </div>
                             <div className="wthree-text">
@@ -89,7 +91,8 @@ function Buy() {
                         <p>Don't have an Account? <a href="#"> Login Now!</a></p>
                     </div>
                 </div>): (<div className="">
-                    <h1>Transaction send you'll be contact in short time</h1>
+                    <h1>La transaction a ete envoye, vous serez contactez d'ici peu</h1>
+                    <h2>votre identifiant est le {transaction.id}</h2>
                 </div>)}
                 <ul className="colorlib-bubbles">
                     <li></li>
