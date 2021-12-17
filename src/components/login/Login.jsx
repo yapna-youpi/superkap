@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { RiFacebookFill,RiTwitterFill } from 'react-icons/ri'
+import { useHistory } from 'react-router-dom'
 import styles from './login.css'
 
 function Login() {
 
+	const [state, setState]=useState({name: "", password: ""})
+
+	let history=useHistory()
+
+	const handleChange=(target)=>{
+		setState({...state, [target.name]: target.value})
+	}
+	const handleSubmit=(e)=>{
+		e.preventDefault()
+		history.push('/')
+		return false
+	}
+	// console.log(state)
     return (
 		<div className="bg-login">
         <div className='login'>
@@ -15,14 +29,14 @@ function Login() {
 						<a href="#" class="social-icon d-flex align-items-center justify-content-center"><RiTwitterFill /></a>
 					</p>
 			    </div>
-                <form action="#" class="login-form">
+                <form action="#" class="login-form" onSubmit={(e)=>handleSubmit(e)}>
 							<div class="form-group mb-3">
 								<label class="label" for="name">Username</label>
-								<input type="text" class="form-control" placeholder="Username" required/>
+								<input type="text" name="name" class="form-control" placeholder="Username" required onChange={(e)=>handleChange(e.target)} />
 							</div>
 							<div class="form-group mb-3">
 								<label class="label" for="password">Password</label>
-								<input type="password" class="form-control" placeholder="Password" required/>
+								<input type="password" name="password" class="form-control" placeholder="Password" required onChange={(e)=>handleChange(e.target)} />
 							</div>
 							<div class="form-group">
 								<button type="submit" class="form-control btn btn-succes submit px-3">Sign In</button>
@@ -44,7 +58,7 @@ function Login() {
 					<div class="text w-100">
 						<h2>Welcome to login</h2>
 						<p>Don't have an account?</p>
-						<a href="#" class="btn btn-white">Sign Up</a>
+						<a href="/signup" class="btn btn-white">Sign Up</a>
 					</div>
 				</div>
 			</div>
