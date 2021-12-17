@@ -17,7 +17,7 @@ function Login() {
 		history.push('/')
 		return false
 	}
-	console.log(state)
+	// console.log(state)
     return (
 		<div className="bg-login">
         <div className='login'>

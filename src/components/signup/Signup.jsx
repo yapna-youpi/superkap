@@ -27,7 +27,7 @@ function Signup() {
 		}
 	}
 	
-	console.log(state, errors)
+	// console.log(state, errors)
     return (
 		<div className="bg-signup">
         <div className='signup'>
