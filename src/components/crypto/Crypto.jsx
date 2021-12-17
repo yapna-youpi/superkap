@@ -1,12 +1,16 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import Carousel from 'react-bootstrap/Carousel'
 
 import './crypto.css'
 import img2 from './assets/tof2.jpeg'
 import img1 from './assets/fem.jpg'
 import tof from './assets/tof1.png'
+import logo from './assets/logo.png'
+import care from './assets/care.png'
 
 function Crypto() {
+    const history = useHistory();
     return (
         <div className="crypto">
             <div className="banner-content">
@@ -77,18 +81,43 @@ function Crypto() {
             </div>
             <div className="partners">
                 <ul>
-                    <li className='partner1'>1</li>
-                    <li className='partner1'>2</li>
-                    <li className='partner1'>3</li>
-                    <li className='partner1'>4</li>
-                    <li className='partner1'>5</li>
-                    <li className='partner1'>6</li>
-                    <li className='partner1'>7</li>
+                    <li className='partner1'>10</li>
+                    <li className='partner1'>25</li>
+                    <li className='partner1'>33</li>
+                    <li className='partner1'>44</li>
+                    <li className='partner1'>54</li>
+                    <li className='partner1'>60</li>
+                    <li className='partner1'>71</li>
                 </ul>
+            </div>
+            <div className="target-form">
+                <div className="target-left">
+                    <h2>Comment acheter ou vendre votre crypto ?</h2>
+                    <p>quel que soit le moyen de paiement utilisé. Désormais, vous pouvez échanger 
+                        votre bitcoin au Cameroun contre MasterCard, MTN Mobile Money, 
+                        Orange Money ou VISA de manière rapide, simple et sécurisée,</p>
+                    <p>il vous suffit juste d’émettre votre commande et vous 
+                        serez servis dans les meilleurs délais et aux meilleurs prix du marché</p>
+                </div>
+                <div className="target-right">    
+                    <div className="target-right-head">
+                        <img src={care} alt="image du trader" />
+                    </div>
+                    <div className="target-right-body">
+                        <div onClick={()=>history.push('/Buy')} className="btn btn-lg target-buy">
+                            <img className='img-logo' src={logo} alt='acheter' />
+                            <span>Acheter</span>    
+                        </div>  
+                        <div  onClick={()=>history.push('/Sell')} className="btn btn-lg target-sell">
+                            <img className='img-logo' src={logo} alt='vendre' />
+                            <span>Vendre</span>   
+                        </div>  
+                    </div>
+                </div>
             </div>
             <div className="credit">
                 <div className="credit-left">
-                    <h1>CREDIT CARD</h1>
+                    <h1>CREDIT CARD </h1>
                     <p>Transactions are completed in seconds when you exchange from<br/> bitcoin (BTC) to your local currency (fiat) and vice versa.</p>
                 </div>
                 <div className="credit-right"></div>

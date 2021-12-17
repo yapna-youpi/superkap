@@ -6,7 +6,7 @@ function Sell() {
     return (
         <div className='sell'>
             <div className="main-w3layouts wrapper">
-                <h1>Sell Bitcoins</h1>
+                <h1 className='sell-title'>Sell Bitcoins</h1>
                 <h5>Vous voulez Vendre  d'autres Cryptomonnaies ou monnaies électroniques ? </h5>
                 <div className="main-agileinfo">
                     <div className="agileits-top">

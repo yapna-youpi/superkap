@@ -6,7 +6,7 @@ function Buy() {
     return (
         <div className='buy'>
             <div className="main-w3layouts wrapper">
-                <h1>Buy Bitcoins</h1>
+                <h1 className='buy-title'>Buy Bitcoins</h1>
                 <div className="main-agileinfo">
                     <div className="agileits-top">
                         <form action="#" method="post" className='form-group'>
@@ -55,18 +55,6 @@ function Buy() {
                         <p>Don't have an Account? <a href="#"> Login Now!</a></p>
                     </div>
                 </div>
-                <ul className="colorlib-bubbles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
             </div>
         </div>
     )

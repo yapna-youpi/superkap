@@ -29,7 +29,7 @@ Author: blackCoders
       z-index: 1;
   }
   
-  h1 {
+  .buy .buy-title {
     font-size: 3em;
     text-align: center;
     color: #fff;
@@ -233,5 +233,29 @@ Author: blackCoders
       border-bottom-color: #fff;
       border-left-color: #fff;
     }
+  }
+  @media only screen and (max-width :576px){
+    .main-agileinfo {
+      width: 85%;
+      margin: 3em auto;
+      background: rgba(0, 0, 0, 0.18);
+      background-size: cover;
+    }
+  }
+  @media only screen and (min-width :576px){
+    .main-agileinfo {
+      width: 65%;
+      margin: 3em auto;
+      background: rgba(0, 0, 0, 0.18);
+      background-size: cover;
+    }
+  }
+  @media only screen and (min-width :992px){
+      .main-agileinfo {
+        width: 35%;
+        margin: 3em auto;
+        background: rgba(0, 0, 0, 0.18);
+        background-size: cover;
+      }
   }
   

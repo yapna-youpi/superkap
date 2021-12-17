@@ -25,7 +25,50 @@
 .crypto .btn-crypto:hover{
     color: var(--sk-green);
 }
-
+/*---styling buy and sell---*/
+.crypto .target-form{
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+}
+.crypto .target-form .target-left{
+    width: 100%;
+    padding: 0 15px;
+}
+.crypto .target-form .target-right{
+    width: 100%;
+    display: block;
+}
+.crypto .target-form .target-right .target-right-head{
+    display: none;
+}
+.crypto .target-form .target-right .target-right-body{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 20px 20px;
+}
+.crypto .target-right-body .img-logo{
+    width: 25px;
+} 
+.crypto .target-buy{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40%;
+    height: 35px;
+    background-color: yellowgreen;
+}
+.crypto .target-sell{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40%;
+    height: 35px;
+    background-color: gold;
+}
 /*-------------site grand ecran-------------*/
 @media (min-width: 992px) {
     .crypto .banner-content{
@@ -59,5 +102,57 @@
     .trade .trade-left{
         width: 55%;
         text-align: left;
+    }
+    /*--styling buy and sell--*/
+    .crypto .target-form{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 10px 25px;
+    }
+    .crypto .target-form .target-left{
+        width: 40%;
+        padding: 0 25px;
+    }
+    .crypto .target-form .target-right{
+        width: 40%;
+        display: block;
+    }
+    .crypto .target-form .target-right .target-right-head{
+       display: block;
+       width: 100%;
+       padding: 2% 5% 8% 20%;
+
+    }
+    .crypto .target-form .target-right .target-right-body{
+        display: flex;
+        width: 100%;
+        margin-bottom: 20px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px 0px 20px;
+    }
+    .crypto .target-right-body .img-logo{
+        width: 25px;
+    } 
+    .crypto .target-buy{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 35px;
+        background-color: yellowgreen;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    }
+    .crypto .target-sell{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 35px;
+        background-color: gold;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    }
+    .crypto .target-buy:hover,.target-sell:hover{
+        box-shadow: 3px 3px 3px rgba(22, 22, 22, 0.4);
+        transform: translateY(-5px);
     }
 }

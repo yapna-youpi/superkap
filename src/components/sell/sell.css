@@ -11,7 +11,15 @@ Author: blackCoders
 .sell .main-w3layouts{
     margin-top: 50px;
 }
- 
+.sell .sell-title {
+  font-size: 3em;
+  text-align: center;
+  color: #fff;
+  font-weight: 100;
+  text-transform: capitalize;
+  letter-spacing: 4px;
+  font-family: 'Roboto', sans-serif;
+}
  
 .sell {
    background: -webkit-linear-gradient(to top, #91df67, #6adf26)!important;
@@ -202,5 +210,31 @@ Author: blackCoders
      border-left-color: #fff;
    }
  }
+
+ @media only screen and (max-width :576px){
+  .main-agileinfo {
+    width: 85%;
+    margin: 3em auto;
+    background: rgba(0, 0, 0, 0.18);
+    background-size: cover;
+  }
+}
+@media only screen and (min-width :576px){
+  .main-agileinfo {
+    width: 65%;
+    margin: 3em auto;
+    background: rgba(0, 0, 0, 0.18);
+    background-size: cover;
+  }
+}
+@media only screen and (min-width :992px){
+    .main-agileinfo {
+      width: 35%;
+      margin: 3em auto;
+      background: rgba(0, 0, 0, 0.18);
+      background-size: cover;
+    }
+}
+
  
  /*-- //checkbox --*/
