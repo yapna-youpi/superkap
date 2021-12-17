@@ -8,6 +8,7 @@ import img1 from './assets/fem.jpg'
 import tof from './assets/tof1.png'
 import logo from './assets/logo.png'
 import care from './assets/care.png'
+import carte from './assets/carte.png'
 
 function Crypto() {
     const history = useHistory();
@@ -117,10 +118,17 @@ function Crypto() {
             </div>
             <div className="credit">
                 <div className="credit-left">
-                    <h1>CREDIT CARD </h1>
-                    <p>Transactions are completed in seconds when you exchange from<br/> bitcoin (BTC) to your local currency (fiat) and vice versa.</p>
+                    <div className="credit-card"><img src={carte} alt='carte credit' /></div>
+                    <div className='btn-credit'>
+                        <h1 onClick={()=>history.push('/Credit')} className='btn btn-lg credit-title'>carte de credit</h1>
+                    </div>
                 </div>
-                <div className="credit-right"></div>
+                <div className="credit-right">
+                    <p>Nous sommes toujours disponibles pour que vous puissiez acheter une cryto-monnaie de chez vous chez nous.<br />
+                         même les jours fériés lorsque
+                         les banques sont fermées. Nous pouvons recharger votre carte bancaire pour vos operations</p>
+                    <p>Les transactions sont effectuées en quelques secondes lorsque vous échangez du bitcoin (BTC) vers votre devise locale (fiat) et vice versa.</p>
+                </div>
             </div>
             <div className="parner">
 

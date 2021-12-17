@@ -41,10 +41,10 @@ function Sell() {
     return (
         <div className='sell'>
             <div className="main-w3layouts wrapper">
-                <h1 className='sell-title'>Sell Bitcoins</h1>
-                <h5>Vous voulez Vendre  d'autres Cryptomonnaies ou monnaies électroniques ? </h5>
+                <h1 className='sell-title'>Vendre Bitcoins</h1>
+                <h5>voulez vous Vendre  d'autres Cryptomonnaies ou monnaies électroniques ? nous contacter </h5>
                 <div className="main-agileinfo">
-                <h1>Vendre sa crypto</h1>
+                {/* <h1>Vendre sa crypto</h1> */}
                 {/* <h5>Vous voulez Vendre  d'autres Cryptomonnaies ou monnaies électroniques ? </h5> */}
                 { !transaction ? (<div className="main-agileinfo">
                     <div className="agileits-top">
@@ -77,10 +77,12 @@ function Sell() {
                             <div className="form-group my-4">
                                 <label className='label' for="select">Mode de paiement</label>
                                 <select class="form-select" name="payment" aria-label="Default select example" onChange={(e)=>handleChange(e.target)}>
-                                    <option value="CB" selected>Carte de credit</option>
-                                    <option value="Mtn">Mtn Mobile Money</option>
-                                    <option value="Orange">Orange Money</option>
-                                    <option value="another">another</option>
+                                    <option value="Usdt" selected>USDT (TRC20)</option>
+                                    <option value="BUSD" >BUSD</option>
+                                    <option value="PFM">PERFECT MONEY</option>
+                                    <option value="PR">PAYEER</option>
+                                    <option value="LTC">LTC</option>
+                                    <option value="SQL">SQL</option>
                                 </select>
                             </div>
                             <div className="wthree-text">
@@ -100,6 +102,7 @@ function Sell() {
                 </div>)}
                 
             </div>
+        </div>
         </div>
     )
 }

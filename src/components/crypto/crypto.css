@@ -69,6 +69,37 @@
     height: 35px;
     background-color: gold;
 }
+
+/*---design credit card-----*/
+.crypto .credit{
+    width: 90%;
+    /* height: 0px; */
+    border: 1px solid #000;
+    margin: 0 auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 15px 25px;
+    background-color: gold;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.crypto .credit-title{
+    text-align: center;
+    margin: 10px;
+    background-color: var(--sk-greenLight);
+    
+}
+.crypto .credit-title:hover{
+    background-color: #63bb7f!important;
+}
+.crypto .credit-card{
+    display: flex;
+    justify-content: center;
+}
+.btn-credit{
+    width: 100%;
+    text-align: center;
+}
 /*-------------site grand ecran-------------*/
 @media (min-width: 992px) {
     .crypto .banner-content{
@@ -155,4 +186,23 @@
         box-shadow: 3px 3px 3px rgba(22, 22, 22, 0.4);
         transform: translateY(-5px);
     }
+
+    /*---styling credit card------*/
+    .crypto .credit{
+        width: 100%;
+        flex-direction: row;
+        margin: 40px 0 0 0;
+        padding: 25px;
+        justify-content: space-around;
+
+    }
+    .crypto .credit .credit-left{
+        width: 40%;
+        padding: 0 25px;
+    }
+    .crypto .credit .credit-right{
+        width: 45%;
+        padding: 25px;
+    }
+
 }

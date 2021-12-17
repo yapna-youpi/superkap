@@ -13,6 +13,7 @@ import Help from '../components/help/Help.jsx'
 import Buy from '../components/buy/Buy'
 import Sell from '../components/sell/Sell'
 import Footer from '../components/footer/Footer'
+import Credit from '../components/credit/Credit'
 
 function Navigation() {
     return (
@@ -30,6 +31,7 @@ function Navigation() {
                     <Route exact path='/Buy'  component={Buy} />
                     <Route exact path='/Sell'  component={Sell} />
                     <Route exact path='/Help'  component={Help} />
+                    <Route exact path='/Credit'  component={Credit} />
                     <Redirect path="/" />
                 </Switch>
                 <Footer />
