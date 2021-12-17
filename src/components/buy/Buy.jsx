@@ -26,6 +26,23 @@ function Buy() {
 								<label class="label" for="name">Numero Telephone</label>
 								<input type="text" class="form-control" placeholder="Telephone" required/>
 							</div>
+                            <div className="form-group my-4">
+                                <label className='label' for="select">choix de la crypto</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Bitcoin</option>
+                                    <option value="1">Usdt</option>
+                                    <option value="2">another</option>
+                                </select>
+                            </div>
+                            <div className="form-group my-4">
+                            <label className='label' for="select">Mode de paiement</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Carte de credit</option>
+                                    <option value="1">Mtn Mobile Money</option>
+                                    <option value="2">Orange Money</option>
+                                    <option value="3">another</option>
+                                </select>
+                            </div>
                             <div className="wthree-text">
                                 <label className="anim">
                                     <input type="checkbox" className="checkbox" required="" />
@@ -33,7 +50,7 @@ function Buy() {
                                 </label>
                                 <div className="clear"> </div>
                             </div>
-                            <input type="submit" value="BUY" />
+                            <button className='btn-buy'>BUY</button>
                         </form>
                         <p>Don't have an Account? <a href="#"> Login Now!</a></p>
                     </div>
