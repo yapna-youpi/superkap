@@ -42,7 +42,7 @@ function Sell() {
         <div className='sell'>
             <div className="main-w3layouts wrapper">
                 <h1 className='sell-title'>Vendre Bitcoins</h1>
-                <h5>voulez vous Vendre  d'autres Cryptomonnaies ou monnaies électroniques ? nous contacter </h5>
+                <h5>voulez vous Vendre  d'autres Cryptomonnaies ou monnaies électroniques ? <mark>Contactez Nous</mark> </h5>
                 <div className="main-agileinfo">
                 {/* <h1>Vendre sa crypto</h1> */}
                 {/* <h5>Vous voulez Vendre  d'autres Cryptomonnaies ou monnaies électroniques ? </h5> */}

@@ -2,18 +2,25 @@ import React from 'react'
 
 import './credit.css'
 import carte from './assets/carte.png'
+import vignette from './assets/vignette.jpg'
+import banq1 from './assets/banq1.jpg'
+import banq3 from './assets/banq3.jpg'
+
 
 function Credit() {
     return (
         <div className='sk-credit'>
             <div className="banner-credit">
-                <input type='submit' value="s'inscrire" />
+                {/* <div className="banner-content">
+                    <h1 style={{color:'var(--sk-greenLight)'}}>BSIC</h1>
+                    <input type='submit' value="s'inscrire" />
+                </div> */}
             </div>
             <div className="command">
                 <div className="command-option">
-                <a href='https://www.gtpsecurecard.com/BSIC/'><div className="btn btn-lg teal command-solde">Consulter son Solde</div></a>
-                    <div className="btn btn-lg second command-solde">Reconduire</div>
-                    <div className="btn btn-lg bg-success command-solde">Recharger</div>
+                <a href='https://www.gtpsecurecard.com/BSIC/'><h1 className="btn btn-lg teal command-solde">Consulter son Solde</h1></a>
+                    <h1 className="btn btn-lg  second command-solde">Reconduire</h1>
+                    <h1 className=" btn btn-lg bg-success command-solde">Recharger</h1>
                 </div>
                 <div className='command-head'>
                     <div className="container d-flex justify">
@@ -34,7 +41,7 @@ function Credit() {
                             Les personnes sans compte bancaire<br/>
                             Les nouveaux clients et clients de la BSIC bank</p>
                 </div>
-                <div className="container d-flex justify-content-between">
+                <div className="container d-flex justify-content-between avantages">
                     <div className="avantages-left">
                     <h3>Les principaux avantages</h3>
                     Avoir une carte sans disposer d’un compte bancaire<br/>
@@ -49,7 +56,34 @@ function Credit() {
                         <div className="credit-card"><img src={carte} alt='carte credit' /></div>
                     </div>
                 </div>
-                <div className="container d-flex justify-content-around mb-5 mt-5">
+                    <h3 className='mt-5 pt-5 text-center mb-3'>C'est simple et pratique grace a votre banque BSIC </h3>
+                <div className="container-fluid carti  d-flex justify-content-around mb-5 pb-5 ">
+                    <div className="card mx-3 " style={{width:'400px'}}>
+                        <img className="card-img-top" src={banq1} alt="Card image"/>
+                        <div className="card-body">
+                            <h5 className="card-title"></h5>
+                            <p className="card-text">pour vos retraits et paiements mobile</p>
+                            <a className="btn w-100 btn-light">See Profile</a>
+                        </div>
+                    </div>
+                    <div className="card mx-3" style={{width:'400px'}}>
+                        <img className="card-img-top" src={vignette} alt="Card image"/>
+                        <div className="card-body">
+                            <h4 className="card-title"></h4>
+                            <p className="card-text">gagner en liberter ou que vous soyez</p>
+                            <a className="btn btn-light w-100">See Profile</a>
+                        </div>
+                    </div>
+                    <div className="card mx-3" style={{width:'400px'}}>
+                        <img className="card-img-top" src={banq3} alt="Card image"/>
+                        <div className="card-body">
+                            <h4 className="card-title"></h4>
+                            <p className="card-text">Some example text.</p>
+                            <a className="btn btn-light w-100" >See Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div className="container d-flex tableau justify-content-around mb-5 mt-5">
                     <div className="tableau-n1">
                         <h3 className='tableau-title'>Frais de votre carte BSIC</h3>
                         <table className="table table-hover ">
@@ -146,9 +180,23 @@ function Credit() {
                         </table>
                     </div>
                 </div>
-                <div className="container-fluid py-5 bg-warning mb-5 mt-5">
+                <div className="container-fluid py-5 bg-warning  mt-5">
                     <h1 className='text-center'>VOTRE CARTE BSIC DISPONIBLE</h1>
                     <div className='text-center'><button className='btn btn-lg bg-info mx-auto'> Commander </button></div>
+                </div>
+                <div className="container-fluid py-5 bg-P ">
+                    <p className='text-center'>
+                    La livraison prendra 1-2 jours selon la ville. Le montant de recharge ne peut 
+                    dépasser le solde maximum de la carte, qui est de 5.000.000 XOF. 
+                    La carte prépayée est libellée en XOF. Vous pouvez recharger la carte avec 
+                    les Fonds que vous recevez en échange de votre monnaie virtuelle. 
+                    Cette carte prépayée n'est pas une carte-cadeau, une carte de crédit ou 
+                    une carte de paiement et ne fournit pas d'avances en espèces. L'utilisateur doit être vérifié par la procédure KYC. 
+                    Pour pouvoir utiliser la carte, celle-ci doit être vérifiée et activée. 
+                    Pour signaler une carte prépayée perdue ou volée, veuillez nous contacter à travers le Service client. 
+                    Votre compte BSIC et votre carte prépayée sont émis par BSIC bank, Veuillez lire 
+                    la Politique de confidentialité et les Termes et Conditions de la carte prépayée.
+                    </p>
                 </div>
             </div>
         </div>

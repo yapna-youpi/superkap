@@ -50,3 +50,46 @@
     margin: 15px 0;
     padding: 5px;
 }
+.sk-credit .bg-P{
+    background: #57aad16b;
+}
+.sk-credit .banner-content{
+    padding-left: 20%;
+}
+
+@media only screen and (max-width: 768px){
+    .sk-credit .command-solde{
+        height: 44px!important;
+        width: 120px!important;
+        overflow: hidden!important;
+    }
+    .sk-credit .command-body{
+        padding: 0 25px;
+        
+    }
+    .sk-credit .avantages{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .sk-credit .carti{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .sk-credit .tableau{
+        display: flex;
+        flex-direction: column!important;
+    }
+    .sk-credit .tableau-n1{
+        width: 85%;
+        margin: 0 auto;
+    }
+    .sk-credit .tableau-n2{
+        width: 85%;
+        margin: 30px auto;
+    }
+    .sk-credit .card{
+        margin-top: 20px;
+    }
+
+}
