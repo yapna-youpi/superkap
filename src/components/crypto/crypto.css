@@ -61,6 +61,9 @@
     height: 35px;
     background-color: yellowgreen;
 }
+.crypto .target-buy:hover{
+    transform: translateY(-4px);
+}
 .crypto .target-sell{
     display: flex;
     align-items: center;
@@ -68,6 +71,9 @@
     width: 40%;
     height: 35px;
     background-color: gold;
+}
+.crypto .target-sell:hover{
+    transform: translateY(-4px);
 }
 
 /*---design credit card-----*/
@@ -100,6 +106,32 @@
     width: 100%;
     text-align: center;
 }
+.crypto .partners ul{
+    margin: 15px 0;
+    display: flex;
+    width: 100%;
+    /* border-bottom: 1px solid gray;
+    border-top: 1px solid gray; */
+    animation: cryptoRoll 200s linear 0s infinite forwards normal;
+}
+.crypto .partners ul li{
+    display: inline-block;
+    margin: 15px 25px;
+}
+.crypto .partners .partner1{
+    width: 100px;
+    
+}
+
+@keyframes cryptoRoll{
+    0%{
+        transform: translateX(0x);
+    }
+    100%{
+        transform: translateX(-2000px);
+    }
+}
+
 /*-------------site grand ecran-------------*/
 @media (min-width: 992px) {
     .crypto .banner-content{
@@ -182,10 +214,10 @@
         background-color: gold;
         transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
     }
-    .crypto .target-buy:hover,.target-sell:hover{
+    /* .crypto .target-buy:hover,.target-sell:hover{
         box-shadow: 3px 3px 3px rgba(22, 22, 22, 0.4);
         transform: translateY(-5px);
-    }
+    } */
 
     /*---styling credit card------*/
     .crypto .credit{

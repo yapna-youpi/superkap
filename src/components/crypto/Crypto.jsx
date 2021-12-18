@@ -9,6 +9,15 @@ import tof from './assets/tof1.png'
 import logo from './assets/logo.png'
 import care from './assets/care.png'
 import carte from './assets/carte.png'
+import crp1 from './assets/images crypto/dogde.jpeg'
+import crp2 from './assets/images crypto/tether.jpg'
+import crp3 from './assets/images crypto/solana.jpg'
+import crp4 from './assets/images crypto/bitcoin.jpg'
+import crp5 from './assets/images crypto/usd.jpg'
+import crp6 from './assets/images crypto/terra.jpg'
+import crp7 from './assets/images crypto/nft.jpg'
+import crp8 from './assets/images crypto/usdc-logo.jpg'
+
 
 function Crypto() {
     const history = useHistory();
@@ -82,13 +91,21 @@ function Crypto() {
             </div>
             <div className="partners">
                 <ul>
-                    <li className='partner1'>10</li>
-                    <li className='partner1'>25</li>
-                    <li className='partner1'>33</li>
-                    <li className='partner1'>44</li>
-                    <li className='partner1'>54</li>
-                    <li className='partner1'>60</li>
-                    <li className='partner1'>71</li>
+                    <li><img className='partner1' src={crp8} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp7} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp6} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp5} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp4} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp3} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp2} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp1} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp7} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp6} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp5} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp4} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp3} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp2} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp1} alt='crypto' /></li>
                 </ul>
             </div>
             <div className="target-form">
