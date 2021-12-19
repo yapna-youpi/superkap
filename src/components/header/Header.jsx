@@ -13,7 +13,7 @@ function Header() {
                 <div className="container d-flex justify-content-between">
 
                     <div className="logo">
-                        <h1><a href="#">Superkap</a></h1>
+                        <h1><Link to='/'>Superkap</Link></h1>
                     </div>
 
                     <nav id="navbar" className="navbar">

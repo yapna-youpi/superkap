@@ -32,7 +32,7 @@ function Login() {
                 <form action="#" class="login-form" onSubmit={(e)=>handleSubmit(e)}>
 							<div class="form-group mb-3">
 								<label class="label" for="name">Username</label>
-								<input type="text" name="name" class="form-control" placeholder="Username" required onChange={(e)=>handleChange(e.target)} />
+								<input type="text" name="name" class="form-control " placeholder="Username" required onChange={(e)=>handleChange(e.target)} />
 							</div>
 							<div class="form-group mb-3">
 								<label class="label" for="password">Password</label>

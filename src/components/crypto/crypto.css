@@ -78,14 +78,8 @@
 
 /*---design credit card-----*/
 .crypto .credit{
-    width: 90%;
-    /* height: 0px; */
-    border: 1px solid #000;
-    margin: 0 auto;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    padding: 15px 25px;
-    background-color: gold;
+    width: 100%;
+    background-color: var(--sk-orange);
     display: flex;
     flex-direction: column-reverse;
 }
@@ -135,13 +129,10 @@
 /*-------------site grand ecran-------------*/
 @media (min-width: 992px) {
     .crypto .banner-content{
-        width: 100%;
-        background: #FDFC47;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to bottom, #24FE41, #FDFC47);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to bottom, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+        width: 100%;  
     }
     .crypto .banner{
-        width: 90%;
+        width: 100%;
         margin: 0 auto 20px auto;
         border-bottom-right-radius: 8px ;
         border-bottom-left-radius: 8px;
@@ -228,9 +219,12 @@
         justify-content: space-around;
 
     }
-    .crypto .credit .credit-left{
+    .crypto .credit .credit-left {
         width: 40%;
         padding: 0 25px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
     }
     .crypto .credit .credit-right{
         width: 45%;

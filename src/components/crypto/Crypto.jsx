@@ -5,7 +5,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import './crypto.css'
 import img2 from './assets/tof2.jpeg'
 import img1 from './assets/fem.jpg'
-import tof from './assets/tof1.png'
+import tof from './assets/tof1.jpeg'
 import logo from './assets/logo.png'
 import care from './assets/care.png'
 import carte from './assets/carte.png'
@@ -64,6 +64,25 @@ function Crypto() {
                     </Carousel>
                 </div>
             </div>
+            <div className="partners">
+                <ul>
+                    <li><img className='partner1' src={crp8} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp7} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp6} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp5} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp4} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp3} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp2} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp1} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp7} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp6} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp5} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp4} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp3} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp2} alt='crypto' /></li>
+                    <li><img className='partner1' src={crp1} alt='crypto' /></li>
+                </ul>
+            </div>
             <div className="trade">
                 <div className="trade-left">
                     <h1>Ours services on Blockchain</h1>
@@ -88,25 +107,6 @@ function Crypto() {
                 <div className="trade-right">
                     <p><img src={tof} alt='image crypto' /></p>
                 </div>
-            </div>
-            <div className="partners">
-                <ul>
-                    <li><img className='partner1' src={crp8} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp7} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp6} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp5} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp4} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp3} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp2} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp1} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp7} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp6} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp5} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp4} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp3} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp2} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp1} alt='crypto' /></li>
-                </ul>
             </div>
             <div className="target-form">
                 <div className="target-left">
@@ -136,15 +136,17 @@ function Crypto() {
             <div className="credit">
                 <div className="credit-left">
                     <div className="credit-card"><img src={carte} alt='carte credit' /></div>
-                    <div className='btn-credit'>
-                        <h1 onClick={()=>history.push('/Credit')} className='btn btn-lg credit-title'>carte de credit</h1>
-                    </div>
                 </div>
                 <div className="credit-right">
-                    <p>Nous sommes toujours disponibles pour que vous puissiez acheter une cryto-monnaie de chez vous chez nous.<br />
+                    <h4>Nous sommes toujours disponibles pour que vous puissiez acheter une cryto-monnaie de chez vous chez nous.<br />
                          même les jours fériés lorsque
-                         les banques sont fermées. Nous pouvons recharger votre carte bancaire pour vos operations</p>
-                    <p>Les transactions sont effectuées en quelques secondes lorsque vous échangez du bitcoin (BTC) vers votre devise locale (fiat) et vice versa.</p>
+                         les banques sont fermées. Nous pouvons recharger votre carte bancaire pour vos operations</h4>
+                    <h4>Les transactions sont effectuées en quelques secondes lorsque vous échangez du
+                         bitcoin (BTC) vers votre devise locale (fiat) et vice versa.
+                        <div className='btn-credit'>
+                            <h1 onClick={()=>history.push('/Credit')} className='btn btn-lg credit-title mt-5'>carte de credit</h1>
+                        </div> 
+                    </h4>
                 </div>
             </div>
             <div className="parner">

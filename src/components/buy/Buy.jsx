@@ -39,38 +39,13 @@ function Buy() {
 
     console.log(state)
     return (
-        <div className='buy'>
-            <div className="main-w3layouts wrapper">
-                <h1 className='buy-title'>Acheter Bitcoins</h1>
-                <div className="main-agileinfo">
-                    {/* <h1>Acheter de la crypto</h1> */}
-                    { !transaction ? (<div className="main-agileinfo">
+        <div className='buy container-fluid'>
+            <h1 className='text-center mt-5 pt-5' style={{color:'white'}}>Acheter de la crypto</h1>
+            <div className="row d-sm-flex flex-column-reverse flex-lg-row MX-5">
+                <div className="col-md-12 col-lg-6 d-lg-inline-block main-w3layouts wrapper">
+                    <div className="main-agileinfo2">
                         <div className="agileits-top">
                             <form action="#" method="post" className='form-group' onSubmit={(e)=>handleSubmit(e)} >
-                                <div class="form-group mb-3">
-                                    <label class="label" for="name">j'ai besoin de </label>
-                                    <input type="number" name="amount" class="form-control" placeholder="montant correspondant a la quandite de btc" required onChange={(e)=>handleChange(e.target)} />
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label class="label" for="name">Noms et Prénoms</label>
-                                    <input type="text"  name="names" class="form-control" placeholder="Nom et Prénom" required onChange={(e)=>handleChange(e.target)}/>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label class="label" for="name">Adresse wallet</label>
-                                    <input type="text"  name="wallet" class="form-control" placeholder="Entree votre adresse Blockchain" required onChange={(e)=>handleChange(e.target)}/>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label class="label" for="name">Numero Telephone</label>
-                                    <input type="tel" name="phone" class="form-control" placeholder="Telephone"
-                                    required onChange={(e)=>handleChange(e.target)}/>
-                                </div>
-                                <div className="form-group my-4">
-                                    <label className='label' for="select">choix de la crypto</label>
-                                    <select class="form-select" name="crypto" aria-label="Default select example" onChange={(e)=>handleChange(e.target)}>
-                                        <option value="Bitcoin" selected>Bitcoin</option>
-                                        <option value="Usdt">USDT (TRC20)</option>
-                                    </select>
-                                </div>
                                 <div className="form-group my-4">
                                     <label className='label' for="select">Mode de paiement</label>
                                     <select class="form-select" name="payment" aria-label="Default select example" onChange={(e)=>handleChange(e.target)}>
@@ -80,7 +55,25 @@ function Buy() {
                                         <option value="MTNF">MTN MOMO FLOAT CAMEROUN</option>
                                         <option value="CBSK">Carte Visa Crypto SuperKap</option>  
                                     </select>
-                              </div>
+                                </div>
+                                <div className="form-group my-4">
+                                    <label className='label' for="select">Choix de la crypto</label>
+                                    <select class="form-select" name="crypto" aria-label="Default select example" onChange={(e)=>handleChange(e.target)}>
+                                        <option value="Bitcoin" selected>Bitcoin</option>
+                                        <option value="Usdt">USDT (TRC20)</option>
+                                        <option value="Ep">Euro payeer</option>
+                                        <option value="Theter">Theter </option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="name">J'ai besoin de disposer de: </label>
+                                    <input type="number" name="amount" class="form-control input-buy" placeholder="montant correspondant a la quandite de btc" required onChange={(e)=>handleChange(e.target)} />
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="name">Numero Telephone</label>
+                                    <input type="tel" name="phone" class="form-control input-buy" placeholder="Telephone"
+                                    required onChange={(e)=>handleChange(e.target)}/>
+                                </div>
                                 <div className="wthree-text">
                                     <label className="anim">
                                         <input type="checkbox" className="checkbox" required />
@@ -93,12 +86,40 @@ function Buy() {
                             <p>Don't have an Account? <a href="#"> Login Now!</a></p>
                         </div>
                         </div>
-                    ): (<div className="">
-                        <h1>La transaction a ete envoye, vous serez contactez d'ici peu</h1>
-                        <h2>votre identifiant est le {transaction.id}</h2>
-                    </div>)}
-                    
-               </div> 
+                </div>
+
+
+                <div className=" col-md-12 col-lg-6 d-lg-inline-block main-w3layouts wrapper">
+                    <div className="main-agileinfo">
+                        <div className="agileits-top">
+                            <form action="#" method="post" className='form-group' onSubmit={(e)=>handleSubmit(e)} >
+                                <div class="form-group mb-3">
+                                    <label class="label" for="name">J'ai besoin de </label>
+                                    <input type="number" name="amount" class="form-control input-buy" placeholder="montant correspondant a la quandite de btc" required onChange={(e)=>handleChange(e.target)} />
+                                </div>
+                                <div className="row">
+                                    <div className="col-6">Montant net en CFA</div>
+                                    <div className="col-6">Montant net en devise crypto</div>
+                                </div>
+                                <div className="input-group">
+                                    <input type="text" className="form-control" placeholder='montant net' required/>
+                                    <div className="input-group-prepend">
+                                        <span className="input-group-text">-</span>
+                                    </div> 
+                                    <input type="text" className="form-control" placeholder='devise net' required/>
+                                </div>
+                                <div class="form-group my-3">
+                                    <label class="label" for="name">Nom du Compte</label>
+                                    <input type="text"  name="names" class="form-control input-buy" placeholder="Nom et Prénom" required onChange={(e)=>handleChange(e.target)}/>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="name">Adresse wallet ou N° tel:</label>
+                                    <input type="text"  name="wallet" class="form-control input-buy" placeholder="Entree votre adresse Blockchain" required onChange={(e)=>handleChange(e.target)}/>
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                </div>
             </div>
         </div>
     )
