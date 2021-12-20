@@ -138,6 +138,10 @@ Author: blackCoders
     transition: .5s all!important;
     background: #8DC26F!important;
   } 
+  .form-control:disabled{
+     background-color: inherit!important; 
+    opacity: 1;
+  }
   
   .agileits-top p {
     font-size: 1em;
