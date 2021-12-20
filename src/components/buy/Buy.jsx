@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { history } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 import './buy.css'
 
 function Buy() {
-    const history =  history();
+    const history =  useHistory();
 
     const [state, setState]=useState({amount: "", fees: "", crypto: "Bitcoin", payment: "CB", wallet: "", names: ""})
     const [transaction, setTransaction]=useState(null)

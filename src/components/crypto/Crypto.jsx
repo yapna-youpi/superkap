@@ -3,8 +3,9 @@ import { useHistory } from 'react-router-dom'
 import Carousel from 'react-bootstrap/Carousel'
 
 import './crypto.css'
-import img2 from './assets/tof2.jpeg'
-import img1 from './assets/fem.jpg'
+import img1 from './assets/crypt5.jpg'
+import img2 from './assets/crypt2.jpg'
+import img3 from './assets/crypt3.jpg'
 import tof from './assets/tof1.jpeg'
 import logo from './assets/logo.png'
 import care from './assets/care.png'
@@ -52,7 +53,7 @@ function Crypto() {
                         <Carousel.Item>
                             <img
                             className="d-block w-100"
-                            src={img1}
+                            src={img3}
                             alt="Third slide"
                             />
 
