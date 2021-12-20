@@ -3,8 +3,9 @@ import { useHistory } from 'react-router-dom'
 import Carousel from 'react-bootstrap/Carousel'
 
 import './crypto.css'
-import img2 from './assets/tof2.jpeg'
-import img1 from './assets/fem.jpg'
+import img1 from './assets/crypt5.jpg'
+import img2 from './assets/crypt2.jpg'
+import img3 from './assets/crypt3.jpg'
 import tof from './assets/tof1.jpeg'
 import logo from './assets/logo.png'
 import care from './assets/care.png'
@@ -52,41 +53,41 @@ function Crypto() {
                         <Carousel.Item>
                             <img
                             className="d-block w-100"
-                            src={img1}
+                            src={img3}
                             alt="Third slide"
                             />
 
                             <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <h3>disponible sans aucun delai de paiement</h3>
+                            <p>votre partenaire ideale.</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
                 </div>
             </div>
             <div className="partners">
-                <ul>
-                    <li><img className='partner1' src={crp8} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp7} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp6} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp5} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp4} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp3} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp2} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp1} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp7} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp6} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp5} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp4} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp3} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp2} alt='crypto' /></li>
-                    <li><img className='partner1' src={crp1} alt='crypto' /></li>
-                </ul>
+                <div className='partner-container'>
+                    <img className='partner1' src={crp8} alt='crypto' />
+                    <img className='partner1' src={crp7} alt='crypto' />
+                    <img className='partner1' src={crp6} alt='crypto' />
+                    <img className='partner1' src={crp5} alt='crypto' />
+                    <img className='partner1' src={crp4} alt='crypto' />
+                    <img className='partner1' src={crp3} alt='crypto' />
+                    <img className='partner1' src={crp2} alt='crypto' />
+                    <img className='partner1' src={crp1} alt='crypto' />
+                    <img className='partner1' src={crp7} alt='crypto' />
+                    <img className='partner1' src={crp6} alt='crypto' />
+                    <img className='partner1' src={crp5} alt='crypto' />
+                    <img className='partner1' src={crp4} alt='crypto' />
+                    <img className='partner1' src={crp3} alt='crypto' />
+                    <img className='partner1' src={crp2} alt='crypto' />
+                    <img className='partner1' src={crp1} alt='crypto' />
+                </div>
             </div>
             <div className="trade">
                 <div className="trade-left">
-                    <h1>Ours services on Blockchain</h1>
-                    <p>With our new affiliate program, you will have<br/> the most advanced tools in the market that <br/>will allow you to promote Pursa and generate commissions with us!</p>
+                    <h1>Nos services sur Blockchain</h1>
+                    <p>Avec notre nouveau programme d'affiliation, vous aurez<br/> les outils les plus avancés du marché qui<br/>vous permettra de promouvoir Pursa et de générer des commissions avec nous !</p>
                     <dl>
                         <dt>INFOS CRYPTO</dt>
                         <dd>Initiation, perfectionnement et mise à jour des connaissances sur les plates-formes Crypto.</dd>
@@ -94,30 +95,22 @@ function Crypto() {
                         <dt>HOLDING.</dt>
                         <dd>N’achetez pas aveuglement toute crypto, faites confiance aux professionnels pour<br/>
                              vous aider à investir sur les projets les plus rentables. Il est exclusivement réservé aux abonnés actifs.<br/>
-                            <button className="btn-crypto">learn more</button> 
+                            <button className="btn-crypto">En savoir plus</button> 
                         </dd>
 
                         <dt>MONTH TRADING</dt>
                         <dd>Ce service est destiné à tous ceux qui veulent gagner hebdomadairement et mensuellement de l’argent avec la cryptomonnaie. Il est exclusivement réservé aux abonnés actifs.<br/>
                              Découvrez nos signaux d’achats et de vente et profitez pour faire le plein de cryptos<br/>
-                            <button className="btn-crypto">learn more</button> 
+                            <button className="btn-crypto">En savoir plus</button> 
                         </dd>
                     </dl>               
                 </div>
                 <div className="trade-right">
-                    <p><img src={tof} alt='image crypto' /></p>
+                    <p><img style={{width:'100%'}} src={tof} alt='image crypto' /></p>
                 </div>
             </div>
             <div className="target-form">
                 <div className="target-left">
-                    <h2>Comment acheter ou vendre votre crypto ?</h2>
-                    <p>quel que soit le moyen de paiement utilisé. Désormais, vous pouvez échanger 
-                        votre bitcoin au Cameroun contre MasterCard, MTN Mobile Money, 
-                        Orange Money ou VISA de manière rapide, simple et sécurisée,</p>
-                    <p>il vous suffit juste d’émettre votre commande et vous 
-                        serez servis dans les meilleurs délais et aux meilleurs prix du marché</p>
-                </div>
-                <div className="target-right">    
                     <div className="target-right-head">
                         <img src={care} alt="image du trader" />
                     </div>
@@ -132,21 +125,31 @@ function Crypto() {
                         </div>  
                     </div>
                 </div>
+                <div className="target-right">    
+                    <h2>Comment acheter ou vendre votre crypto ?</h2>
+                    <p>quel que soit le moyen de paiement utilisé. Désormais, vous pouvez échanger 
+                        votre bitcoin au Cameroun contre MasterCard, MTN Mobile Money, 
+                        Orange Money ou VISA de manière rapide, simple et sécurisée,
+                    </p>
+                    <p>il vous suffit juste d’émettre votre commande et vous 
+                        serez servis dans les meilleurs délais et aux meilleurs prix du marché
+                    </p>
+                </div>
             </div>
             <div className="credit">
                 <div className="credit-left">
                     <div className="credit-card"><img src={carte} alt='carte credit' /></div>
                 </div>
                 <div className="credit-right">
-                    <h4>Nous sommes toujours disponibles pour que vous puissiez acheter une cryto-monnaie de chez vous chez nous.<br />
+                    <h5>Nous sommes toujours disponibles pour que vous puissiez acheter une cryto-monnaie de chez vous chez nous.<br />
                          même les jours fériés lorsque
-                         les banques sont fermées. Nous pouvons recharger votre carte bancaire pour vos operations</h4>
-                    <h4>Les transactions sont effectuées en quelques secondes lorsque vous échangez du
+                         les banques sont fermées. Nous pouvons recharger votre carte bancaire pour vos operations</h5>
+                    <p>Les transactions sont effectuées en quelques secondes lorsque vous échangez du
                          bitcoin (BTC) vers votre devise locale (fiat) et vice versa.
+                    </p>
                         <div className='btn-credit'>
-                            <h1 onClick={()=>history.push('/Credit')} className='btn btn-lg credit-title mt-5'>carte de credit</h1>
+                            <h1 onClick={()=>history.push('/Credit')} className='btn btn-lg credit-title mt-5'>Achat Carte de Credit</h1>
                         </div> 
-                    </h4>
                 </div>
             </div>
             <div className="parner">

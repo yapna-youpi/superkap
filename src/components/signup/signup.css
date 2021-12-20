@@ -9,7 +9,6 @@
     text-align: left;
     width: 85%;
     background-color: #ffffff;
-    border: 1px solid #000;
 }
 .signup .signup-left .signup-title{
     padding-top: 35px;
@@ -59,7 +58,7 @@
 @media only screen and (min-width:768px){
     .bg-signup{
         background-color: #f8f9fd;
-        padding: 90px 0 20px 0;
+        padding: 100px 0 50px 0;
     }
     .signup{
         display: flex;

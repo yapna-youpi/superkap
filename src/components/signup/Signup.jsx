@@ -30,7 +30,7 @@ function Signup() {
 	// console.log(state, errors)
     return (
 		<div className="bg-signup">
-        <div className='signup'>
+        <div className='pb-sm-3 pb-md-0 signup shadow'>
             <div className="signup-left">
                 <div class="signup-head">
 					<h3 class='signup-title'>Sign up</h3>
