@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
+import { history } from 'react-router-dom'
 
 import './sell.css'
 
 function Sell() {
-
+    const history = history();
     const [state, setState]=useState({amount: "", fees: "", crypto: "Bitcoin", payment: "CB", wallet: "", names: ""})
     const [transaction, setTransaction]=useState(null)
 
@@ -83,7 +84,7 @@ function Sell() {
                                 </div>
                                 <button className='btn-sell'>sell</button>
                             </form>
-                            <p>Don't have an Account? <a href="#"> Login Now!</a></p>
+                            <p>Don't have an Account? <a onClick={()=>history.push('/Signup')}> Login Now!</a></p>
                         </div>
                         </div>
                 </div>

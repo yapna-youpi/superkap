@@ -32,7 +32,7 @@ function Navigation() {
                     <Route exact path='/Sell'  component={Sell} />
                     <Route exact path='/Help'  component={Help} />
                     <Route exact path='/Credit'  component={Credit} />
-                    <Redirect path="/" />
+                    <Redirect to="/" />
                 </Switch>
                 <Footer />
             </Router>
