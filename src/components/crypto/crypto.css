@@ -25,6 +25,8 @@
 }
 .crypto .btn-crypto:hover{
     color: var(--sk-green);
+    background: var(--sk-orange);
+    border: 1px solid var(--sk-white);
 }
 /*---styling buy and sell---*/
 .crypto .target-form{
@@ -60,7 +62,7 @@
     justify-content: space-evenly;
     width: 40%;
     height: 35px;
-    color: var(--sk-white);
+    color: var(--sk-white)!important;
     background-color: yellowgreen;
 }
 .crypto .target-buy:hover{
@@ -113,8 +115,8 @@
     overflow: hidden;
 }
 .crypto .partners .partner-container img{
-    margin: 100px;
-    width: 130px;
+    margin: 40px;
+    width: 50px;
     animation: cryptoRoll 10s linear 0s infinite normal backwards;
 }
 /* .crypto .partners .partner1{
@@ -126,7 +128,7 @@
         transform: translateX(0px);
     }
     100% {
-        transform: translateX(-2216px);
+        transform: translateX(-1216px);
     }
 }
 
@@ -152,16 +154,80 @@
         padding-left: 35px;
     }
     .trade .trade-right{
-        width: 40%;
-        height: 400px;
+        width: 80%;
+        height: 350px;
+        margin-left: 5%px;
+        margin-right: 5%;
         display: block;
+        background-position: 50% 50%;
+        border-radius: 10px;
+        background-size: 100%;
+        transition: all 0.4s;
+        transform:translateX(60px);
+    }
+    .trade .trade-right:hover{
+        background-size: 120%;
     }
     .trade .trade-left{
         width: 55%;
         text-align: left;
     }
     /*--styling buy and sell--*/
-    .crypto .target-form{
+
+    .crypto .target-img1{
+       background-image: url('./assets/crypt6.jpg');
+       border: 1px solid #000;
+       border-radius: 8px;
+       height: 180px;
+       background-position: center;
+       background-size: 100%;
+       transition: all 0.4s; 
+    }
+    .crypto .target-img2{
+        background-image: url('./assets/crypt1.jpg');
+        border: 1px solid #000;
+        border-radius: 8px;
+        height: 180px;
+        background-position: center;
+        background-size: 100%;
+        transition: all 0.4s; 
+    }
+    .crypto .target-img1:hover{
+        background-size: 110%;
+    }
+    .crypto .target-img2:hover{
+        background-size: 110%;
+    }
+    .crypto .target-bg{
+        height: 100%;
+    }
+    .crypto .target-bg:hover{
+        background-size: 110%;
+    }
+    .crypto .target .btn{
+        box-shadow: none;
+    }
+    .crypto .target .btn:hover{
+        transform:translateY(-4px);
+    }
+
+    .crypto .partners .partner-container img{
+        margin: 40px 100px;
+        width: 130px;
+        animation: cryptoRoll 10s linear 0s infinite normal backwards;
+    }
+
+    @keyframes cryptoRoll {
+        0% {
+            transform: translateX(0px);
+        }
+        100% {
+            transform: translateX(-2216px);
+        }
+    }
+
+
+    /* .crypto .target-form{
         display: flex;
         justify-content: space-around;
         width: 100%;
@@ -205,7 +271,7 @@
         justify-content: space-evenly;
         height: 45px;
         transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
-    }
+    } */
     /* .crypto .target-buy:hover,.target-sell:hover{
         box-shadow: 3px 3px 3px rgba(22, 22, 22, 0.4);
         transform: translateY(-5px);
