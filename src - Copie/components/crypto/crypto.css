@@ -5,6 +5,7 @@
     display: block;
     margin: 10px auto;
     padding: 5px auto;
+    background: yellowgreen;
 }
 .trade .trade-left{
     width: 95%;
@@ -24,6 +25,8 @@
 }
 .crypto .btn-crypto:hover{
     color: var(--sk-green);
+    background: var(--sk-orange);
+    border: 1px solid var(--sk-white);
 }
 /*---styling buy and sell---*/
 .crypto .target-form{
@@ -59,6 +62,7 @@
     justify-content: space-evenly;
     width: 40%;
     height: 35px;
+    color: var(--sk-white)!important;
     background-color: yellowgreen;
 }
 .crypto .target-buy:hover{
@@ -70,7 +74,8 @@
     justify-content: space-evenly;
     width: 40%;
     height: 35px;
-    background-color: gold;
+    color: var(--sk-white);
+    background-color: var(--sk-orange);
 }
 .crypto .target-sell:hover{
     transform: translateY(-4px);
@@ -78,16 +83,10 @@
 
 /*---design credit card-----*/
 .crypto .credit{
-    width: 90%;
-    /* height: 0px; */
-    border: 1px solid #000;
-    margin: 0 auto;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    padding: 15px 25px;
-    background-color: gold;
+    width: 100%;
+    background-color: var(--sk-orange);
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 .crypto .credit-title{
     text-align: center;
@@ -100,48 +99,46 @@
 }
 .crypto .credit-card{
     display: flex;
+    padding-top: 98;
     justify-content: center;
 }
 .btn-credit{
     width: 100%;
     text-align: center;
 }
-.crypto .partners ul{
-    margin: 15px 0;
+.crypto .partners{
+    position: relative;
+}
+.crypto .partners .partner-container{
+    margin-top: -20px;
     display: flex;
-    width: 100%;
-    /* border-bottom: 1px solid gray;
-    border-top: 1px solid gray; */
-    animation: cryptoRoll 200s linear 0s infinite forwards normal;
+    overflow: hidden;
 }
-.crypto .partners ul li{
-    display: inline-block;
-    margin: 15px 25px;
+.crypto .partners .partner-container img{
+    margin: 30px 30px 20px 30px;
+    width: 50px;
+    animation: cryptoRoll 10s linear 0s infinite normal backwards;
 }
-.crypto .partners .partner1{
-    width: 100px;
-    
-}
+/* .crypto .partners .partner1{
+    width: 100px; 
+} */
 
-@keyframes cryptoRoll{
-    0%{
-        transform: translateX(0x);
+@keyframes cryptoRoll {
+    0% {
+        transform: translateX(0px);
     }
-    100%{
-        transform: translateX(-2000px);
+    100% {
+        transform: translateX(-1216px);
     }
 }
 
 /*-------------site grand ecran-------------*/
 @media (min-width: 992px) {
     .crypto .banner-content{
-        width: 100%;
-        background: #FDFC47;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to bottom, #24FE41, #FDFC47);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to bottom, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+        width: 100%;  
     }
     .crypto .banner{
-        width: 90%;
+        width: 100%;
         margin: 0 auto 20px auto;
         border-bottom-right-radius: 8px ;
         border-bottom-left-radius: 8px;
@@ -151,23 +148,87 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin: 75px;
-        padding: auto 20px;
+        padding: 25px 30px;
     }
     .trade .trade-left dl{
         padding-left: 35px;
     }
     .trade .trade-right{
-        width: 40%;
-        height: 400px;
+        width: 45%;
+        height: 350px;
+        background: url('./assets/tof1.jpeg');
+        margin-left: 5%;
+        margin-right: 5%;
         display: block;
+        background-position: center;
+        border-radius: 10px;
+        background-size: 100%;
+        transition: all 0.4s;
+        
+    }
+    .trade .trade-right:hover{
+        background-size: 110%;
     }
     .trade .trade-left{
         width: 55%;
         text-align: left;
     }
     /*--styling buy and sell--*/
-    .crypto .target-form{
+
+    .crypto .target-img1{
+       background-image: url('./assets/crypt6.jpg');
+       border: 1px solid #000;
+       border-radius: 8px;
+       height: 180px;
+       background-position: center;
+       background-size: 100%;
+       transition: all 0.4s; 
+    }
+    .crypto .target-img2{
+        background-image: url('./assets/crypt1.jpg');
+        border: 1px solid #000;
+        border-radius: 8px;
+        height: 180px;
+        background-position: center;
+        background-size: 100%;
+        transition: all 0.4s; 
+    }
+    .crypto .target-img1:hover{
+        background-size: 110%;
+    }
+    .crypto .target-img2:hover{
+        background-size: 110%;
+    }
+    .crypto .target-bg{
+        height: 100%;
+    }
+    .crypto .target-bg:hover{
+        background-size: 110%;
+    }
+    .crypto .target .btn{
+        box-shadow: none;
+    }
+    .crypto .target .btn:hover{
+        transform:translateY(-4px);
+    }
+
+    .crypto .partners .partner-container img{
+        margin: 20px 100px;
+        width: 130px;
+        animation: cryptoRoll 10s linear 0s infinite normal backwards;
+    }
+
+    @keyframes cryptoRoll {
+        0% {
+            transform: translateX(0px);
+        }
+        100% {
+            transform: translateX(-2216px);
+        }
+    }
+
+
+    /* .crypto .target-form{
         display: flex;
         justify-content: space-around;
         width: 100%;
@@ -202,18 +263,16 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        height: 35px;
-        background-color: yellowgreen;
+        height: 45px;
         transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
     }
     .crypto .target-sell{
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        height: 35px;
-        background-color: gold;
+        height: 45px;
         transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
-    }
+    } */
     /* .crypto .target-buy:hover,.target-sell:hover{
         box-shadow: 3px 3px 3px rgba(22, 22, 22, 0.4);
         transform: translateY(-5px);
@@ -228,9 +287,15 @@
         justify-content: space-around;
 
     }
-    .crypto .credit .credit-left{
+    .crypto .credit-card{
+        padding-top: 0;
+    }
+    .crypto .credit .credit-left {
         width: 40%;
         padding: 0 25px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
     }
     .crypto .credit .credit-right{
         width: 45%;

@@ -273,6 +273,9 @@ background-size: cover;
     text-align: left;
     font-weight: bolder;
   }
+  .home .uniform .m-5{
+    margin: 2rem!important;
+  }
 
  /* --------------site mode tablette-----------*/
   @media (min-width: 768px){
@@ -400,6 +403,7 @@ background-size: cover;
 
     #home  .uniform-col{
       width: 21.5%;
+      cursor: pointer;
     }
   }
 

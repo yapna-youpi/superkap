@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import ReactLoading from 'react-loading'
 
 import './buy.css'
 
 function Buy() {
     const history =  useHistory();
+
+    const [loader,setLoader] = useState(false);
 
     const [state, setState]=useState({amount: "", fees: "", crypto: "Bitcoin", payment: "CB", wallet: "", numAccount: "", names: "", phone: ""})
     const [transaction, setTransaction]=useState(null)
@@ -15,6 +18,7 @@ function Buy() {
     const handleSubmit=(e)=>{
         console.log(state)
         e.preventDefault()
+        setLoader(true);
         fetch("https://admin-superkap.herokuapp.com/transactions.json", {
             "method": "POST",
             "headers": {
@@ -33,10 +37,12 @@ function Buy() {
             })
         })
         .then(response => response.json()).then(data=>{
+            setLoader(false);
             console.log("the data ", data)
             setTransaction(data)
-        })
+        }) 
         .catch(err => {
+            setLoader(false);
             console.error("an error are occur ", err);
         })
         return false
@@ -50,7 +56,7 @@ function Buy() {
                 transaction ? (
                     <div className="row">
                         <center>
-                        <div className="col-md-8 bg-white">
+                        <div className="col-md-8 bg-white p-5 m-5" >
                             <h2>votre operation a ete enregistree vous serez contactez sous peu</h2>
                             <h4>votre identifiant de transaction est le {transaction.id}</h4>
                         </div>
@@ -149,7 +155,10 @@ function Buy() {
                                     </label>
                                     <div className="clear"> </div>
                                 </div>
-                                <button className='btn-buy'>BUY</button>
+                                <button className='btn-buy'>
+                                    { loader? <reactLoading type="spin" color="#ffffff" width="45px" height="45px" /> 
+                                            : 'BUY'}
+                                </button>
                             <p>Don't have an Account? <a href="#"> Login Now!</a></p>
                         </div>
                         </div>

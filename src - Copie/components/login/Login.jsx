@@ -20,8 +20,8 @@ function Login() {
 	// console.log(state)
     return (
 		<div className="bg-login">
-        <div className='login'>
-            <div className="login-left">
+        <div className='login pt-5 pt-md-0 pb-sm-3 pb-md-0 shadow'>
+            <div className="shadow shadow-md-none login-left">
                 <div class="login-head">
 					<h3 class='login-title'>Sign In</h3>
 					<p class="social-media d-flex justify-content-end">
@@ -32,7 +32,7 @@ function Login() {
                 <form action="#" class="login-form" onSubmit={(e)=>handleSubmit(e)}>
 							<div class="form-group mb-3">
 								<label class="label" for="name">Username</label>
-								<input type="text" name="name" class="form-control" placeholder="Username" required onChange={(e)=>handleChange(e.target)} />
+								<input type="text" name="name" class="form-control " placeholder="Username" required onChange={(e)=>handleChange(e.target)} />
 							</div>
 							<div class="form-group mb-3">
 								<label class="label" for="password">Password</label>

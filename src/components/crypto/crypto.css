@@ -99,8 +99,15 @@
 }
 .crypto .credit-card{
     display: flex;
-    padding-top: 98;
+    margin: 15px;
+    width: 85%;
     justify-content: center;
+}
+.crypto .text-title{
+    padding: 7px 15px;
+}
+.crypto .credit-card img{
+    width: 100%!important;
 }
 .btn-credit{
     width: 100%;
@@ -110,14 +117,14 @@
     position: relative;
 }
 .crypto .partners .partner-container{
-    margin-top: -20px;
     display: flex;
+    margin-top: 70px;
     overflow: hidden;
 }
 .crypto .partners .partner-container img{
-    margin: 40px;
+    margin: 15px 50px 6px 30px;
     width: 50px;
-    animation: cryptoRoll 10s linear 0s infinite normal backwards;
+    animation: cryptoRoll 20s linear 0s infinite normal backwards;
 }
 /* .crypto .partners .partner1{
     width: 100px; 
@@ -129,6 +136,7 @@
     }
     100% {
         transform: translateX(-1216px);
+        
     }
 }
 
@@ -154,19 +162,20 @@
         padding-left: 35px;
     }
     .trade .trade-right{
-        width: 80%;
+        width: 45%;
         height: 350px;
-        margin-left: 5%px;
+        background: url('./assets/tof1.jpeg');
+        margin-left: 5%;
         margin-right: 5%;
         display: block;
-        background-position: 50% 50%;
+        background-position: center;
         border-radius: 10px;
         background-size: 100%;
         transition: all 0.4s;
-        transform:translateX(60px);
+        
     }
     .trade .trade-right:hover{
-        background-size: 120%;
+        background-size: 110%;
     }
     .trade .trade-left{
         width: 55%;
@@ -212,9 +221,8 @@
     }
 
     .crypto .partners .partner-container img{
-        margin: 40px 100px;
-        width: 130px;
-        animation: cryptoRoll 10s linear 0s infinite normal backwards;
+        margin: 10px 130px;
+        width: 80px;
     }
 
     @keyframes cryptoRoll {
@@ -222,7 +230,7 @@
             transform: translateX(0px);
         }
         100% {
-            transform: translateX(-2216px);
+            transform: translateX(-2220px);
         }
     }
 

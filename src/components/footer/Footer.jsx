@@ -1,7 +1,8 @@
 import React from 'react'
+import { RiFacebookFill,RiTwitterFill,RiWhatsappFill,RiInstagramFill,RiLinkedinFill } from 'react-icons/ri'
 
 import './footer.css'
-import { RiFacebookFill,RiTwitterFill,RiWhatsappFill,RiInstagramFill,RiLinkedinFill } from 'react-icons/ri'
+import logo from './assets/logo-superkap.png'
 
 function Footer() {
 
@@ -13,7 +14,9 @@ function Footer() {
 
                         <div className="col-lg-3 col-md-6">
                             <div className="footer-info">
-                                <h3 className='logo'>Superkap</h3>
+                                <h3 className='logo mx-auto mx-md-0'>
+                                    <img className='logo' src={logo} alt="image logo" />
+                                </h3>
                                 <p>
                                     polyclinic tsinga <br/>
                                     yaounde-II arr<br/><br/>

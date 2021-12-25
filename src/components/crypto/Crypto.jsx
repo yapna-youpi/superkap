@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom'
 import Carousel from 'react-bootstrap/Carousel'
 
 import './crypto.css'
+import Caroussel from './carrousssel/Caroussel'
 import img1 from './assets/crypt5.jpg'
 import img2 from './assets/crypt2.jpg'
 import img3 from './assets/crypt3.jpg'
@@ -25,7 +26,11 @@ function Crypto() {
         <div className="crypto">
             <div className="banner-content">
                 <div className="banner">
-                    <Carousel fade>
+
+                    <Caroussel />
+
+
+                    {/* <Carousel fade>
                         <Carousel.Item>
                             <img
                             className="d-block w-100"
@@ -61,7 +66,7 @@ function Crypto() {
                             <p>votre partenaire ideale.</p>
                             </Carousel.Caption>
                         </Carousel.Item>
-                    </Carousel>
+                    </Carousel> */}
                 </div>
             </div>
             <div className="partners">
@@ -104,8 +109,8 @@ function Crypto() {
                         </dd>
                     </dl>               
                 </div>
-                <div  >
-                    <img className="trade-right" src={tof3} alt='image crypto' />
+                <div  className="trade-right">
+                    
                 </div>
             </div>
             <div className="container target">
@@ -129,8 +134,8 @@ function Crypto() {
                         </div><hr/>
                     </div>
                     <div className="col-11 text-sm-center target-bg my-4 col-md-4">
-                        <div class="card" style={{width:'400px'}}>
-                            <img class="card-img-top" src={tof} alt="Card image" />
+                        <div class="card">
+                            <img class="card-img-top img-car" src={tof} alt="Card image" />
                             <div class="card-body">
                                 <h6 class="card-title">Court de la crypto 24/24 et 7jours.</h6>
                                 <p class="card-text">abonnez vous à notre FAQ </p>
@@ -146,10 +151,10 @@ function Crypto() {
                     <div className="credit-card"><img src={carte} alt='carte credit' /></div>
                 </div>
                 <div className="credit-right">
-                    <h5>Nous sommes toujours disponibles pour que vous puissiez acheter une cryto-monnaie de chez vous chez nous.<br />
+                    <h5 className='text-title'>Nous sommes toujours disponibles pour que vous puissiez acheter une cryto-monnaie de chez vous chez nous.<br />
                          même les jours fériés lorsque
                          les banques sont fermées. Nous pouvons recharger votre carte bancaire pour vos operations</h5>
-                    <p>Les transactions sont effectuées en quelques secondes lorsque vous échangez du
+                    <p className='text-title'>Les transactions sont effectuées en quelques secondes lorsque vous échangez du
                          bitcoin (BTC) vers votre devise locale (fiat) et vice versa.
                     </p>
                         <div className='btn-credit'>

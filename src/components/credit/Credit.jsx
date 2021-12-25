@@ -23,16 +23,17 @@ function Credit() {
                     <h1 className=" btn btn-lg bg-success command-solde">Recharger</h1>
                 </div>
                 <div className='command-head'>
-                    <div className="container d-flex justify">
-                        <div className="command-head-left">
-                            <h6>Particuliers/entreprises/StartUp</h6>
-                            <h1 className='title-n1'><span className='command-title'>VOS CARTES</span> BANCAIRES</h1>
-                        </div>
-                        <div className="command-head-right">
-                            <h1 className='btn btn-lg bg-info'>COMMANDER</h1>
+                    <div className="container">
+                        <div className="row d-flex flex-direction-column justify">
+                            <div className="col command-head-left ">
+                                <h6>Particuliers/entreprises/StartUp</h6>
+                                <h1 className='title-n1'><span className='command-title'>VOS CARTES</span> BANCAIRES</h1>
+                            </div>
+                            <div className="col text-center command-head-right">
+                                <h1 className='btn btn-lg bg-info'>COMMANDER</h1>
+                            </div>
                         </div>
                     </div>
-                    
                 </div>
                 <div className="container command-body">
                     <h1>Adopter le reflexe Carte Bancaire  </h1>
@@ -53,12 +54,12 @@ function Credit() {
                     Faire recharger sa carte à distance via une agence BSIC<r/>
                     </div>
                     <div className="advantages-right">
-                        <div className="credit-card"><img src={carte} alt='carte credit' /></div>
+                        <div className="credit-card"><img style={{width:"90%"}} src={carte} alt='carte credit' /></div>
                     </div>
                 </div>
-                    <h3 className='mt-5 pt-5 text-center mb-3'>C'est simple et pratique grace a votre banque BSIC </h3>
+                    <h3 className='mt-5 pt-5 px-3 text-center mb-3'>C'est simple et pratique grace a votre banque BSIC </h3>
                 <div className="container-fluid carti  d-flex justify-content-around mb-5 pb-5 ">
-                    <div className="card mx-3 " style={{width:'400px'}}>
+                    <div className="card mx-3 ">
                         <img className="card-img-top" src={banq1} alt="Card image"/>
                         <div className="card-body">
                             <h5 className="card-title"></h5>
@@ -66,7 +67,7 @@ function Credit() {
                             <a className="btn w-100 btn-light">See Profile</a>
                         </div>
                     </div>
-                    <div className="card mx-3" style={{width:'400px'}}>
+                    <div className="card mx-3">
                         <img className="card-img-top" src={vignette} alt="Card image"/>
                         <div className="card-body">
                             <h4 className="card-title"></h4>
@@ -74,7 +75,7 @@ function Credit() {
                             <a className="btn btn-light w-100">See Profile</a>
                         </div>
                     </div>
-                    <div className="card mx-3" style={{width:'400px'}}>
+                    <div className="card mx-3">
                         <img className="card-img-top" src={banq3} alt="Card image"/>
                         <div className="card-body">
                             <h4 className="card-title"></h4>

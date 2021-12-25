@@ -55,6 +55,7 @@
     font-weight: 600;
     color: #fff;
     position: relative;
+    padding: inherit;
     padding-bottom: 12px;
   }
   #footer .footer-top .footer-links {

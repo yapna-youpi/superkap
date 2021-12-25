@@ -50,9 +50,11 @@
     margin: 15px 0;
     padding: 5px;
 }
-.sk-credit .bg-P{
-   
+.sk-credit .card{
+    margin-top: 20px 10px;
+    width: 27%;
 }
+
 .sk-credit .banner-content{
     padding-left: 20%;
 }
@@ -89,7 +91,8 @@
         margin: 30px auto;
     }
     .sk-credit .card{
-        margin-top: 20px;
-    }
+        width: 85%!important;
+        margin: 35px auto!important;
+     }
 
 }

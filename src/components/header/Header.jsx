@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
-
 import './header.css'
+import logo from './assets/logo-superkap.png'
 
 function Header() {
     return (
@@ -13,10 +13,10 @@ function Header() {
                 <div className="container d-flex justify-content-between">
 
                     <div className="logo">
-                        <h1><Link to='/'>Superkap</Link></h1>
+                        <h1><Link to='/'><img className='logo' src={logo}  alt="logo superkap"/></Link></h1>
                     </div>
 
-                    <nav id="navbar" className="navbar">
+                    <nav id="navbar" className="navbar ">
                         <ul>
                             <li><Link className="nav-link scrollto active" to="/">Home</Link></li>
                             <li><Link className="nav-link scrollto" to="/Business">Business</Link></li>

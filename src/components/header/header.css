@@ -26,6 +26,9 @@
   color: white;
   font-size: 30px;
 } 
+#header .logo{
+  width: 40px;
+}
 
 
 /*
@@ -43,6 +46,11 @@
     display: none;
     color: white;
     font-size: 30px;
+  }
+
+  #header .logo{
+    width: 70px;
+    padding: 8px 2px 5px 2px;
   }
 
 

@@ -85,6 +85,10 @@
     transition: 0.3s;
     display: inline-block;
     line-height: 1;
+    text-decoration: none;
+  }
+  #footer .logo{
+    width: 55px;
   }
   #footer .footer-top .footer-links ul a:hover {
     color: var(--sk-green);
