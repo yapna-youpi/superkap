@@ -1,0 +1,20 @@
+#business .tex{
+    color: var(--sk-green)
+}
+#business .tex-title{
+    font-weight: bold;
+    color: var(--sk-orange);
+}
+
+
+@media only screen and (min-width: 992px){
+    #business .col-lg-3{
+        flex: 0 0 auto;
+        width: 22.5%!important;
+        margin-right: 20px!important;
+    }
+    #business img{
+        width: 90%;
+
+    }
+}
