@@ -13,27 +13,27 @@ function Immo() {
                     <h2 className='immo-title text-center'>Où rêvez-vous de vivre?</h2>
                     <div className="immo-search d-flex justify-content-center">
                         <form className="d-flex justify-content-center" >
-                            <div class="input-group mb-3 input-group-lg w-75 mb-2">
-                                <input type="text" class="form-control " placeholder='Maison Appartement ...'/>
-                                <span class="input-group-text btn">Rechercher</span>
+                            <div className="input-group mb-3 input-group-lg w-75 mb-2">
+                                <input type="text" className="form-control " placeholder='Maison Appartement ...'/>
+                                <span className="input-group-text btn">Rechercher</span>
                                 <h6 className='mt-3'>1,525,363 annonces immobilières au Cameroun sur le grand site Superkap ! </h6>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div className="container ">
+                <div className="container immo-head py-5 mt-5 ">
                     <h2 className='text-center'>Qu'est-ce que vous cherchez?</h2>
                     <div className="row immo-section2 ">
-                        <div className="col-11 py-5 mt-5 bg-primary immo-couvre d-flex align-items-end">
+                        <div className="col-11 py-5 mt-5 bg-primary immo-couvre1 d-flex align-items-end">
                             <h4>Une maison</h4>
                         </div>
-                        <div className="col-11 py-5 mt-5 bg-info immo-couvre d-flex align-items-end">
+                        <div className="col-11 py-5 mt-5 bg-info immo-couvre2 d-flex align-items-end">
                             <h4>Une appartement</h4>
                         </div>
-                        <div className="col-11 py-5 mt-5 bg-success immo-couvre d-flex align-items-end">
+                        <div className="col-11 py-5 mt-5 bg-success immo-couvre3 d-flex align-items-end">
                             <h4>Une terrain</h4>
                         </div>
-                        <div className="col-11 py-5 mt-5 bg-danger immo-couvre d-flex align-items-end">
+                        <div className="col-11 py-5 mt-5 bg-danger immo-couvre4 d-flex align-items-end">
                             <h4>Un logement etudiant</h4>
                         </div>
                     </div>    

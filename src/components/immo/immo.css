@@ -27,11 +27,29 @@
 #immo .til{
     font-weight: bold;
 }
+#immo .immo-head{
+    background-color: orange!important;
+}
 
 @media only screen and (min-width: 768px ) {
-    #immo .immo-section2 .immo-couvre{
+    #immo .immo-section2 .immo-couvre1{
         width: 22%;
         height: 200px;
         background: url('./assets/fot4.jpg');
+    }
+    #immo .immo-section2 .immo-couvre2{
+        width: 22%;
+        height: 200px;
+        background: url('./assets/fot5.jpg');
+    }
+    #immo .immo-section2 .immo-couvre3{
+        width: 22%;
+        height: 200px;
+        background: url('./assets/fot8.jpg');
+    }
+    #immo .immo-section2 .immo-couvre4{
+        width: 22%;
+        height: 200px;
+        background: url('./assets/fot7.jpg');
     }
 }
