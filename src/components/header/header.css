@@ -2,7 +2,7 @@
 #header {
   height: 70px;
   transition: all 0.5s;
-  z-index: 997;
+  z-index: 2000;
   background: #000;
 }
 #header .logo {
@@ -21,16 +21,67 @@
 #header .list-open{
   display: block;
 } 
-#header .navbar .mobile-nav-toggle{
+.header .mobile-nav-toggle{
   display: block;
-  color: white;
-  font-size: 30px;
+    position: fixed;
+    color: white;
+    font-size: 30px;
+    right: 7%;
+    z-index: 2000;
+    top: 12px;
 } 
 #header .logo{
   width: 40px;
 }
-
-
+#header .dropdown-toggle::after {
+  display: none!important;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+}
+.header .nav-mobile{
+  position: fixed;
+  z-index: 1500;
+  padding: 70px 0;
+  width: 100%!important;
+  background-color: #062822!important;
+  border-radius: 4px;
+  right: 500%;
+  top: 0;
+  transition: 2s;
+}
+.mobile-nav-visible{
+  right: initial!important;
+  transition: 4s;
+}
+.header .lien{
+  padding: 11px 0;
+  text-align: center;
+  font-size: 22px;
+  text-decoration: none;
+  color: var(--sk-white);
+  font-weight: bold;
+  text-decoration: none!important;
+}
+.header .lien:hover{
+  background-color: gold;
+  color: var(--sk-black);
+  font-weight: bold;
+  text-decoration: none;
+}
+.header .lien a{
+  color: var(--sk-white);
+  font-weight: bold;
+  text-decoration: none!important;
+}
+.header a:-webkit-any-link{
+  text-decoration: none!important;
+}
+.header .nav-mobile a .liste{
+  padding: 7px 5px;
+  text-align: center!important;
+  color: gold!important;
+}
 /*
   * Desktop Navigation 
   */
@@ -42,12 +93,15 @@
   #header ul {
       display: flex;
   }
-  #header .navbar .mobile-nav-toggle{
-    display: none;
-    color: white;
-    font-size: 30px;
+  .header .nav-mobile{
+    display: none!important;
   }
-
+  .bi-list::before {
+    display: none!important;
+ }
+ .bi-x::before {
+  display: none!important;
+}
   #header .logo{
     width: 70px;
     padding: 8px 2px 5px 2px;
@@ -69,7 +123,7 @@
     color: var(--sk-green);
   }
   .navbar {
-    padding: 0;
+    padding: 15px 0!important;
   }
   .navbar ul {
     margin: 0;

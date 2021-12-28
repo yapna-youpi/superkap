@@ -28,10 +28,10 @@ function Immo() {
                             <h4>Une maison</h4>
                         </div>
                         <div className="col-11 py-5 mt-5 bg-info immo-couvre2 d-flex align-items-end">
-                            <h4>Une appartement</h4>
+                            <h4>Un appartement</h4>
                         </div>
                         <div className="col-11 py-5 mt-5 bg-success immo-couvre3 d-flex align-items-end">
-                            <h4>Une terrain</h4>
+                            <h4>Un terrain</h4>
                         </div>
                         <div className="col-11 py-5 mt-5 bg-danger immo-couvre4 d-flex align-items-end">
                             <h4>Un logement etudiant</h4>

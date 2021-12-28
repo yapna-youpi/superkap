@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
 import './header.css'
 import logo from './assets/logo-superkap.png'
 
 function Header() {
+    const [visible, setVisible] = useState(false);
+
+    const handleNav = e =>{
+        setVisible( v => !v);
+            document.getElementById('nav-mobile').classList.remove('mobile-nav-visible');
+        if(!visible){
+            document.getElementById('nav-mobile').classList.add('mobile-nav-visible');
+            
+        }
+    }
+
+
     return (
         <div className="header">
             
@@ -31,12 +43,28 @@ function Header() {
                             </li>
                             <li><a className="nav-link scrollto" href="#contact">Support</a></li>
                         </ul>
-                        <i className="bi bi-list mobile-nav-toggle"></i>
                     </nav>
+
+                   
                         {/* !--End .navbar --> */}
 
                 </div>
             </header>
+            { visible?  (<i onClick={handleNav} class="bi bi-x mobile-nav-toggle"></i>)
+                    :   (<i onClick={handleNav} className="bi bi-list mobile-nav-toggle"></i>) 
+            }
+            
+            <div id="nav-mobile" className="nav-mobile d-md-none d-block">
+                    <Link to="/"><div  className="col-12 lien">Acceuil</div></Link>
+                    <Link to="/Business"><div  className="col-12 lien">Business</div></Link>
+                    <Link to="/Crypto"><div  className="col-12 lien">Superkap crypto</div></Link>
+                    <Link to="/Immo"><div  className="col-12 lien">Immobilier</div></Link>
+                    <Link to="/Academy"><div  className="col-12 lien">Academie</div></Link>
+                    <Link ><div  className="col-12 lien"><i class="bi bi-person-circle"></i> &nbsp; User</div></Link>
+                        <Link to="/Login" ><div className='liste'>Connexion</div></Link>
+                        <Link to="/SignUp" ><div className='liste'>S'inscrire</div></Link>
+                    <Link to=""><div  className="col-12 lien">Support</div></Link>
+                </div>
             {/* <!-- End Header --> */}
         </div>
     )
