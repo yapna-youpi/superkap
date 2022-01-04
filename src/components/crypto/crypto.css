@@ -123,7 +123,7 @@
 }
 .crypto .partners .partner-container img{
     margin: 15px 50px 6px 30px;
-    width: 50px;
+    width: 60px;
     animation: cryptoRoll 20s linear 0s infinite normal backwards;
 }
 /* .crypto .partners .partner1{
@@ -222,7 +222,7 @@
 
     .crypto .partners .partner-container img{
         margin: 10px 130px;
-        width: 80px;
+        width: 120px;
     }
 
     @keyframes cryptoRoll {

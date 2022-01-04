@@ -54,6 +54,15 @@
     margin-top: 20px 10px;
     width: 27%;
 }
+.sk-credit .credit-card{
+    width: 60%;
+    border-radius: 8px;
+}
+.sk-credit .avantages{
+    display: flex;
+
+    justify-content: space-between;
+}
 
 .sk-credit .banner-content{
     padding-left: 20%;

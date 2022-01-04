@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import Carousel from 'react-bootstrap/Carousel'
+import { motion, AnimatePresence } from 'framer-motion'
 
 import './crypto.css'
 import Caroussel from './carrousssel/Caroussel'
@@ -23,6 +23,8 @@ import crp8 from './assets/images crypto/usdc-logo.jpg'
 function Crypto() {
     const history = useHistory();
     return (
+
+        <motion.div exit={{ opacity: 0 }}>
         <div className="crypto">
             <div className="banner-content">
                 <div className="banner">
@@ -166,6 +168,8 @@ function Crypto() {
 
             </div>
         </div>
+        <AnimatePresence exitBeforeEnter/>
+        </motion.div>
     )
 }
 

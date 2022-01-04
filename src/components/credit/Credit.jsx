@@ -54,10 +54,10 @@ function Credit() {
                     Faire recharger sa carte à distance via une agence BSIC<r/>
                     </div>
                     <div className="advantages-right">
-                        <div className="credit-card"><img style={{width:"90%"}} src={carte} alt='carte credit' /></div>
+                        <div className='d-flex justify-content-center align-items-center'><img className="credit-card" src={carte} alt='carte credit' /></div>
                     </div>
                 </div>
-                    <h3 className='mt-5 pt-5 px-3 text-center mb-3'>C'est simple et pratique grace a votre banque BSIC </h3>
+                    <h3 className='mt-5 pt-5 px-3 text-center mb-3' style={{fontWeight:"bold"}}>C'est simple et pratique grace a votre banque BSIC </h3>
                 <div className="container-fluid carti  d-flex justify-content-around mb-5 pb-5 ">
                     <div className="card mx-3 ">
                         <img className="card-img-top" src={banq1} alt="Card image"/>

@@ -30,7 +30,7 @@ function Header() {
 
                     <nav id="navbar" className="navbar ">
                         <ul>
-                            <li><Link className="nav-link scrollto active" to="/">Home</Link></li>
+                            <li><Link className="nav-link scrollto active"  to="/">Home</Link></li>
                             <li><Link className="nav-link scrollto" to="/Business">Business</Link></li>
                             <li><Link className="nav-link scrollto" to="/Crypto">Superkap Crypto</Link></li>
                             <li><Link className="nav-link scrollto " to="/Immo">Immobilier</Link></li>
