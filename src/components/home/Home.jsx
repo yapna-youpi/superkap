@@ -31,7 +31,7 @@ function Home() {
                 <h2>Buy, sell and trading your cryptocurrencies instantly and for less</h2>
                 <div className="d-flex align-items-center">
                     <i className="bx bxs-right-arrow-alt get-started-icon"><HiArrowNarrowRight/></i>
-                    <a href="#about" className="btn-get-started scrollto">Get Started</a>
+                    <a href="#firstDiv" className="btn-get-started scrollto">Get Started</a>
                 </div>
                 </div>
             </section>
@@ -40,7 +40,7 @@ function Home() {
 
                 {/*--ours services -- */}
                 <div className="container-fluid uniform py-5">
-                    <div  className="row d-flex justify-content-around  py-5 flex-column flex-md-row">
+                    <div id="firstDiv"  className="row d-flex justify-content-around  py-5 flex-column flex-md-row">
                         <div onClick={()=>history.push('/Crypto')} div className="uniform-col shadow col-10 col-md-2 m-5 mx-sm-3  p-5 p-md-3">
                             <p className='text-center'><img className='uniform-img' src={imag1} alt="logo1" /></p>
                             <h5 className='text-center'>Superkap Crypto</h5>
