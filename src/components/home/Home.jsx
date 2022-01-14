@@ -35,6 +35,7 @@ function Home() {
 
                 <Card />
                 <Formation />
+                
             
             </main>
         </div>

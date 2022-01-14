@@ -48,6 +48,7 @@ function Header() {
                                 <ul className='text-center list-open'>
                                     <Link to="/Login" className='="list'><li>Login Superkap</li></Link>
                                     <Link to="/SignUp" className='="list'><li>Sign Up</li></Link>
+                                    <Link to="/Credit" className='="list'><li>Achat Carte de Credit</li></Link>
                                 </ul>
                             </li>
                             <li><a className="nav-link scrollto" href="#contact">Support</a></li>
