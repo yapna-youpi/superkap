@@ -57,6 +57,7 @@
     position: relative;
     padding: inherit;
     padding-bottom: 12px;
+    padding-left: 0;
   }
   #footer .footer-top .footer-links {
     margin-bottom: 30px;
@@ -142,6 +143,10 @@
   #footer .fot-link:hover{
       color: var(--sk-orange);
   }
+  #footer .lite{
+    text-align: left;
+  }
+   
   @media only  screen and (max-width: 768px) {
     #footer .footer-info,.footer-links{
       text-align:  center;
@@ -154,5 +159,12 @@
       display: block;
       align-items: center;
     }
+    #footer .footer-top h4{
+      color: var(--sk-orange);
+      text-align: center;
+   }
+   #footer .lite{
+     text-align: center;
+   }
     
   }

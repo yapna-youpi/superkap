@@ -60,7 +60,7 @@ function Credit() {
                     <h3 className='mt-5 pt-5 px-3 text-center mb-3' style={{fontWeight:"bold"}}>C'est simple et pratique grace a votre banque BSIC </h3>
                 <div className="container-fluid carti  d-flex justify-content-around mb-5 pb-5 ">
                     <div className="card mx-3 ">
-                        <img className="card-img-top" src={banq1} alt="Card image"/>
+                        <img className="card-img-top" src={banq1} alt="Card1"/>
                         <div className="card-body">
                             <h5 className="card-title"></h5>
                             <p className="card-text">pour vos retraits et paiements mobile</p>
@@ -68,7 +68,7 @@ function Credit() {
                         </div>
                     </div>
                     <div className="card mx-3">
-                        <img className="card-img-top" src={vignette} alt="Card image"/>
+                        <img className="card-img-top" src={vignette} alt="Card2"/>
                         <div className="card-body">
                             <h4 className="card-title"></h4>
                             <p className="card-text">gagner en liberter ou que vous soyez</p>
@@ -76,7 +76,7 @@ function Credit() {
                         </div>
                     </div>
                     <div className="card mx-3">
-                        <img className="card-img-top" src={banq3} alt="Card image"/>
+                        <img className="card-img-top" src={banq3} alt="Card3"/>
                         <div className="card-body">
                             <h4 className="card-title"></h4>
                             <p className="card-text">Some example text.</p>

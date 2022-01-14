@@ -1,9 +1,12 @@
 #business .tex{
     color: var(--sk-green)
 }
-#business .tex-title{
-    font-weight: bold;
-    color: var(--sk-orange);
+#business .banner-business{
+    height: 450px;
+    margin-top: 60px;
+    background-image: url('./assets/tof2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -11,7 +14,7 @@
     #business .col-lg-3{
         flex: 0 0 auto;
         width: 22.5%!important;
-        margin-right: 20px!important;
+        margin-right: 22px!important;
     }
     #business img{
         width: 90%;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, useHistory, Redirect, useLocation } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 import { AnimatePresence } from "framer-motion";
 
 import Header from '../components/header/Header.jsx'
@@ -35,6 +35,7 @@ function Navigation() {
                         <Route exact path='/Sell'  component={Sell} />
                         <Route exact path='/Help'  component={Help} />
                         <Route exact path='/Credit'  component={Credit} />
+                        <Route exact path='/Help'  component={Help} />
                         <Redirect to="/" />
                     </Switch>
                     <Footer />
