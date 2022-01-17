@@ -122,7 +122,7 @@
     overflow: hidden;
 }
 .crypto .partners .partner-container img{
-    margin: 15px 50px 6px 30px;
+    margin: 10px 50px 6px 30px;
     width: 60px;
     animation: cryptoRoll 20s linear 0s infinite normal backwards;
 }
@@ -221,7 +221,7 @@
     }
 
     .crypto .partners .partner-container img{
-        margin: 10px 130px;
+        margin: 0px 80px 10px 80px;
         width: 120px;
     }
 

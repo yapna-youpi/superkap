@@ -61,6 +61,8 @@
   text-decoration: none;
   color: var(--sk-white);
   font-weight: bold;
+  border-top: 0.5px solid var(--sk-white);
+  border-bottom: 1px solid var(--sk-white);
   text-decoration: none!important;
 }
 /* .header .lien:hover,.lien:focus{
@@ -118,7 +120,9 @@
   .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
-
+  .navbar ul .list{
+    font-size: 30px;
+  }
   #header .navbar .dropdown .ul li{
     color: var(--sk-green);
   }

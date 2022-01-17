@@ -1,12 +1,22 @@
 import React from 'react'
 
+
+import './immo.css'
+import Produit from './produit/Produit.jsx'
 import img1 from './assets/fot1.jpg'
 import img2 from './assets/fot2.jpg'
 import img3 from './assets/fot3.jpg'
 import img4 from './assets/fot4.jpg'
-import './immo.css'
+import { useState } from 'react'
+
+// const stock = {
+//    lig1: ["./assets/fot1.jpg", "Logement entier : Appartement ⋅ nilon bastos", "LA CAVA pour deux personnes", "deux chambres - salon - cuisine - douche","wifi gratuit - parking - lave linge", "70000 f/moi"],
+//    lig2: ["./assets/fot2.jpg", "Logement entier : Studio ⋅ tsinga ecole de police", "Le STUDIO pour deux personnes", "chambre - salon - cuisine - douche","wifi gratuit - lave linge", "35000 f/moi"],
+//    lig3: ["./assets/fot3.jpg", "Logement entier : Chambre ⋅ pont de la gare", "LA CHAMBRE pour une personne", "chambre - cuisine - douche","lave linge", "25000 f/moi"],
+// };
 
 function Immo() {
+
     return (
         <div id="immo" className='immo'>
                 <div className="immo-content p-5 m-5">
@@ -38,7 +48,12 @@ function Immo() {
                         </div>
                     </div>    
                 </div>
-                <div className="container">
+                {/* { stock.map( ligne => {
+                        <Produit  src={ligne[0]} lieu={ligne[1]} estim={ligne[2]} descript={ligne[3]} wifi={ligne[4]} prix={ligne[5]}  />
+                    })
+                } */}
+                <Produit />
+                <div className="container mt-5">
                       {/* styling portfolio */}
                     <section className="content-section" id="portfolio">
                         <div className={`container px-4 px-lg-5`}>

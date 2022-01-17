@@ -62,9 +62,9 @@ function Buy() {
                         </div>
                         </center>
                     </div>):(
-            <div className="row d-sm-flex flex-column-reverse flex-lg-row MX-5">
-                <form action="#" method="post" className='form-group' onSubmit={(e)=>handleSubmit(e)} >
-                <div className="col-md-12 col-lg-6 d-lg-inline-block main-w3layouts wrapper">
+            <div className="row d-sm-flex flex-column-reverse flex-lg-row ">
+                <form action="#" method="post" className='d-sm-block d-lg-flex  form-group' onSubmit={(e)=>handleSubmit(e)} >
+                <div className="col-md-12 col-lg-6  main-w3layouts wrapper">
                     <div className="main-agileinfo2">
                         <div className="agileits-top">
                                 <div className="form-group my-4">
@@ -110,7 +110,7 @@ function Buy() {
                         </div>
                     </div>
                 </div>
-                <div className=" col-md-12 col-lg-6 d-lg-inline-block main-w3layouts wrapper">
+                <div className=" col-md-12 col-lg-6 main-w3layouts wrapper">
                     <div className="main-agileinfo">
                         <div className="agileits-top">
                             {/* <form action="#" method="post" className='form-group' onSubmit={(e)=>handleSubmit(e)} > */}
