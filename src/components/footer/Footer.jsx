@@ -15,7 +15,7 @@ function Footer() {
                         <div className="col-lg-3 col-md-6">
                             <div className="footer-info">
                                 <h3 className='logo mx-auto mx-md-0'>
-                                    <img className='logo' src={logo} alt="image logo" />
+                                    <img className='logo' src={logo} alt="logo" />
                                 </h3>
                                 <p>
                                     polyclinic tsinga <br/>
@@ -57,7 +57,7 @@ function Footer() {
 
                         <div className="col-lg-4 col-md-6 footer-newsletter">
                             <h4 className='fot-link'>Our Newsletter</h4>
-                            <p>Abonnez - vous à notre newsletter et recevez nos dernières actualités</p>
+                            <p className='lite'>Abonnez - vous à notre newsletter et recevez nos dernières actualités</p>
                             <form action="" method="post">
                                 <input type="email" name="email"/><input type="submit" value="Subscribe" />
                             </form>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, useHistory, Redirect, useLocation } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 import { AnimatePresence } from "framer-motion";
 
 import Header from '../components/header/Header.jsx'
@@ -21,24 +21,23 @@ function Navigation() {
     return (
         <div>
             <Router>
-                <AnimatePresence >
-                    <Header />
-                    <Switch >
-                        <Route exact path='/'  component={Home} />
-                        <Route exact path='/Crypto'  component={Crypto} />
-                        <Route exact path='/Immo'  component={Immo} />
-                        <Route exact path='/Business'  component={Business} />
-                        <Route exact path='/Academy'  component={Academy} />
-                        <Route exact path='/Login'  component={Login} />
-                        <Route exact path='/Signup'  component={Signup} />
-                        <Route exact path='/Buy'  component={Buy} />
-                        <Route exact path='/Sell'  component={Sell} />
-                        <Route exact path='/Help'  component={Help} />
-                        <Route exact path='/Credit'  component={Credit} />
-                        <Redirect to="/" />
-                    </Switch>
-                    <Footer />
-                </AnimatePresence>
+                <Header />
+                <Switch >
+                    <Route exact path='/'  component={Home} />
+                    <Route exact path='/Crypto'  component={Crypto} />
+                    <Route exact path='/Immo'  component={Immo} />
+                    <Route exact path='/Business'  component={Business} />
+                    <Route exact path='/Academy'  component={Academy} />
+                    <Route exact path='/Login'  component={Login} />
+                    <Route exact path='/Signup'  component={Signup} />
+                    <Route exact path='/Buy'  component={Buy} />
+                    <Route exact path='/Sell'  component={Sell} />
+                    <Route exact path='/Help'  component={Help} />
+                    <Route exact path='/Credit'  component={Credit} />
+                    <Route exact path='/Help'  component={Help} />
+                    <Redirect to="/" />
+                </Switch>
+                <Footer />
             </Router>
         </div>
     )

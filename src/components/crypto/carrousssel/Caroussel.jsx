@@ -46,13 +46,13 @@ function Caroussel() {
                     </div>
                     {/*---manual navigation start--*/}
                     <div className="navigation-manual">
-                        <label for="radio1" className='manual-btn'></label>
-                        <label for="radio2" className='manual-btn'></label>
-                        <label for="radio3" className='manual-btn'></label>
-                        <label for="radio4" className='manual-btn'></label>
+                        <label htmlFor="radio1" className='manual-btn'></label>
+                        <label htmlFor="radio2" className='manual-btn'></label>
+                        <label htmlFor="radio3" className='manual-btn'></label>
+                        <label htmlFor="radio4" className='manual-btn'></label>
                     </div>
                     <div className="slide first">
-                    <img src={img1} alt="imge slide1"/>
+                    <img src={img4} alt="imge slide1"/>
                 </div>
                 <div className="slide">
                     <img src={img2} alt="imge slide2"/>
@@ -61,7 +61,7 @@ function Caroussel() {
                     <img src={img3} alt="imge slide3"/>
                 </div>
                 <div className="slide">
-                    <img src={img4} alt="imge slide4"/>
+                    <img src={img1} alt="imge slide4"/>
                 </div>
                 </div>
                 

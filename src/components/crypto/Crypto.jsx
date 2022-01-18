@@ -1,13 +1,8 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
 
 import './crypto.css'
 import Caroussel from './carrousssel/Caroussel'
-import img1 from './assets/crypt5.jpg'
-import img2 from './assets/crypt2.jpg'
-import img3 from './assets/crypt3.jpg'
-import tof3 from './assets/tof3.jpg'
 import tof from './assets/crypt4.jpg'
 import carte from './assets/carte.png'
 import crp1 from './assets/images crypto/dogde.jpeg'
@@ -24,51 +19,10 @@ function Crypto() {
     const history = useHistory();
     return (
 
-        <motion.div exit={{ opacity: 0 }}>
         <div className="crypto">
             <div className="banner-content">
                 <div className="banner">
-
                     <Caroussel />
-
-
-                    {/* <Carousel fade>
-                        <Carousel.Item>
-                            <img
-                            className="d-block w-100"
-                            src={img1}
-                            alt="First slide"
-                            />
-                            <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                            className="d-block w-100"
-                            src={img2}
-                            alt="Second slide"
-                            />
-
-                            <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                            className="d-block w-100"
-                            src={img3}
-                            alt="Third slide"
-                            />
-
-                            <Carousel.Caption>
-                            <h3>disponible sans aucun delai de paiement</h3>
-                            <p>votre partenaire ideale.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    </Carousel> */}
                 </div>
             </div>
             <div className="partners">
@@ -136,12 +90,12 @@ function Crypto() {
                         </div><hr/>
                     </div>
                     <div className="col-11 text-sm-center target-bg my-4 col-md-4">
-                        <div class="card">
-                            <img class="card-img-top img-car" src={tof} alt="Card image" />
-                            <div class="card-body">
-                                <h6 class="card-title">Court de la crypto 24/24 et 7jours.</h6>
-                                <p class="card-text">abonnez vous à notre FAQ </p>
-                                <a onClick={()=>history.push('/Help')} class="btn btn-crypto">En Savoir Plus</a>
+                        <div className="card">
+                            <img className="card-img-top img-car" src={tof} alt="Card image" />
+                            <div className="card-body">
+                                <h6 className="card-title">Court de la crypto 24/24 et 7jours.</h6>
+                                <p className="card-text">abonnez vous à notre FAQ </p>
+                                <a onClick={()=>history.push('/Help')} className="btn btn-crypto">En Savoir Plus</a>
                             </div>
                         </div>
                     </div>
@@ -168,8 +122,7 @@ function Crypto() {
 
             </div>
         </div>
-        <AnimatePresence exitBeforeEnter/>
-        </motion.div>
+     
     )
 }
 

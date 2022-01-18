@@ -64,7 +64,7 @@
     background: #FDFC47;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #24FE41, #FDFC47);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: url('./assets//banner.png');
+    background-image: url(./assets/banner.png);
     background-size: cover;
     position: relative;
     z-index: 1;
@@ -198,7 +198,6 @@ background-size: cover;
     color: var(--sk-white);
     margin: 0 25px;
     padding: 0 45px 25px 45ps;
-  
     text-align: center;
 }
 .home #services .row1,.row2{
@@ -219,63 +218,7 @@ background-size: cover;
     color: var(--sk-white);
   }
 
-  /*-----immobilier section ----*/
-  /* .home .home-immo{
-    
-  } */
-  /* .home .h-immo-card{
-    position: relative;
-    color: var(--sk-white)!important;
-    width: 25%;
-    height: 100%;
-    border-radius: 8px;
-    background-image: url('./assets/images-immo/imo2.jpg');
-    background-size: cover;
-  } */
-  .home .immo-card1{
-    position: relative;
-    color: var(--sk-white)!important;
-    height: 350px;
-    background-image: url('./assets/images-immo/imo5.jpg');
-    background-size: cover;
-    border-radius: 8px;
-    background-size: 100%;
-    background-position: center;
-    cursor: pointer;
-    background-position: 50% 50%;
-    -webkit-transition: all .4s;
-    transition: all .4s;
-  }
-  .home .immo-card1:hover{
-    background-size: 110%;
-  }
-  .home .immo-card2{
-    position: relative;
-    color: var(--sk-white)!important;
-    height: 350px;
-    background-image: url('./assets/images-immo/imo5.jpg');
-    background-size: cover;
-    border-radius: 8px;
-    background-size: 100%;
-    background-position: center;
-    cursor: pointer;
-    background-position: 50% 50%;
-    -webkit-transition: all .4s;
-    transition: all .4s;
-  }
-  .home .immo-card2:hover{
-    background-size: 110%;
-  }
-  .home .h-immo-content{
-    position: absolute;
-    bottom: 0;
-    background-position: center;
-    text-align: left;
-    font-weight: bolder;
-  }
-  .home .uniform .m-5{
-    margin: 2rem!important;
-  }
+  
 
  /* --------------site mode tablette-----------*/
   @media (min-width: 768px){
