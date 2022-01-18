@@ -8,27 +8,25 @@ import img4 from './assets/crypt1.jpg'
 
 function Caroussel() {
 
-    // let [counter, setCounter] = useState(1);
-    // useLayoutEffect(()=>{
+    let [counter, setCounter] = useState(1);
+    useLayoutEffect(()=>{
 
-    //     setInterval(() => {
-    //         let radio = document.getElementById('#radio');
+       let interval=setInterval(() => {
+            // let radio = document.getElementById('radio');
             
-    //         document.getElementById('radio' + counter ).checked = true;
-    //         counter++;
-    //         if(counter > 4){
-    //             counter = 1;
-    //         }
-    //     }, 5000);
+            document.getElementById('radio' + counter ).checked = true;
+            setCounter(counter++);
+            if(counter > 4){
+                counter = 1;
+            }
+        }, 5000);
 
-    //     return clearInterval(setInterval);
+        return ()=>{
+            // console.log("clear interval ", interval)
+            clearInterval(interval)
+        }
 
-    // },[])
-    
-   
-
-
-
+    },[])
 
     return (
         <div className='caroussel'>
