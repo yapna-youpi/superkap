@@ -1,9 +1,12 @@
 .crypto .banner{
     width: 100%;
 }
+.trad{
+    background: yellowgreen;
+}
 .trade{
     display: block;
-    margin: 10px auto;
+    margin: 0 auto 10px auto;
     padding: 5px auto;
     background: yellowgreen;
 }
@@ -118,7 +121,7 @@
 }
 .crypto .partners .partner-container{
     display: flex;
-    margin-top: 70px;
+    margin: 25px 0;
     overflow: hidden;
 }
 .crypto .partners .partner-container img{
@@ -224,6 +227,11 @@
         margin: 0px 80px 10px 80px;
         width: 120px;
     }
+    .crypto .partners .partner-container{
+        display: flex;
+        margin: 30px 0 20px 0;
+        overflow: hidden;
+    }
 
     @keyframes cryptoRoll {
         0% {
@@ -233,58 +241,6 @@
             transform: translateX(-2220px);
         }
     }
-
-
-    /* .crypto .target-form{
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-        padding: 10px 25px;
-    }
-    .crypto .target-form .target-left{
-        width: 40%;
-        padding: 0 25px;
-    }
-    .crypto .target-form .target-right{
-        width: 40%;
-        display: block;
-    }
-    .crypto .target-form .target-right .target-right-head{
-       display: block;
-       width: 100%;
-       padding: 2% 5% 8% 20%;
-
-    }
-    .crypto .target-form .target-right .target-right-body{
-        display: flex;
-        width: 100%;
-        margin-bottom: 20px;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px 0px 20px;
-    }
-    .crypto .target-right-body .img-logo{
-        width: 25px;
-    } 
-    .crypto .target-buy{
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 45px;
-        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
-    }
-    .crypto .target-sell{
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 45px;
-        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
-    } */
-    /* .crypto .target-buy:hover,.target-sell:hover{
-        box-shadow: 3px 3px 3px rgba(22, 22, 22, 0.4);
-        transform: translateY(-5px);
-    } */
-
     /*---styling credit card------*/
     .crypto .credit{
         width: 100%;

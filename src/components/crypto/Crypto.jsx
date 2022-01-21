@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom'
 
 import './crypto.css'
 import Caroussel from './carrousssel/Caroussel'
+import Service from './service/Service'
 import tof from './assets/crypt4.jpg'
 import carte from './assets/carte.png'
 import crp1 from './assets/images crypto/dogde.jpeg'
@@ -25,6 +26,15 @@ function Crypto() {
                     <Caroussel />
                 </div>
             </div>
+            <Service />
+            <div className="container">
+                <div className="row">
+                    <div className="col col-md-3"></div>
+                    <div className="col col-md-3"></div>
+                    <div className="col col-md-3"></div>
+                    <div className="col col-md-3"></div>
+                </div>
+            </div>
             <div className="partners">
                 <div className='partner-container'>
                     <img className='partner1' src={crp8} alt='crypto' />
@@ -44,10 +54,12 @@ function Crypto() {
                     <img className='partner1' src={crp1} alt='crypto' />
                 </div>
             </div>
-            <div className="trade py-4 ">
+            <div className="trad pt-5">
+                <h1 className='text-center '>Nos services sur Blockchain</h1>
+                <p className='text-center mb-0'>Avec notre nouveau programme d'affiliation, vous aurez<br/> les outils les plus avancés du marché qui<br/>vous permettront de promouvoir Superkap et de générer des commissions avec nous !</p>
+            </div>
+            <div className="trade pb-4 ">
                 <div className="trade-left pt-3 p-4 p-md-0">
-                    <h1>Nos services sur Blockchain</h1>
-                    <p>Avec notre nouveau programme d'affiliation, vous aurez<br/> les outils les plus avancés du marché qui<br/>vous permettra de promouvoir Pursa et de générer des commissions avec nous !</p>
                     <dl>
                         <dt>INFOS CRYPTO</dt>
                         <dd>Initiation, perfectionnement et mise à jour des connaissances sur les plates-formes Crypto.</dd>

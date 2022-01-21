@@ -31,7 +31,7 @@
     top: 12px;
 } 
 #header .logo{
-  width: 40px;
+  width: 100px;
 }
 #header .dropdown-toggle::after {
   display: none!important;
@@ -91,6 +91,7 @@
 
   #header .navbar{
     display: block;
+
   }
   #header ul {
       display: flex;
@@ -140,7 +141,7 @@
     position: relative;
   }
   .navbar > ul > li + li {
-    margin-left: 14px;
+    margin-left: 5px;
   }
   .navbar a, .navbar a:focus {
     display: flex;
@@ -148,7 +149,7 @@
     justify-content: space-between;
     padding: 12px 0;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
     color: rgba(255, 255, 255, 0.8);
     white-space: nowrap;
     transition: 0.3s;
@@ -239,5 +240,8 @@
 @media only screen and (min-width: 992px){
   .navbar > ul > li + li {
     margin-left: 30px;
+  }
+  .navbar a, .navbar a:focus {
+    font-size: 14px;
   }
 }
