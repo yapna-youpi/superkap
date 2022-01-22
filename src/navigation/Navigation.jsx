@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
-import { AnimatePresence } from "framer-motion";
 
 import Header from '../components/header/Header.jsx'
 import Home from '../components/home/Home.jsx'
@@ -15,6 +14,7 @@ import Buy from '../components/buy/Buy'
 import Sell from '../components/sell/Sell'
 import Footer from '../components/footer/Footer'
 import Credit from '../components/credit/Credit'
+import CreditCrypto from '../components/creditCrypto/CreditCrypto'
 
 function Navigation() {
    
@@ -34,6 +34,7 @@ function Navigation() {
                     <Route exact path='/Sell'  component={Sell} />
                     <Route exact path='/Help'  component={Help} />
                     <Route exact path='/Credit'  component={Credit} />
+                    <Route exact path='/CreditCrypto'  component={CreditCrypto} />
                     <Route exact path='/Help'  component={Help} />
                     <Redirect to="/" />
                 </Switch>

@@ -5,12 +5,12 @@ import carte from './assets/carte.png'
 import vignette from './assets/vignette.jpg'
 import banq1 from './assets/banq1.jpg'
 import banq3 from './assets/banq3.jpg'
-import visa from './assets/banner.png'
+import visa from './assets/banq1.jpg'
 
 
 function Credit() {
     return (
-        <div className='sk-credit'>
+        <div className='sk-credit1'>
             <div className="banner-credit">
                 {/* <div className="banner-content">
                     <h1 style={{color:'var(--sk-greenLight)'}}>BSIC</h1>
@@ -36,7 +36,7 @@ function Credit() {
                         </div>
                     </div>
                 </div>
-                <div className="container command-body ">
+                <div className="container command-body">
                     <h1>Adopter le reflexe Carte Bancaire  </h1>
                     <p>La carte visa prépayée BSIC est disponible en 5 minutes dans nos locaux. Elle est pratique et vous pouvez l’avoir sans disposer d’un compte bancaire. Elle est idéale pour :</p>
                         <p>Les voyageurs partout dans le monde<br/>
@@ -188,28 +188,28 @@ function Credit() {
                 </div>
                 <div className="container-fluid pt-3 bg-P ">
                     <div className="row">
-                        <div className="col d-none d-md-block .col-md-6 ">
-                            <img src={visa} style={{height:'350px',width:'100%'}} alt="visa-crypto" />
-                        </div>
-                        <div className="col .col-md-6 fs-5">
-                            <p className=''>
-                                La livraison prendra 1-2 jours selon la ville. Le montant de recharge ne peut 
-                                dépasser le solde maximum de la carte, qui est de 5.000.000 XOF. 
-                                La carte prépayée est libellée en XOF. Vous pouvez recharger la carte avec 
-                                les Fonds que vous recevez en échange de votre monnaie virtuelle.
-                                Cette carte prépayée n'est pas une carte-cadeau, une carte de crédit ou 
-                                une carte de paiement et ne fournit pas d'avances en espèces. 
-                            </p>
-                            <p>
-                                L'utilisateur doit être vérifié par la procédure KYC. 
-                                Pour pouvoir utiliser la carte, celle-ci doit être vérifiée et activée. 
-                                Pour signaler une carte prépayée perdue ou volée, veuillez nous contacter à travers le Service client. 
-                                Votre compte BSIC et votre carte prépayée sont émis par BSIC bank, Veuillez lire 
-                                la Politique de confidentialité et les Termes et Conditions de la carte prépayée.
-                            </p>
+                            <div className="col .col-md-6 fs-5">
+                                <p className=''>
+                                    La livraison prendra 1-2 jours selon la ville. Le montant de recharge ne peut 
+                                    dépasser le solde maximum de la carte, qui est de 5.000.000 XOF. 
+                                    La carte prépayée est libellée en XOF. Vous pouvez recharger la carte avec 
+                                    les Fonds que vous recevez en échange de votre monnaie virtuelle.
+                                    Cette carte prépayée n'est pas une carte-cadeau, une carte de crédit ou 
+                                    une carte de paiement et ne fournit pas d'avances en espèces. 
+                                </p>
+                                <p>
+                                    L'utilisateur doit être vérifié par la procédure KYC. 
+                                    Pour pouvoir utiliser la carte, celle-ci doit être vérifiée et activée. 
+                                    Pour signaler une carte prépayée perdue ou volée, veuillez nous contacter à travers le Service client. 
+                                    Votre compte BSIC et votre carte prépayée sont émis par BSIC bank, Veuillez lire 
+                                    la Politique de confidentialité et les Termes et Conditions de la carte prépayée.
+                                </p>
+                            </div>
+                            <div className="col d-none d-md-block .col-md-6 ">
+                                <img src={visa} style={{height:'350px',width:'100%'}} alt="visa-crypto" />
+                            </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     )

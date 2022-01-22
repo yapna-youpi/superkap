@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { IoMdLogIn } from 'react-icons/io'
 import { FaUserCircle } from 'react-icons/fa'
+import { RiWhatsappFill } from 'react-icons/ri'
+import { BsTelephoneOutboundFill } from 'react-icons/bs'
 
 import './header.css'
 import logo from './assets/logo-superkap.png'
@@ -50,12 +52,18 @@ function Header() {
                                 <ul className='text-center list-open'>
                                     <Link to="/SignUp" className='="list'><li><FaUserCircle  />&nbsp;  Inscription</li></Link>
                                     <Link to="/Login" className='="list'><li><IoMdLogIn  />&nbsp; Connexion</li></Link>
-                                    <Link to="/Credit" className='="list'><li>Achat Carte de Credit</li></Link>
+                                    <Link to="/Credit" className='="list'><li>Achat Carte de Credit Bsic</li></Link>
+                                    <Link to="/CreditCrypto" className='="list'><li>Achat Carte Visa Crypto</li></Link>
                                 </ul>
                             </li>
-                            <li><a className="nav-link scrollto" href="#contact">Support</a></li>
+                            <li><Link to="/Help">Support</Link></li>
                         </ul>
+
                     </nav>
+                    <div className="icon-contact d-none d-md-block">
+                        <a href="https://api.whatsapp.com/send?phone=237698215858"><div className="icon-telphon"><i className="icone" > <RiWhatsappFill /></i> &nbsp;:&nbsp; 698 - 21 - 58 - 58</div></a>
+                        <a href="tel:+237698215858"><div className="icon-whatsapp"><i className='icone'> <BsTelephoneOutboundFill /></i> &nbsp;:&nbsp; 698 - 21 - 58 - 58</div></a>
+                    </div>
 
                    
                         {/* !--End .navbar --> */}

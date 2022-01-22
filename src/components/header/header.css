@@ -31,7 +31,7 @@
     top: 12px;
 } 
 #header .logo{
-  width: 40px;
+  width: 100px;
 }
 #header .dropdown-toggle::after {
   display: none!important;
@@ -84,6 +84,31 @@
   text-align: center!important;
   color: gold!important;
 }
+.header .icon-contact{
+    color: var(--sk-white);
+    position: absolute;
+    top: 350px;
+    right: 0;
+    z-index: 10000;
+    transform: translateX(83%); 
+}
+.header .icon-telphon{
+  background-color: var(--sk-black);
+  margin: 5px 0;
+  padding: 12px 35px 12px 10px;
+  cursor: pointer;
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.header .icon-whatsapp{
+  margin: 5px 0;
+  padding: 12px 35px 12px 10px;
+  cursor: pointer;
+  background-color: var(--sk-black);
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.header .icon-telphon:hover,.icon-whatsapp:hover{
+  transform: translateX(-83%);
+}
 /*
   * Desktop Navigation 
   */
@@ -91,6 +116,7 @@
 
   #header .navbar{
     display: block;
+
   }
   #header ul {
       display: flex;
@@ -105,7 +131,7 @@
   display: none!important;
 }
   #header .logo{
-    width: 70px;
+    width: 200px;
     padding: 8px 2px 5px 2px;
   }
 
@@ -127,7 +153,7 @@
     color: var(--sk-green);
   }
   .navbar {
-    padding: 15px 0!important;
+    padding: 35px 0!important;
   }
   .navbar ul {
     margin: 0;
@@ -140,7 +166,7 @@
     position: relative;
   }
   .navbar > ul > li + li {
-    margin-left: 14px;
+    margin-left: 5px;
   }
   .navbar a, .navbar a:focus {
     display: flex;
@@ -148,7 +174,7 @@
     justify-content: space-between;
     padding: 12px 0;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
     color: rgba(255, 255, 255, 0.8);
     white-space: nowrap;
     transition: 0.3s;
@@ -239,5 +265,8 @@
 @media only screen and (min-width: 992px){
   .navbar > ul > li + li {
     margin-left: 30px;
+  }
+  .navbar a, .navbar a:focus {
+    font-size: 14px;
   }
 }
