@@ -84,6 +84,31 @@
   text-align: center!important;
   color: gold!important;
 }
+.header .icon-contact{
+    color: var(--sk-white);
+    position: absolute;
+    top: 350px;
+    right: 0;
+    z-index: 10000;
+    transform: translateX(83%); 
+}
+.header .icon-telphon{
+  background-color: var(--sk-black);
+  margin: 5px 0;
+  padding: 12px 35px 12px 10px;
+  cursor: pointer;
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.header .icon-whatsapp{
+  margin: 5px 0;
+  padding: 12px 35px 12px 10px;
+  cursor: pointer;
+  background-color: var(--sk-black);
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.header .icon-telphon:hover,.icon-whatsapp:hover{
+  transform: translateX(-83%);
+}
 /*
   * Desktop Navigation 
   */
