@@ -11,17 +11,17 @@ function Caroussel() {
     // let [counter, setCounter] = useState(1);
     // useLayoutEffect(()=>{
 
-    //     setInterval(() => {
+    //     let interval = setInterval(() => {
     //         let radio = document.getElementById('#radio');
             
     //         document.getElementById('radio' + counter ).checked = true;
-    //         counter++;
+    //         setCounter(counter++);
     //         if(counter > 4){
     //             counter = 1;
     //         }
-    //     }, 5000);
+    //     }, 2000);
 
-    //     return clearInterval(setInterval);
+    //     return clearInterval(interval);
 
     // },[])
     
