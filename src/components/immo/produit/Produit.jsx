@@ -1,5 +1,6 @@
 import React,{ useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import { FiHeart } from 'react-icons/fi'
 
 import './produit.css'
 import img4 from './assets/fot4.jpg'
@@ -29,12 +30,12 @@ function Produit() {
                         <div className="col px-5 mt-md-2 tex-3">{appart.capacite}</div>
                         <div className="col px-5 tex-4">{appart.ajout}</div>    
                         <div className="col px-3   tex-2">{appart.titre}</div>
-                        <div className="col px-4 tex-6">coeur</div>
+                        <div className="col px-4 tex-6"><FiHeart /></div>
                     </div>
                     <div className="col-12 d-none d-md-block col-md-3 ">
                         <div className="col tex-7">{appart.prix}</div>    
                         <div className="col tex-5">
-                            <button  className="btn btn-outline-success"
+                            <button  className="btn btn-lg btn-outline-success"
                                      onClick={()=>history.push('/ProduitDetail')}    
                             >     
                                 voir plus

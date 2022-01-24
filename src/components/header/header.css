@@ -97,14 +97,14 @@
   margin: 5px 0;
   padding: 12px 35px 12px 10px;
   cursor: pointer;
-  transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+  transition: 0.5s all ease;
 }
 .header .icon-whatsapp{
   margin: 5px 0;
   padding: 12px 35px 12px 10px;
   cursor: pointer;
   background-color: var(--sk-black);
-  transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+  transition: 0.5s all ease;
 }
 .header .icon-telphon:hover,.icon-whatsapp:hover{
   transform: translateX(-83%);
