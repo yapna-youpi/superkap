@@ -61,7 +61,7 @@ function Header() {
 
                     </nav>
                     <div className="icon-contact d-none d-md-block">
-                        <a href="https://api.whatsapp.com/send?phone=237698215858"><div className="icon-telphon"><i className="icone" > <RiWhatsappFill /></i> &nbsp;:&nbsp; 698 - 21 - 58 - 58</div></a>
+                        <a href="https://api.whatsapp.com/send?phone=237698215858"><div className="icon-whatsapp"><i className="icone" > <RiWhatsappFill /></i> &nbsp;:&nbsp; 698 - 21 - 58 - 58</div></a>
                         <a href="tel:+237698215858"><div className="icon-whatsapp"><i className='icone'> <BsTelephoneOutboundFill /></i> &nbsp;:&nbsp; 698 - 21 - 58 - 58</div></a>
                     </div>
 

@@ -25,10 +25,14 @@ function Footer() {
                                 </p>
                                 <div className="social-links mt-3">
                                     <a href="#" className="twitter"><i><RiTwitterFill /></i></a>
-                                    <a href="#" className="facebook"><i><RiFacebookFill/></i></a>
+                                    <a href="https://www.facebook.com/Superkap-102254418642682" className="facebook">
+                                        <i><RiFacebookFill/></i>
+                                    </a>
                                     <a href="#" className="instagram"><i><RiInstagramFill /></i></a>
-                                    <a href="#" className="google-plus"><i><RiWhatsappFill /></i></a>
-                                    <a href="#" className="linkedin"><i><RiLinkedinFill /></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=237698215858" className="whatsapp">
+                                        <i><RiWhatsappFill /></i>
+                                    </a>
+                                    <a href="#" className="telegramm"><i><RiLinkedinFill /></i></a>
                                 </div>
                             </div>
                         </div>
