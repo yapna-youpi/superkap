@@ -44,11 +44,11 @@ function Header() {
                     <nav id="navbar" className="navbar ">
                         <ul>
                             <li><Link className="nav-link scrollto "  to="/">ACCEUIL</Link></li>
-                            <li><Link className="nav-link scrollto" to="/Business">Business</Link></li>
-                            <li><Link className="nav-link scrollto" to="/Crypto">Superkap Crypto</Link></li>
-                            <li><Link className="nav-link scrollto " to="/Immo">Immobilier</Link></li>
-                            <li><Link className="nav-link scrollto" to="/Academy">Academie</Link></li>
-                            <li className="dropdown"><Link><span style={{textDecoration: 0}}>Inscription</span> <i className="bi bi-chevron-down"></i></Link>
+                            <li><Link className="nav-link scrollto" to="/Business">BUSINESS</Link></li>
+                            <li><Link className="nav-link scrollto" to="/Crypto">SUPERKAP CRYPTO</Link></li>
+                            <li><Link className="nav-link scrollto " to="/Immo">IMMOBILIER</Link></li>
+                            <li><Link className="nav-link scrollto" to="/Academy">ACADEMIE</Link></li>
+                            <li className="dropdown"><Link><span style={{textDecoration: 0}}>COMPTE</span> <i className="bi bi-chevron-down"></i></Link>
                                 <ul className='text-center list-open'>
                                     <Link to="/SignUp" className='="list'><li><FaUserCircle  />&nbsp;  Inscription</li></Link>
                                     <Link to="/Login" className='="list'><li><IoMdLogIn  />&nbsp; Connexion</li></Link>
@@ -56,12 +56,12 @@ function Header() {
                                     <Link to="/CreditCrypto" className='="list'><li>Achat Carte Visa Crypto</li></Link>
                                 </ul>
                             </li>
-                            <li><Link to="/Help">Support</Link></li>
+                            <li><Link to="/Help">SUPPORT</Link></li>
                         </ul>
 
                     </nav>
                     <div className="icon-contact d-none d-md-block">
-                        <a href="https://api.whatsapp.com/send?phone=237698215858"><div className="icon-telphon"><i className="icone" > <RiWhatsappFill /></i> &nbsp;:&nbsp; 698 - 21 - 58 - 58</div></a>
+                        <a href="https://api.whatsapp.com/send?phone=237698215858"><div className="icon-whatsapp"><i className="icone" > <RiWhatsappFill /></i> &nbsp;:&nbsp; 698 - 21 - 58 - 58</div></a>
                         <a href="tel:+237698215858"><div className="icon-whatsapp"><i className='icone'> <BsTelephoneOutboundFill /></i> &nbsp;:&nbsp; 698 - 21 - 58 - 58</div></a>
                     </div>
 

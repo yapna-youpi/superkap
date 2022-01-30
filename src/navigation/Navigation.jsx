@@ -15,6 +15,7 @@ import Sell from '../components/sell/Sell'
 import Footer from '../components/footer/Footer'
 import Credit from '../components/credit/Credit'
 import CreditCrypto from '../components/creditCrypto/CreditCrypto'
+import ProduitDetail from '../components/immo/produitDetail/ProduitDetail.jsx'
 
 function Navigation() {
    
@@ -35,6 +36,7 @@ function Navigation() {
                     <Route exact path='/Help'  component={Help} />
                     <Route exact path='/Credit'  component={Credit} />
                     <Route exact path='/CreditCrypto'  component={CreditCrypto} />
+                    <Route exact path='/ProduitDetail'  component={ProduitDetail} />
                     <Route exact path='/Help'  component={Help} />
                     <Redirect to="/" />
                 </Switch>
