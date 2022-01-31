@@ -1,0 +1,95 @@
+.immo-home {
+  padding: 0px;
+}
+.immo-home h1 {
+  text-align: center;
+  font-weight: bold;
+}
+.immo-home .brand {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  background-image: url("../../assets/banner3.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  margin-top: 60px;
+}
+.immo-home .brand {
+    color: var(--sk-orange);
+}
+.immo-home .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+}
+.immo-home .search input {
+    height: 40px;
+    width: 60vw;
+    padding: 0px 2%;
+    background-color: rgba(255, 255, 255, 0.472);
+    border-radius: 10px 0px 0px 10px;
+    border: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-align: center;
+    outline: none;
+    color: var(--sk-orange);
+}
+.immo-home .search input::placeholder {
+    color: var(--sk-orange);
+    font-weight: 500;
+}
+.immo-home .search button {
+    height: 40px;
+    padding: 0px 5%;
+    background-color: var(--sk-greenLight);
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+}
+.immo-home .brand h4 {
+    text-align: center;
+}
+.immo-home .cats-container {
+    width: 80%;
+    margin: 60px auto;
+    padding: 2%;
+    background-color: rgb(243, 243, 243);
+}
+.immo-home .cats {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+.immo-home .cat {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    background-color: rgb(236, 236, 236);
+    background-size: cover;
+    border-radius: 10px;
+}
+.immo-home .cat:hover {
+    cursor: pointer;
+}
+.immo-home .cat h2 {
+    width: 100%;
+    background-color: rgba(146, 146, 146, 0.603);
+    text-align: center;
+    color: white;
+}
+
+.apparts {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
