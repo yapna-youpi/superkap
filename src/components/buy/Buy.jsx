@@ -10,7 +10,7 @@ function Buy() {
     const [loader,setLoader] = useState(false);
 
     const [state, setState]=useState({amount: "", fees: "", crypto: "Bitcoin", payment: "CB", wallet: "", numAccount: "", names: "", phone: ""})
-    const [transaction, setTransaction]=useState(null)
+    const [transaction, setTransaction]=useState(true)
 
     const handleChange=(target)=>{
         setState({...state, [target.name]: target.value})
@@ -57,7 +57,7 @@ function Buy() {
                     <div className="row">
                         <center>
                         <div className="col-md-8 bg-white p-5 m-5" >
-                            <h2>votre operation a ete enregistree vous serez contactez sous peu</h2>
+                            <h2>votre operation a ete enregistree vous serez contacte sous peu</h2>
                             <h4>votre identifiant de transaction est le {transaction.id}</h4>
                         </div>
                         </center>

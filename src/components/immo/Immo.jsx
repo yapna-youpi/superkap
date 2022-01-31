@@ -9,6 +9,9 @@ import img3 from './assets/fot3.jpg'
 import img4 from './assets/fot4.jpg'
 import { useState } from 'react'
 
+import Home from '../immo2/views/home/Home'
+import Details from '../immo2/views/details/Details'
+
 // const stock = {
 //    lig1: ["./assets/fot1.jpg", "Logement entier : Appartement ⋅ nilon bastos", "LA CAVA pour deux personnes", "deux chambres - salon - cuisine - douche","wifi gratuit - parking - lave linge", "70000 f/moi"],
 //    lig2: ["./assets/fot2.jpg", "Logement entier : Studio ⋅ tsinga ecole de police", "Le STUDIO pour deux personnes", "chambre - salon - cuisine - douche","wifi gratuit - lave linge", "35000 f/moi"],
@@ -109,8 +112,8 @@ function Immo() {
                         </div>
                     </section>
             </div>
-
         </div>
+        
     )
 }
 

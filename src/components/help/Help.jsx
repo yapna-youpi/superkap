@@ -2,7 +2,7 @@ import React from 'react'
 import { MdLocationPin } from 'react-icons/md' 
 import { BsTelephoneFill } from 'react-icons/bs' 
 import { HiMail } from 'react-icons/hi' 
-import Mape from './Map.jsx'
+// import Mape from './Map.jsx'
 
 
 import './help.css'
@@ -78,7 +78,7 @@ function Help() {
                 
                 <div className="col-11 col-md-5 mx-auto d-none d-md-block mt-sm-5 help-right">
                     <div className="map">
-                        <Mape />
+                        {/* <Mape /> */}
                     </div>
                 </div>
 

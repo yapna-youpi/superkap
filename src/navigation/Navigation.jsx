@@ -18,6 +18,9 @@ import CreditCrypto from '../components/creditCrypto/CreditCrypto'
 import Card from '../components/card/Card'
 import ProduitDetail from '../components/immo/produitDetail/ProduitDetail.jsx'
 
+import Home2 from '../components/immo2/views/home/Home'
+import Details from '../components/immo2/views/details/Details'
+
 function Navigation() {
    
     return (
@@ -39,6 +42,8 @@ function Navigation() {
                     <Route exact path='/CreditCrypto'  component={CreditCrypto} />
                     <Route exact path='/ProduitDetail'  component={ProduitDetail} />
                     <Route exact path='/Help'  component={Help} />
+                    <Route exact path='/immo2'  component={Home2} />
+                    <Route exact path='/immo2/details2'  component={Details} />
                     <Redirect to="/" />
                 </Switch>
                 <Footer />
