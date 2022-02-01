@@ -17,7 +17,7 @@ import Credit from '../components/credit/Credit'
 import CreditCrypto from '../components/creditCrypto/CreditCrypto'
 import Card from '../components/card/Card'
 import ProduitDetail from '../components/immo/produitDetail/ProduitDetail.jsx'
-
+import FormulaireC from '../components/formulaires/view/FormulaireC'
 import Home2 from '../components/immo2/views/home/Home'
 import Details from '../components/immo2/views/details/Details'
 
@@ -44,6 +44,7 @@ function Navigation() {
                     <Route exact path='/Help'  component={Help} />
                     <Route exact path='/immo2'  component={Home2} />
                     <Route exact path='/immo2/details2'  component={Details} />
+                    <Route exact path='/FormulaireC'  component={FormulaireC} />
                     <Redirect to="/" />
                 </Switch>
                 <Footer />

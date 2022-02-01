@@ -32,7 +32,7 @@ function Home() {
                     <input type="text" placeholder='Trouvez un bien immobilier'/>
                     <button>Rechercher</button>
                 </div>
-                <h4>1,525,363 annonces immobilières au Cameroun sur le grand site Superkap !</h4>
+                <h6>1,525,363 annonces immobilières au Cameroun sur le grand site Superkap !</h6>
             </div>
             <div className="cats-container">
                 <div className="">

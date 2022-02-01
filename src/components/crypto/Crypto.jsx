@@ -126,7 +126,7 @@ function Crypto() {
                          bitcoin (BTC) vers votre devise locale (fiat) et vice versa.
                     </p>
                         <div className='btn-credit'>
-                            <h1 onClick={()=>history.push('/Credit')} className='btn btn-lg credit-title mt-5'>Achat Carte de Credit</h1>
+                            <h1 onClick={()=>history.push('/Card')} className='btn btn-lg credit-title mt-5'>Achat Carte de Credit</h1>
                         </div> 
                 </div>
             </div>

@@ -106,7 +106,7 @@ function Sell() {
 
 
                 <div className=" col-md-12 col-lg-6  main-w3layouts wrapper">
-                    <div className="main-agileinfo">
+                    <div className="main-sell">
                         <div className="agileits-top">
                             {/* <form action="#" method="post" className='form-group' onSubmit={(e)=>handleSubmit(e)} > */}
                                 {/* <div class="form-group mb-3">

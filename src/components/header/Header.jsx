@@ -46,7 +46,7 @@ function Header() {
                             <li><Link className="nav-link scrollto "  to="/">ACCEUIL</Link></li>
                             <li><Link className="nav-link scrollto" to="/Business">BUSINESS</Link></li>
                             <li><Link className="nav-link scrollto" to="/Crypto">SUPERKAP CRYPTO</Link></li>
-                            <li><Link className="nav-link scrollto " to="/Immo">IMMOBILIER</Link></li>
+                            <li><Link className="nav-link scrollto " to="/Immo2">IMMOBILIER</Link></li>
                             <li><Link className="nav-link scrollto" to="/Academy">ACADEMIE</Link></li>
                             <li className="dropdown"><Link><span style={{textDecoration: 0}}>COMPTE</span> <i className="bi bi-chevron-down"></i></Link>
                                 <ul className='text-center list-open'>
@@ -78,7 +78,7 @@ function Header() {
                     <div><div onClick={()=>navLink("/")}  className="col-12 lien">Acceuil</div></div>
                     <div><div onClick={()=>navLink("/Business")}  className="col-12 lien">Business</div></div>
                     <div><div onClick={()=>navLink("/Crypto")}  className="col-12 lien">Superkap crypto</div></div>
-                    <div><div onClick={()=>navLink("/Immo")}  className="col-12 lien">Immobilier</div></div>
+                    <div><div onClick={()=>navLink("/Immo2")}  className="col-12 lien">Immobilier</div></div>
                     <div><div onClick={()=>navLink("/Academy")}  className="col-12 lien">Academie</div></div>
                     <div><div className="col-12 lien"><i className="bi bi-person-circle"></i> &nbsp; User</div></div>
                         <div><div onClick={()=>navLink("/Login")} className='liste'>Connexion</div></div>
