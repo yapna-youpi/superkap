@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { RiFacebookFill,RiTwitterFill } from 'react-icons/ri'
 import { useHistory } from 'react-router-dom'
-import styles from './signup.css'
+import './signup.css'
 
 function Signup() {
 	const [state, setState]=useState({name: "", email: "", password: "", confirm: ""})

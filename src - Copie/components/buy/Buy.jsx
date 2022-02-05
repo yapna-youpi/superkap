@@ -10,7 +10,7 @@ function Buy() {
     const [loader,setLoader] = useState(false);
 
     const [state, setState]=useState({amount: "", fees: "", crypto: "Bitcoin", payment: "CB", wallet: "", numAccount: "", names: "", phone: ""})
-    const [transaction, setTransaction]=useState(null)
+    const [transaction, setTransaction]=useState(false)
 
     const handleChange=(target)=>{
         setState({...state, [target.name]: target.value})
@@ -48,6 +48,12 @@ function Buy() {
         return false
     }
 
+    const Loader = () => (
+        <div className="loader" style={{textAlign:'center',padding:'0 auto'}}>
+            <p style={{textAlign:'center'}}><ReactLoading type="spin" center={true} color="#ffffff" height={25} width={25}/></p>
+        </div>
+    )
+
     console.log(state)
     return (
         <div className='buy container-fluid'>
@@ -57,15 +63,15 @@ function Buy() {
                     <div className="row">
                         <center>
                         <div className="col-md-8 bg-white p-5 m-5" >
-                            <h2>votre operation a ete enregistree vous serez contactez sous peu</h2>
+                            <h2>votre operation a ete enregistree vous serez contacte sous peu</h2>
                             <h4>votre identifiant de transaction est le {transaction.id}</h4>
                         </div>
                         </center>
                     </div>):(
-            <div className="row d-sm-flex flex-column-reverse flex-lg-row MX-5">
-                <form action="#" method="post" className='form-group' onSubmit={(e)=>handleSubmit(e)} >
-                <div className="col-md-12 col-lg-6 d-lg-inline-block main-w3layouts wrapper">
-                    <div className="main-agileinfo2">
+            <div className="row d-sm-flex flex-column-reverse flex-lg-row ">
+                <form action="#" method="post" className='d-sm-block d-lg-flex  form-group' onSubmit={(e)=>handleSubmit(e)} >
+                <div className="col-md-12 col-lg-6  main-w3layouts wrapper">
+                    <div className="main-buy">
                         <div className="agileits-top">
                                 <div className="form-group my-4">
                                     <label className='label' for="select">Mode de paiement</label>
@@ -77,13 +83,15 @@ function Buy() {
                                         <option value="CBSK">Carte Visa Crypto SuperKap</option>  
                                     </select>
                                 </div>
+
                                 <div className="form-group my-4">
                                     <label className='label' for="select">Choix de la crypto</label>
                                     <select class="form-select" name="crypto" aria-label="Default select example" onChange={(e)=>handleChange(e.target)}>
-                                        <option value="Bitcoin" selected>Bitcoin</option>
-                                        <option value="Usdt">USDT (TRC20)</option>
-                                        <option value="Ep">Euro payeer</option>
-                                        <option value="Theter">Theter </option>
+                                        <option value="Bitcoin" selected>USDT (TRC20)</option>
+                                        <option value="Usdt">SOLANA</option>
+                                        <option value="Ep">LTC (Litecoin)</option>
+                                        <option value="Theter">PAYEER </option>
+                                        <option value="autre">Autres Contacter le support </option>
                                     </select>
                                 </div>
                                 <div class="form-group mb-3">
@@ -110,26 +118,10 @@ function Buy() {
                         </div>
                     </div>
                 </div>
-                <div className=" col-md-12 col-lg-6 d-lg-inline-block main-w3layouts wrapper">
-                    <div className="main-agileinfo">
-                        <div className="agileits-top">
-                            {/* <form action="#" method="post" className='form-group' onSubmit={(e)=>handleSubmit(e)} > */}
-                                {/* <div class="form-group mb-3">
-                                    <label class="label" for="name">J'ai besoin de </label>
-                                    <input type="number" name="amount" class="form-control input-buy" placeholder="montant correspondant a la quandite de btc" required onChange={(e)=>handleChange(e.target)} />
-                                </div> */}
-                                {/* <div className="row">
-                                    <div className="col-6">Montant net en CFA</div>
-                                    <div className="col-6">Montant net en devise crypto</div>
-                                </div>
-                                <div className="input-group">
-                                    <input type="text" className="form-control" placeholder='montant net' required/>
-                                    <div className="input-group-prepend">
-                                        <span className="input-group-text">-</span>
-                                    </div> 
-                                    <input type="text" className="form-control" placeholder='devise net' required/>
-                                </div> */}
-                                <div class="form-group mb-3">
+                <div className=" col-md-12 col-lg-6 main-w3layouts wrapper">
+                    <div className="main-buy">
+                        <div className="agileits-top ">
+                                <div class="form-group mb-3 pt-2">
                                     <label class="label" for="name">Montant a envoyer en XAF : </label>
                                     <input type="tel" name="phone" class="form-control input-buy" placeholder="Telephone"
                                         disabled value={Math.floor(state.amount*1.1*550)} />
@@ -156,7 +148,7 @@ function Buy() {
                                     <div className="clear"> </div>
                                 </div>
                                 <button className='btn-buy'>
-                                    { loader? <reactLoading type="spin" color="#ffffff" width="45px" height="45px" /> 
+                                    { loader? <Loader /> 
                                             : 'BUY'}
                                 </button>
                             <p>Don't have an Account? <a href="#"> Login Now!</a></p>

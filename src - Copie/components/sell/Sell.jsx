@@ -1,9 +1,17 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import ReactLoading from 'react-loading'
 
 import './sell.css'
 
 function Sell() {
+
+    const Loader = () => (
+        <div className="loader" style={{textAlign:'center',padding:'0 auto'}}>
+            <p style={{textAlign:'center'}}><ReactLoading type="spin" center={true} color="#ffffff" height={25} width={25}/></p>
+        </div>
+    )
+    const [loader,setLoader] = useState(false);
 
     const [state, setState]=useState({amount: "", fees: "", crypto: "Bitcoin", payment: "CB", wallet: "", numAccount: "", names: "", phone: ""})
     const [transaction, setTransaction]=useState(null)
@@ -56,18 +64,27 @@ function Sell() {
                         </center>
                     </div>):(
             <div className="row d-sm-flex flex-column-reverse flex-lg-row ">
-                <form action="#" method="post" className='form-group' onSubmit={(e)=>handleSubmit(e)} >
-                <div className="col-md-12 col-lg-6 d-lg-inline-block main-w3layouts wrapper">
+                <form action="#" method="post" className='d-sm-block d-lg-flex  form-group' onSubmit={(e)=>handleSubmit(e)} >
+                <div className="col-md-12 col-lg-6 main-w3layouts wrapper">
                     <div className="main-agileinfo2">
                         <div className="agileits-top">
                                 <div className="form-group my-4">
                                     <label className='label' for="select">Choix de la crypto</label>
                                     <select class="form-select" name="crypto" aria-label="Default select example" onChange={(e)=>handleChange(e.target)}>
-                                        <option value="Bitcoin" selected>Bitcoin</option>
-                                        <option value="Usdt">USDT (TRC20)</option>
-                                        <option value="Ep">Euro payeer</option>
-                                        <option value="Theter">Theter </option>
+                                        <option value="Bitcoin" selected>USDT (TRC20)</option>
+                                        <option value="Usdt">SOLANA</option>
+                                        <option value="Ep">LTC (Litecoin)</option>
+                                        <option value="Theter">PAYEER </option>
+                                        <option value="autre">Autres Contacter le support </option>
                                     </select>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="name">Montant à Vendre: </label>
+                                    <input type="number" name="amount" class="form-control input-buy" placeholder="montant crypto en $" required onChange={(e)=>handleChange(e.target)} />
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="name">Adresse de réception Superkap </label>
+                                    <input type="text"  name="wallet" class="form-control input-buy" placeholder="Entrez l'adresse de votre wallet" required onChange={(e)=>handleChange(e.target)}  disabled={true} />
                                 </div>
                                 <div className="form-group my-4">
                                     <label className='label' for="select">Mode de reception</label>
@@ -78,14 +95,6 @@ function Sell() {
                                         <option value="MTNF">MTN MOMO FLOAT CAMEROUN</option>
                                         <option value="CBSK">Carte Visa Crypto SuperKap</option>  
                                     </select>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label class="label" for="name">Je dispose de: </label>
-                                    <input type="number" name="amount" class="form-control input-buy" placeholder="montant crypto en $" required onChange={(e)=>handleChange(e.target)} />
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label class="label" for="name">Adresse wallet</label>
-                                    <input type="text"  name="wallet" class="form-control input-buy" placeholder="Entrez l'adresse de votre wallet" required onChange={(e)=>handleChange(e.target)}/>
                                 </div>
                                 {
                                     (state.payment.indexOf("CB")+1) ? (
@@ -105,25 +114,9 @@ function Sell() {
                 </div>
 
 
-                <div className=" col-md-12 col-lg-6 d-lg-inline-block main-w3layouts wrapper">
-                    <div className="main-agileinfo">
+                <div className=" col-md-12 col-lg-6  main-w3layouts wrapper">
+                    <div className="main-sell">
                         <div className="agileits-top">
-                            {/* <form action="#" method="post" className='form-group' onSubmit={(e)=>handleSubmit(e)} > */}
-                                {/* <div class="form-group mb-3">
-                                    <label class="label" for="name">Adresse du dépot </label>
-                                    <input type="number" name="amount" class="form-control input-sell" placeholder="montant correspondant a la quandite de btc" required onChange={(e)=>handleChange(e.target)} />
-                                </div> */}
-                                {/* <div className="row">
-                                    <div className="col-6">Montant net en CFA</div>
-                                    <div className="col-6">Montant net en devise crypto</div>
-                                </div>
-                                <div className="input-group">
-                                    <input type="text" className="form-control" placeholder='montant net' required/>
-                                    <div className="input-group-prepend">
-                                        <span className="input-group-text">-</span>
-                                    </div> 
-                                    <input type="text" className="form-control" placeholder='devise net' required/>
-                                </div> */}
                                 <div class="form-group mb-3">
                                     <label class="label" for="name">Montant a recevoir en XAF : </label>
                                     <input type="tel" name="phone" class="form-control input-buy" placeholder="Telephone"
@@ -150,7 +143,10 @@ function Sell() {
                                     </label>
                                     <div className="clear"> </div>
                                 </div>
-                                <button className='btn-sell'>sell</button>
+                                <button className='btn-sell'>
+                                    { loader? <Loader /> 
+                                            : 'sell'}
+                                </button>
                             <p>Don't have an Account? <a href="#"> Login Now!</a></p>
                         </div>
                         </div>

@@ -222,7 +222,9 @@
     .crypto .target .btn:hover{
         transform:translateY(-4px);
     }
-
+    .crypto .btn-crypto{
+        margin: 5px 12px ;
+    }
     .crypto .partners .partner-container img{
         margin: 0px 80px 10px 80px;
         width: 120px;

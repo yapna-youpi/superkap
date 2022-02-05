@@ -1,0 +1,93 @@
+.caroussel{
+    height: 50vh;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.caroussel .slider{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.caroussel .slides{
+    width: 500%;
+    height: 400px;
+    display: flex;
+}
+.caroussel .slides input{
+display: none;
+}
+.caroussel .slide{
+    width: 20%;
+    transition: 2s;
+}
+.caroussel .slide img{
+    width: 100%;
+    height: 500px;
+}
+ 
+/*---manual navigation--*/
+.caroussel .navigation-manual{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    margin-top: 350px;
+    justify-content: center;
+}
+.caroussel .navigation-manual .manual-btn{
+    border: 2px solid yellowgreen;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.caroussel .manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.caroussel .manual-btn:hover{
+    background-color: yellowgreen;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+.caroussel .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 350px;
+}
+.caroussel .navigation-auto div{
+    border: 2px solid yellowgreen;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.caroussel .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: yellowgreen;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: yellowgreen;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: yellowgreen;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: yellowgreen;
+}
+

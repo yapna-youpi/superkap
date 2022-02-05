@@ -1,0 +1,16 @@
+#business .tex-title{
+    font-weight: bold!important;
+    color: var(--sk-orange);
+}
+.tex{
+    color: var(--sk-green);
+    font-weight: bold;
+}
+.btn-command{
+    background-color: var(--sk-orange)!important;
+    margin: 12px 0;
+}
+.image-busi{
+    width: 70%;
+    cursor: pointer;
+}
