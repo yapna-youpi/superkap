@@ -63,7 +63,7 @@ export default function BasicTabs() {
     image: ordi1
   }
   const Modalite4 = {
-    titre: 'Telphone samsung s7 edge',
+    titre: 'Telephone samsung S21 ultra',
     prix: '9000.00 XAF ou 35 Ussd',
     image: tel1
   }

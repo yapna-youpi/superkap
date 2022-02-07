@@ -67,4 +67,7 @@
     .appart-details .price {
         padding-right: 0px;
     }
+    .img-detail:hover{
+        filter: contrast(0.7);
+    }
 }

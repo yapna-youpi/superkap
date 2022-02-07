@@ -26,7 +26,7 @@ function BusinessDetail() {
                                 <p style={{fontSize:'15px'}}>vous remarquez que nos produits apres commande ne sont ni repris , ni échangés.</p>
                             </div>
                             <button  className="btn btn-lg btn-secondary my-5 mx-auto d-block"
-                                     onClick={()=>history.push('/#')}    
+                                     onClick={()=>history.push('/FormulaireC')}    
                             >     
                                 Contacter le fournisseur
                             </button>

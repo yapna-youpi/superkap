@@ -20,6 +20,8 @@
 }
 #header .list-open{
   display: block;
+  border-radius: 15px;
+  background-color: honeydew;
 } 
 .header .mobile-nav-toggle{
   display: block;
