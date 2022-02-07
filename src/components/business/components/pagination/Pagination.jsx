@@ -6,10 +6,11 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 
 import Card from '../card/Card'
-import busi1 from '../../assets/images/tof3.jpg'
-import busi2 from '../../assets/images/tof8.jpg'
 import busi3 from '../../assets/images/tof9.jpg'
-import busi4 from '../../assets/images/tof2.jpg'
+import null1 from '../../assets/modes/tof1.jpg'
+import ordi1 from '../../assets/informatique/tof6.jpg'
+import tel1 from '../../assets/informatique/tof9.jpg'
+import chauss1 from '../../assets/chaussures/tof7.jpg'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -47,24 +48,29 @@ function a11yProps(index) {
 export default function BasicTabs() {
 
   const Modalite1 = {
-    titre: 'Chaine de venise',
+    titre: 'Veste de venise',
     prix: '5000.00 XAF ou 15 Ussd',
-    image: busi1
-  }
-  const Modalite2 = {
-    titre: 'chemise pachini',
-    prix: '7000.00 XAF ou 25 Ussd',
-    image: busi2
-  }
-  const Modalite3 = {
-    titre: 'Chaine de venise',
-    prix: '12000.00 XAF ou 50 Ussd',
     image: busi3
   }
+  const Modalite2 = {
+    titre: 'Parfum pachini',
+    prix: '7000.00 XAF ou 25 Ussd',
+    image: null1
+  }
+  const Modalite3 = {
+    titre: 'Laptop core-i7',
+    prix: '12000.00 XAF ou 50 Ussd',
+    image: ordi1
+  }
   const Modalite4 = {
-    titre: 'Chaine de venise',
+    titre: 'Telphone samsung s7 edge',
     prix: '9000.00 XAF ou 35 Ussd',
-    image: busi4
+    image: tel1
+  }
+  const Modalite5 = {
+    titre: 'Chaussure dain bleu nuit',
+    prix: '4000.00 XAF ou 10 Ussd',
+    image: chauss1
   }
 
 
@@ -81,24 +87,23 @@ export default function BasicTabs() {
               onChange={handleChange}
               scrollButtons
               allowScrollButtonsMobile>
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
-          <Tab label="Item Three" {...a11yProps(3)} />
-          <Tab label="Item Three" {...a11yProps(4)} />
-          <Tab label="Item Three" {...a11yProps(5)} />
-          <Tab label="Item Three" {...a11yProps(6)} />
-          <Tab label="Item Three" {...a11yProps(7)} />
-          <Tab label="Item Three" {...a11yProps(8)} />
-          <Tab label="Item Three" {...a11yProps(9)} />
-          <Tab label="Item Three" {...a11yProps(10)} />
+          <Tab label="Vêtements" {...a11yProps(0)} />
+          <Tab label="Beauté" {...a11yProps(1)} />
+          <Tab label="informatique" {...a11yProps(2)} />
+          <Tab label="Télephones" {...a11yProps(3)} />
+          <Tab label="Chaussures" {...a11yProps(4)} />
+          <Tab label="Voitures" {...a11yProps(5)} />
+          <Tab label="Accessoires" {...a11yProps(6)} />
+          <Tab label="Loisirs" {...a11yProps(7)} />
+          <Tab label="Meubles" {...a11yProps(8)} />
+          <Tab label="Pieces détachés" {...a11yProps(9)} />
         </Tabs>
       </Box>
 
         <TabPanel value={value} index={0}>
-          <Card name={"Produits de Beauté"} Modalite={Modalite1}/>
-          <Card name={"Produits de Beauté"} Modalite={Modalite1}/>
-          <Card name={"Produits de Beauté"} Modalite={Modalite1}/>
+          <Card name={"Nouveaux Vêtements"} Modalite={Modalite1}/>
+          <Card name={"Nouveaux Vêtements"} Modalite={Modalite1}/>
+          <Card name={"Nouveaux Vêtements"} Modalite={Modalite1}/>
         </TabPanel>
 
         <TabPanel value={value} index={1}>
@@ -107,18 +112,20 @@ export default function BasicTabs() {
         </TabPanel>
 
         <TabPanel value={value} index={2}>
-          <Card name={"Produits de Maion"} Modalite={Modalite3}/>
-          <Card name={"Produits de Maion"} Modalite={Modalite3}/>
-          <Card name={"Produits de Maion"} Modalite={Modalite3}/>
+          <Card name={"Laptop octa-core"} Modalite={Modalite3}/>
+          <Card name={"Laptop octa-core"} Modalite={Modalite3}/>
+          <Card name={"Laptop octa-core"} Modalite={Modalite3}/>
         </TabPanel>
 
         <TabPanel value={value} index={3}>
-          <Card name={"produits d'entretien"} Modalite={Modalite4}/>
-          <Card name={"produits d'entretien"} Modalite={Modalite4}/>
+          <Card name={"Telephones d'origines"} Modalite={Modalite4}/>
+          <Card name={"Telephones d'origines"} Modalite={Modalite4}/>
         </TabPanel>
 
         <TabPanel value={value} index={4}>
-          Item Three
+        <Card name={"Chaussures de Marques"} Modalite={Modalite5}/>
+        <Card name={"Chaussures de Marques"} Modalite={Modalite5}/>
+        <Card name={"Chaussures de Marques"} Modalite={Modalite5}/>
         </TabPanel>
 
         <TabPanel value={value} index={5}>
@@ -132,17 +139,13 @@ export default function BasicTabs() {
         <TabPanel value={value} index={7}>
           Item Three
         </TabPanel>
-
+        
         <TabPanel value={value} index={8}>
           Item Three
         </TabPanel>
-
+        
         <TabPanel value={value} index={9}>
           Item Three
-        </TabPanel>
-
-        <TabPanel value={value} index={10}>
-          Item 11
         </TabPanel>
 
     </Box>

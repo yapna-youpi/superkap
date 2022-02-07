@@ -43,7 +43,7 @@ function Home() {
                <Services />
                <Maison />
                <Card name={"Nouveaux produits"} Modalite={Modalite3} />
-               <h6 onClick={()=>history.push('/BusinessDetail')} className='btn btn-lg bg-info d-block mx-auto my-3 w-50'>Voir Plus de Produits</h6>
+               <h6 onClick={()=>history.push('/Business')} className='btn btn-lg bg-info d-block mx-auto my-5 w-50'>Voir Plus de Produits</h6>
                <Formation />
                 
             
