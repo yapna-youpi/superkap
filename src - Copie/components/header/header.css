@@ -1,0 +1,272 @@
+
+#header {
+  height: 70px;
+  transition: all 0.5s;
+  z-index: 2000;
+  background: #000;
+}
+#header .logo {
+  display: flex;
+  align-items: center;
+  color: var(--sk-orange);
+}
+#header .logo h1 a{
+  margin: auto 0;
+  color: var(--sk-orange);
+  text-decoration: none;
+}
+#header ul {
+    display: none;
+}
+#header .list-open{
+  display: block;
+} 
+.header .mobile-nav-toggle{
+  display: block;
+    position: fixed;
+    color: white;
+    font-size: 30px;
+    right: 7%;
+    z-index: 2000;
+    top: 12px;
+} 
+#header .logo{
+  width: 100px;
+}
+#header .dropdown-toggle::after {
+  display: none!important;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+}
+.header .nav-mobile{
+  position: fixed;
+  z-index: 1500;
+  padding: 70px 0;
+  width: 100%!important;
+  background-color: #062822!important;
+  border-radius: 4px;
+  right: 500%;
+  top: 0;
+  transition: 2s;
+}
+.mobile-nav-visible{
+  right: initial!important;
+  transition: 4s;
+}
+.header .lien{
+  padding: 11px 0;
+  text-align: center;
+  font-size: 22px;
+  text-decoration: none;
+  color: var(--sk-white);
+  font-weight: bold;
+  border-top: 0.5px solid var(--sk-white);
+  border-bottom: 1px solid var(--sk-white);
+  text-decoration: none!important;
+}
+/* .header .lien:hover,.lien:focus{
+  background-color: gold;
+  color: var(--sk-black);
+  font-weight: bold;
+  text-decoration: none;
+} */
+.header .lien a{
+  color: var(--sk-white);
+  font-weight: bold;
+  text-decoration: none!important;
+}
+.header a:-webkit-any-link{
+  text-decoration: none!important;
+}
+.header .nav-mobile  .liste{
+  padding: 7px 5px;
+  text-align: center!important;
+  color: gold!important;
+}
+.header .icon-contact{
+    color: var(--sk-white);
+    position: absolute;
+    top: 350px;
+    right: 0;
+    z-index: 10000;
+    transform: translateX(83%); 
+}
+.header .icon-telphon{
+  background-color: var(--sk-black);
+  margin: 5px 0;
+  padding: 12px 35px 12px 10px;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+.header .icon-whatsapp{
+  margin: 5px 0;
+  padding: 12px 35px 12px 10px;
+  cursor: pointer;
+  background-color: var(--sk-black);
+  transition: 0.5s all ease;
+}
+.header .icon-telphon:hover,.icon-whatsapp:hover{
+  transform: translateX(-83%);
+}
+/*
+  * Desktop Navigation 
+  */
+@media only screen and (min-width: 768px) {
+
+  #header .navbar{
+    display: block;
+
+  }
+  #header ul {
+      display: flex;
+  }
+  .header .nav-mobile{
+    display: none!important;
+  }
+  .bi-list::before {
+    display: none!important;
+ }
+ .bi-x::before {
+  display: none!important;
+}
+  #header .logo{
+    width: 200px;
+    padding: 8px 2px 5px 2px;
+  }
+
+
+
+  #header {
+    height: 60px;
+  }
+  .navbar .dropdown ul {
+    left: -90%;
+  }
+  .navbar .dropdown .dropdown:hover > ul {
+    left: -100%;
+  }
+  .navbar ul .list{
+    font-size: 30px;
+  }
+  #header .navbar .dropdown .ul li{
+    color: var(--sk-green);
+  }
+  .navbar {
+    padding: 35px 0!important;
+  }
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  .navbar li {
+    position: relative;
+  }
+  .navbar > ul > li + li {
+    margin-left: 5px;
+  }
+  .navbar a, .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+  }
+  .navbar a i, .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+  .navbar > ul > li > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 3px;
+    left: 0;
+    background-color: var(--sk-orange);
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
+    visibility: visible;
+    width: 100%;
+  }
+  .navbar a:focus:before, .navbar li:focus > a:before, .navbar .active:before {
+    visibility: visible;
+    width: 100%;
+  }
+  .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+    color: #fff;
+  }
+  .navbar .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+  }
+  .navbar .dropdown ul li {
+    min-width: 200px;
+    color: var(--sk-green);
+  }
+  .navbar .dropdown ul li:hover {
+    min-width: 200px;
+    color: var(--sk-orange);
+  }
+  .navbar .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: none;
+    font-weight: 500;
+    color: #062822;
+  }
+  .navbar .dropdown ul a i {
+    font-size: 12px;
+  }
+  .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+    color: var(--sk-orange);
+  }
+  .navbar .dropdown:hover > ul {
+    opacity: 1;
+    visibility: visible;
+  }
+  .navbar .dropdown .dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+  }
+  .navbar .dropdown .dropdown:hover > ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+  }
+  .bi-chevron-down::before {
+    transform: translateY(4px)!important;
+  }
+}
+@media only screen and (min-width: 992px){
+  .navbar > ul > li + li {
+    margin-left: 30px;
+  }
+  .navbar a, .navbar a:focus {
+    font-size: 14px;
+  }
+}

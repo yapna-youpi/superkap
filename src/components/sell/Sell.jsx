@@ -25,8 +25,8 @@ function Sell() {
     const handleSubmit=(e)=>{
         e.preventDefault()
         setLoader(true)
-        // console.log("les data a envoyer ", state)
-        fetch("https://admin-superkap.herokuapp.com/transactions.json", {
+        console.log("les data a envoyer ", state)
+        fetch("https://superkap-admin.herokuapp.com/transactions.json", {
             "method": "POST",
             "headers": {
                 "Content-Type": "application/json"
@@ -40,7 +40,7 @@ function Sell() {
                 "numAccount": state.numAccount,
                 "adresse_crypto": state.wallet,
                 "type_transaction": "Achat",
-                "names": state.names,
+                "name": state.names,
                 "phone": state.phone
             })
         })
@@ -107,8 +107,10 @@ function Sell() {
                                     <input type="number" name="amount" class="form-control input-buy" placeholder="montant crypto en $" required onChange={(e)=>handleChange(e.target)} />
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label class="label" for="name">Adresse de réception Superkap </label>
-                                    <input type="text"  name="wallet" class="form-control input-buy" placeholder="Entrez l'adresse de votre wallet" required onChange={(e)=>handleChange(e.target)}  disabled={true} />
+                                    <label class="label" for="name">Wallet Superkap </label>
+                                    <input type="text"  name="wallet" class="form-control input-buy" value="bc1q0ycvf2jghqldrmq58zqqnehsv7j092s5zx32ls" required 
+                                        onChange={(e)=>handleChange(e.target)}  disabled={true} 
+                                    />
                                 </div>
                                 <div className="form-group my-4">
                                     <label className='label' htmlFor="select">Mode de paiement</label>
@@ -119,12 +121,12 @@ function Sell() {
                                 {
                                     (state.payment.indexOf("CB")+1) ? (
                                         <div class="form-group mb-3">
-                                            <label class="label" for="name">numero carte</label>
+                                            <label class="label" for="name">Numero carte</label>
                                             <input type="text"  name="numAccount" class="form-control input-buy" placeholder="numero de la carte bancaire"
                                                 required onChange={(e)=>handleChange(e.target)}/>
                                         </div>):(
                                 <div class="form-group mb-3">
-                                    <label class="label" for="name">numero de compte</label>
+                                    <label class="label" for="name">Numero de compte</label>
                                     <input type="text"  name="numAccount" class="form-control input-buy" placeholder="numero telephone du compte"
                                     required onChange={(e)=>handleChange(e.target)}/>
                                 </div>)
@@ -143,7 +145,7 @@ function Sell() {
                                         disabled value={Math.floor(state.amount*0.9*550)} />
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label class="label" for="name">frais en XAF : </label>
+                                    <label class="label" for="name">Frais en XAF : </label>
                                     <input type="tel" name="phone" class="form-control input-buy" placeholder="Telephone"
                                         disabled value={Math.floor(state.amount*0.1*550)} />
                                 </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactLoading from 'react-loading'
 
 import './home.css'
@@ -16,6 +16,17 @@ const Loader = () => (
 
 function Home() {
     const [loader, setLoader]=useState(false)
+    const [state, setState]=useState([{}])
+    useEffect(()=>{
+        fetch('https://superkap-admin.herokuapp.com/immobiliers.json')
+            .then(response=>response.json()).then(data=>{
+                console.log("the data ", data)
+                setState(data)
+            })
+            .catch(error=>{
+                console.log("une erreur est survenue ", error)
+            })
+    }, [])
 
     const load=()=>{
         setLoader(true)
@@ -23,7 +34,7 @@ function Home() {
             setLoader(false)
         }, 3000);
     }
-
+    console.log("the state ", state)
     return (
         <div className="immo-home">
             <div className="brand">
@@ -64,18 +75,16 @@ function Home() {
             <h1>Listes des immobiliers</h1>
             <div className="apparts">
                 { loader ? <Loader />:<>
-                    <AppartMin />
-                    <AppartMin />
-                    <AppartMin />
-                    <AppartMin />
-                    <AppartMin />
-                    <AppartMin />
-                    <AppartMin />
-                    <AppartMin />
-                    <AppartMin />
-                    <AppartMin />
-                    <AppartMin />
-                    <AppartMin />
+                    {
+                        state.map((appart, i)=><AppartMin data={appart} />)
+                    }
+                    <AppartMin data={state[0]} />
+                    <AppartMin data={state[0]} />
+                    <AppartMin data={state[0]} />
+                    <AppartMin data={state[0]} />
+                    <AppartMin data={state[0]} />
+                    <AppartMin data={state[0]} />
+                    <AppartMin data={state[0]} />
                 </>  }
 
             </div>
