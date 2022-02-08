@@ -27,8 +27,10 @@ function Buy() {
     const handleSubmit=(e)=>{
         console.log(state)
         e.preventDefault()
-        setLoader(true);
-        fetch("https://admin-superkap.herokuapp.com/transactions.json", {
+        setLoader(true)
+        console.log("les data a envoyer ", state)
+        // return
+        fetch("https://superkap-admin.herokuapp.com/transactions.json", {
             "method": "POST",
             "headers": {
                 "Content-Type": "application/json"
@@ -42,7 +44,7 @@ function Buy() {
                 "numAccount": state.numAccount,
                 "adresse_crypto": state.wallet,
                 "type_transaction": "Achat",
-                "names": state.names,
+                "name": state.names,
                 "phone": state.phone
             })
         })

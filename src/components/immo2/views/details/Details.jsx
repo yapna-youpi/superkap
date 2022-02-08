@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { FaStar } from 'react-icons/fa'
 import { AiOutlineHome } from 'react-icons/ai'
 import { useHistory } from 'react-router-dom'
@@ -10,14 +10,24 @@ import fot3 from '../../assets/fot3.jpg'
 import fot4 from '../../assets/fot4.jpg'
 import fot5 from '../../assets/fot5.jpg'
 
-function Details() {
+function Details({match}) {
+    const [state, setState]=useState({})
     let history = useHistory();
+    useEffect(()=>{
+        fetch(`https://superkap-admin.herokuapp.com/immobiliers/${match.params.id[1]}.json`)
+            .then(response=>response.json()).then(data=>{
+                console.log("the appart ", data)
+                setState(data)
+            })
+    }, [])
+
+    console.log("the state ", match, state)
     return (
         <div className="appart-details">
             <div className="head">
-                <h1>Chulavista Dome</h1>
+                <h1>{state.titre}</h1>
                 <div className="info">
-                    <span> <FaStar className="star" size={15} color="#00B67A" /> info 1 en gras</span>
+                    <span> <FaStar className="star" size={15} color="#00B67A" /> {state.parking && "Parking"} </span>
                     <span>info 2 sans gras</span>
                     <span>info 3 </span>
                 </div>
@@ -35,19 +45,19 @@ function Details() {
             </div>
             <div className="body">
                 <div className="description">
-                    <h2><AiOutlineHome size={20} /> Cabane dans les arbres <b>·</b> Hôte : Anna</h2>
-                    <span>3 voyageurs <b>·</b> 1 chambre <b>·</b> 2 lits <b>·</b> 1,5 salle de bain</span>
+                    <h2><AiOutlineHome size={20} /> {state.lieu} : {state.ville}</h2>
+                    <span>{state.nombre_salon} Salon <b>·</b> {state.nombre_chambre} Chambre(s) <b>·</b> {state.nombre_douche} Salle(s) de bain <b>·</b> 1,5 salle de bain</span>
                 </div>
                 <div className="price">
-                    <h3>2 000 000 XAF</h3>
+                    <h3>{state.prix} XAF</h3>
                     <span>Payable en plusieurs fois <b>·</b> transaction avec notaire </span>
                 </div>
             </div>
             <div className="row">
               <div className="col">
-                  <p>Ma maison est située en position stratégique. À deux pas de la gare (1 heure de train de Milan) et du port (ferry-boats et bateaux à destination de toutes les localités du lac)!</p>
+                  {/* <p>Ma maison est située en position stratégique. À deux pas de la gare (1 heure de train de Milan) et du port (ferry-boats et bateaux à destination de toutes les localités du lac)!</p> */}
                   <h6 style={{fontWeight:"bold"}}>Le logement :</h6>
-                  <p>L’appartement se compose de pièces spacieuses et agréables avec deux chambres à coucher (dans celle avec un grand lit on peut en ajouter un troisième), une salle de séjour, une grande cuisine</p>
+                  <p>{state.detail}</p>
               </div>
             </div>
             <div className="row carros mt-3">
@@ -57,7 +67,7 @@ function Details() {
               <div className="col col-md-6 d-block d-sm-flex pt-3">
                   <div className="col d-none d-sm-block"></div>
                   <div className="col">
-                    <p style={{fontSize:"12px"}}>Pour protéger votre paiement, ne transférez jamais d'argent et ne communiquez pas en dehors du site ou de l'application Airbnb.</p>
+                    <p style={{fontSize:"12px"}}>Pour protéger votre paiement, ne transférez jamais d'argent et ne communiquez pas en dehors du site ou de l'application.</p>
                     <button onClick={()=> history.push('/FormulaireC')} className='btn btn-outline-secondary'>contacter l'hôte</button>
                   </div>
               </div>

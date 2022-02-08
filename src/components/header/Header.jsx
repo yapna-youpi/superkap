@@ -48,7 +48,7 @@ function Header() {
                             <li><Link className="nav-link scrollto" to="/Crypto">SUPERKAP CRYPTO</Link></li>
                             <li><Link className="nav-link scrollto " to="/Immo2">IMMOBILIER</Link></li>
                             <li><Link className="nav-link scrollto" to="/Academy">ACADEMIE</Link></li>
-                            <li className="dropdown"><span style={{textDecoration: 0}}>COMPTE</span> <i className="bi bi-chevron-down"></i>
+                            <li className="dropdown"><span>COMPTE</span> <i className="bi bi-chevron-down"></i>
                                 <ul className='text-center list-open'>
                                     <Link to="/SignUp" className='="list'><li><FaUserCircle  />&nbsp;  Inscription</li></Link>
                                     <Link to="/Login" className='="list'><li><IoMdLogIn  />&nbsp; Connexion</li></Link>

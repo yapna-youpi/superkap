@@ -44,7 +44,7 @@ function Navigation() {
                     <Route exact path='/ProduitDetail'  component={ProduitDetail} />
                     <Route exact path='/Help'  component={Help} />
                     <Route exact path='/immo2'  component={Home2} />
-                    <Route exact path='/immo2/details2'  component={Details} />
+                    <Route exact path='/immo2/details2/:id'  component={Details} />
                     <Route exact path='/FormulaireC'  component={FormulaireC} />
                     <Route exact path='/BusinessDetail'  component={BusinessDetail} />
                     <Redirect to="/" />
