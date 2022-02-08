@@ -4,8 +4,9 @@ import { useHistory } from 'react-router-dom'
 import './signup.css'
 
 function Signup() {
-	const [state, setState]=useState({name: "", email: "", password: "", confirm: ""})
+	const [state, setState]=useState({nom: "", prenom: "", email: "", password: "", confirm: "", ville: "", pays: "", telephone: ""})
 	const [errors, setErrors]=useState({password: false})
+	const [fail, setFail]=useState(false)
 	let history=useHistory()
 
 	const handleChange=(target)=>{
@@ -18,16 +19,28 @@ function Signup() {
 
 	const handleSubmit=(e)=>{
 		e.preventDefault()
+		console.log("the data ", state)
 		if(state.password!==state.confirm) {
 			setErrors({password: true})
 			return
 		} else {
-			history.push('/')
-			return false
+			fetch('https://superkap-admin.herokuapp.com/users.json', {
+				"method": "POST",
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": JSON.stringify(state)
+			}).then(response=>response.json()).then(data=>{
+				console.log("signup response ", data)
+				history.push('/login')
+			})
+			.catch(error=>console.log("sign up error ", error))
+
 		}
+		return false
 	}
 	
-	// console.log(state, errors)
+	// console.log("the state ",state, errors)
     return (
 		<div className="bg-signup">
         <div className='pb-sm-3 pb-md-0 signup shadow'>
@@ -40,13 +53,30 @@ function Signup() {
 					</p>
 			    </div>
                 <form action="#" class="signup-form" onSubmit={(e)=>handleSubmit(e)} >
+					{fail && <alert><h1>Erreur de login</h1></alert>}
 							<div class="form-group mb-2">
 								<label class="label" for="name">Name</label>
-								<input type="text" name="name" class="name" class="form-control" placeholder="Name" required onChange={(e)=>handleChange(e.target)} />
+								<input type="text" name="nom" class="name" class="form-control" placeholder="Name" required onChange={(e)=>handleChange(e.target)} />
+							</div>
+							<div class="form-group mb-2">
+								<label class="label" for="name">prenom</label>
+								<input type="text" name="prenom" class="name" class="form-control" placeholder="Name" required onChange={(e)=>handleChange(e.target)} />
 							</div>
 							<div class="form-group mb-2">
 								<label class="label" for="name">Email</label>
-								<input type="email" name="email" id="emeil" class="form-control" placeholder="Email" required onChange={(e)=>handleChange(e.target)} />
+								<input type="email" name="email" id="email" class="form-control" placeholder="Email" required onChange={(e)=>handleChange(e.target)} />
+							</div>
+							<div class="form-group mb-2">
+								<label class="label" for="name">Telephone</label>
+								<input type="phone" name="telephone" id="phone" class="form-control" placeholder="Email" required onChange={(e)=>handleChange(e.target)} />
+							</div>
+							<div class="form-group mb-2">
+								<label class="label" for="name">Ville</label>
+								<input type="text" name="ville" class="name" class="form-control" placeholder="Ville" required onChange={(e)=>handleChange(e.target)} />
+							</div>
+							<div class="form-group mb-2">
+								<label class="label" for="name">Pays</label>
+								<input type="text" name="pays" class="name" class="form-control" placeholder="Pays" required onChange={(e)=>handleChange(e.target)} />
 							</div>
 							<div class="form-group mb-2">
 								<label class="label" for="name">Password</label>
@@ -63,11 +93,11 @@ function Signup() {
 							<div class="signup-down form-group">
 								<a href="#">
 									<div class="down-left">
-										connection
+										{/* connection */}
 									</div>
 								</a>
 								<div class="down-right">
-									<a href="#">Forgot Password</a>
+									{/* <a href="#">Forgot Password</a> */}
 								</div>
 							</div>
 						</form>
