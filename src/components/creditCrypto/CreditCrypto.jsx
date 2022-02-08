@@ -12,10 +12,6 @@ function Credit() {
     return (
         <div className='sk-credit1'>
             <div className="banner-credit">
-                {/* <div className="banner-content">
-                    <h1 style={{color:'var(--sk-greenLight)'}}>BSIC</h1>
-                    <input type='submit' value="s'inscrire" />
-                </div> */}
             </div>
             <div className="command">
                 <div className="command-option">
@@ -36,55 +32,82 @@ function Credit() {
                         </div>
                     </div>
                 </div>
-                <div className="container command-body">
-                    <h1>Adopter le reflexe Carte Bancaire  </h1>
-                    <p>La carte visa prépayée BSIC est disponible en 5 minutes dans nos locaux. Elle est pratique et vous pouvez l’avoir sans disposer d’un compte bancaire. Elle est idéale pour :</p>
-                        <p>Les voyageurs partout dans le monde<br/>
-                            Les personnes sans compte bancaire<br/>
-                            Les nouveaux clients et clients de la BSIC bank</p>
+                <div className="container command-body ">
+                    <h1>Notre carte VISA CRYPTO</h1>
+                    <p>La carte visa prépayée rechargeable CRYPTO est un support qui permet de retirer, payer sur internet et TPE des achats pour un montant défini à l'avance. </p>
+                    <p>Elle est aussi utilisée pour les transferts d'argent de carte à carte.<br/>
+                        Pas besoin de compte bancaire pour souscrire.<br/>
+                        Vous pouvez l'obtenir en passant une commande sur ce site.</p>
                 </div>
-                <div className="container d-flex justify-content-between avantages">
+                <div className="container d-flex justify-content-between avantages px-5">
                     <div className="avantages-left">
-                    <h3>Les principaux avantages</h3>
-                    Avoir une carte sans disposer d’un compte bancaire<br/>
-                    Pouvoir recharger la carte en fonction de ses besoins<br/>
-                    Effectuer des achats en ligne<br/>
-                    Effectuer des paiements sur TPE chez les commerçants<br/>
-                    Voyager en toute quiétude et faire des retrais partout dans le monde<br/>
-                    Financer les études de ses enfants à l’étranger<br/>
-                    Faire recharger sa carte à distance via une agence BSIC<r/>
+                        <h3>Les principaux avantages</h3>
+                        <ol>
+                            <li>La carte Visa prépayée CRYPTO n’exige aucune vérification de solvabilité.</li>
+                            <li>La carte Visa prépayée CRYPTO offre plusieurs options de recharge faciles et rapides en étant un outil efficace pour mieux gérer vos achats.</li>
+                            <li>La carte Visa prépayée CRYPTO offre une grande flexibilité d’utilisation et plus d'autonomie dans vos dépenses.</li>
+                        </ol>
+                        <br/>
+                        <p>Vous pouvez aussi l'utiliser pour:</p>
+                        <ul>
+                            <li>Pour éffectuer vos réservations de voyage en ligne.</li>
+                            <li>Pour vos achats en ligne (Facebook, Abonnement, Compte Iphone, Les paris sportifs et jeux, Casino, Etc.).</li>
+                            <li>Pour les retraits d'argent dans plus de 1,7 million de guichets automatiques VISA dans le monde.</li>
+                        </ul>
                     </div>
                     <div className="advantages-right">
                         <div className='d-flex justify-content-center align-items-center'><img className="credit-card" src={carte} alt='carte credit' /></div>
                     </div>
                 </div>
-                    <h3 className='mt-5 pt-5 px-3 text-center mb-3' style={{fontWeight:"bold"}}>C'est simple et pratique grace a votre banque BSIC </h3>
-                <div className="container-fluid carti  d-flex justify-content-around mb-5 pb-5 ">
-                    <div className="card mx-3 ">
-                        <img className="card-img-top" src={banq1} alt="Card1"/>
-                        <div className="card-body">
-                            <h5 className="card-title"></h5>
-                            <p className="card-text">pour vos retraits et paiements mobile</p>
-                            <a className="btn w-100 btn-light">See Profile</a>
-                        </div>
-                    </div>
-                    <div className="card mx-3">
-                        <img className="card-img-top" src={vignette} alt="Card2"/>
-                        <div className="card-body">
-                            <h4 className="card-title"></h4>
-                            <p className="card-text">gagner en liberter ou que vous soyez</p>
-                            <a className="btn btn-light w-100">See Profile</a>
-                        </div>
-                    </div>
-                    <div className="card mx-3">
-                        <img className="card-img-top" src={banq3} alt="Card3"/>
-                        <div className="card-body">
-                            <h4 className="card-title"></h4>
-                            <p className="card-text">Some example text.</p>
-                            <a className="btn btn-light w-100" >See Profile</a>
-                        </div>
-                    </div>
+
+                <section id="blog" className="padd-sectio">
+                <div className="container" data-aos="fade-up">
+                <div className="section-title text-center">
+
+                    <h2>C'est simple et pratique grace a votre banque BSIC</h2>
+                    <p className="separator">Integer cursus bibendum augue ac cursus .</p>
                 </div>
+
+                <div className="row" data-aos="fade-up" data-aos-delay="100">
+
+                    <div className="col-md-6 col-lg-4">
+                    <div className="block-blog text-left">
+                        <a href="#"><img src={banq1} alt="img-3"/></a>
+                        <div className="content-blog">
+                        <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
+                        <span>05, juin 2017</span>
+                        <a className="float-end readmore" href="#">read more</a>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div className="col-md-6 col-lg-4">
+                    <div className="block-blog text-left">
+                        <a href="#"><img src={vignette} className="img-responsive" alt="img-1"/></a>
+                        <div className="content-blog">
+                        <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
+                        <span>05, juin 2017</span>
+                        <a className="float-end readmore" href="#">read more</a>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div className="col-md-6 col-lg-4">
+                    <div className="block-blog text-left">
+                        <a href="#"><img src={banq3} className="img-responsive" alt="img-2"/></a>
+                        <div className="content-blog">
+                        <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
+                        <span>05, juin 2017</span>
+                        <a className="float-end readmore" href="#">read more</a>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+                </div>
+                </section>
+
+
                 <div className="container d-flex tableau justify-content-around mb-5 mt-5">
                     <div className="tableau-n1">
                         <h3 className='tableau-title'>Frais de votre carte BSIC</h3>
@@ -183,28 +206,24 @@ function Credit() {
                     </div>
                 </div>
                 <div className="container-fluid py-5 bg-warning  mt-5">
-                    <h1 className='text-center'>VOTRE CARTE BSIC DISPONIBLE</h1>
+                    <h1 className='text-center'>VOTRE CARTE CRYPTO DISPONIBLE</h1>
                     <div className='text-center'><button className='btn btn-lg bg-info mx-auto'> Commander </button></div>
                 </div>
                 <div className="container-fluid pt-3 bg-P ">
                     <div className="row">
-                            <div className="col .col-md-6 fs-5">
-                                <p className=''>
-                                    La livraison prendra 1-2 jours selon la ville. Le montant de recharge ne peut 
-                                    dépasser le solde maximum de la carte, qui est de 5.000.000 XOF. 
-                                    La carte prépayée est libellée en XOF. Vous pouvez recharger la carte avec 
-                                    les Fonds que vous recevez en échange de votre monnaie virtuelle.
-                                    Cette carte prépayée n'est pas une carte-cadeau, une carte de crédit ou 
-                                    une carte de paiement et ne fournit pas d'avances en espèces. 
-                                </p>
-                                <p>
-                                    L'utilisateur doit être vérifié par la procédure KYC. 
-                                    Pour pouvoir utiliser la carte, celle-ci doit être vérifiée et activée. 
-                                    Pour signaler une carte prépayée perdue ou volée, veuillez nous contacter à travers le Service client. 
-                                    Votre compte BSIC et votre carte prépayée sont émis par BSIC bank, Veuillez lire 
-                                    la Politique de confidentialité et les Termes et Conditions de la carte prépayée.
-                                </p>
-                            </div>
+                        <div className="col .col-md-6 fs-5">
+                            <p className=''>
+                                <h5 className='text-center fw-bolder'>Sécurité et prévention de la fraude</h5>
+                                La carte Visa prépayée Crypto favorise la tranquillité d’esprit en 
+                                limitant votre exposition aux fraudes bancaires.
+                            </p>
+                            <p>
+                            Cette carte internationale VISA Crypto est en formule PRÉPAYÉE et est 
+                            disponible pour une cible clientèle et non clientèle. Elle est rechargeable à souhait 
+                            et permet le transfert de carte à carte. Elle permet les retraits sur tous les GABS GIM et VISA 
+                            et les paiements sur tous les TPE VISA en plus des sites marchands.
+                            </p>
+                        </div>
                             <div className="col d-none d-md-block .col-md-6 ">
                                 <img src={visa} style={{height:'350px',width:'100%'}} alt="visa-crypto" />
                             </div>
