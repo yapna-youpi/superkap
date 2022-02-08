@@ -1,0 +1,13 @@
+.tex{
+    color: var(--sk-green);
+    font-weight: bold;
+}
+.btn-command{
+    background-color: var(--sk-orange)!important;
+    margin: 12px 0;
+}
+.image-busi{
+    width: 70%;
+    padding: 15px;
+    cursor: pointer;
+}

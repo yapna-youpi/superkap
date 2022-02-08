@@ -1,0 +1,20 @@
+.ico-colore{
+    font-weight: bold!important;
+    color: rgb(64, 211, 64)!important;
+}
+.ico-text{
+    font-weight: bold!important;
+    color: rgb(5, 5, 83)!important;
+}
+.ico-text span{
+    font-size: 14px;
+    margin-left: 10px;
+    line-height: inherit;
+}
+.ico-detail{
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 15px 10px;
+    width: 90%;
+    margin: 15px auto;
+}

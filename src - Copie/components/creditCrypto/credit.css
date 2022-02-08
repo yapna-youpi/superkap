@@ -1,0 +1,107 @@
+.sk-credit1{
+    width: 100%;
+    margin-top: 60px;
+}
+.sk-credit1 .banner-credit{
+    width: 100%;
+    height: 400px;
+    background: url('./assets/banner.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.sk-credit1 .command-head{
+    display: flex;
+    margin-top: 35px;
+    width: 100%;
+}
+.sk-credit1 .justify{
+    justify-content: space-between;
+}
+.sk-credit1 .command-head .title-n1{
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 0;
+    line-height: 60px;
+}
+.sk-credit1 .command-head .command-title{
+    border-bottom: 4px solid var(--sk-greenLight);
+    padding: 0 0 0 10px;
+}
+.sk-credit1 .teal{
+    background-color: var(--bs-teal)!important;
+}
+.sk-credit1 .second{
+    background-color: var(--bs-warning)!important;
+}
+.sk-credit1 .tableau-n1{
+    width: 55%;
+    box-shadow: 2px 2px 10px rgb(0 0 0 / 20%);
+    background-color: #FFFFFF;
+    padding-bottom: 20px;
+}
+.sk-credit1 .tableau-n2{
+    width: 35%;
+    box-shadow: 2px 2px 10px rgb(0 0 0 / 20%);
+    background-color: #FFFFFF;
+    padding-bottom: 20px;
+}
+.sk-credit1 .tableau-title{
+    text-align: center;
+    margin: 15px 0;
+    padding: 5px;
+}
+.sk-credit1 .card{
+    margin-top: 20px 10px;
+    width: 27%;
+}
+.sk-credit1 .credit-card{
+    width: 60%;
+    border-radius: 8px;
+}
+.sk-credit1 .avantages{
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.sk-credit1 .banner-content{
+    padding-left: 20%;
+}
+
+@media only screen and (max-width: 768px){
+    .sk-credit1 .command-solde{
+        height: 44px!important;
+        width: 120px!important;
+        overflow: hidden!important;
+    }
+    .sk-credit1 .command-body{
+        padding: 0 25px;
+        
+    }
+    .sk-credit1 .avantages{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .sk-credit1 .carti{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .sk-credit1 .tableau{
+        display: flex;
+        flex-direction: column!important;
+    }
+    .sk-credit1 .tableau-n1{
+        width: 85%;
+        margin: 0 auto;
+    }
+    .sk-credit1 .tableau-n2{
+        width: 85%;
+        margin: 30px auto;
+    }
+    .sk-credit1 .card{
+        width: 85%!important;
+        margin: 35px auto!important;
+     }
+
+}

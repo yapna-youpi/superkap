@@ -7,7 +7,11 @@ Author: blackCoders
 
  }
   
-  
+ .buy .main-buy{
+  width: 90%;
+  margin: 3em auto;
+  background: rgba(0, 0, 0, 0.18);
+}
 
  /*-- end reset --*/
  .buy {
@@ -258,7 +262,7 @@ Author: blackCoders
   @media only screen and (min-width :992px){
       .main-agileinfo {
         width: 85%;
-        margin: 3em 3em 3em 0;
+        margin: 0 3em 3em 0;
         background: rgba(0, 0, 0, 0.18);
         background-size: cover;
       }

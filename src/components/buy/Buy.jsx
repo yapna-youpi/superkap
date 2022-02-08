@@ -57,6 +57,13 @@ function Buy() {
         })
         return false
     }
+
+    const Loader = () => (
+        <div className="loader" style={{textAlign:'center',padding:'0 auto'}}>
+            <p style={{textAlign:'center'}}><ReactLoading type="spin" center={true} color="#ffffff" height={25} width={25}/></p>
+        </div>
+    )
+
     const setPaymentsWays=()=>{
         let way=state.country.split('-')[1]
         console.log("the way ", way)
@@ -104,6 +111,7 @@ function Buy() {
                                         <option value="Autres-p6">Autre Pays</option>
                                     </select>
                                 </div>
+
                                 <div className="form-group my-4">
                                     <label className='label' htmlFor="select">Mode de paiement</label>
                                     <select className="form-select" name="payment" aria-label="Default select example" onChange={(e)=>handleChange(e.target)}>

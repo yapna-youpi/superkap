@@ -1,13 +1,9 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import Carousel from 'react-bootstrap/Carousel'
 
 import './crypto.css'
 import Caroussel from './carrousssel/Caroussel'
-import img1 from './assets/crypt5.jpg'
-import img2 from './assets/crypt2.jpg'
-import img3 from './assets/crypt3.jpg'
-import tof3 from './assets/tof3.jpg'
+import Service from './service/Service'
 import tof from './assets/crypt4.jpg'
 import carte from './assets/carte.png'
 import crp1 from './assets/images crypto/dogde.jpeg'
@@ -23,50 +19,20 @@ import crp8 from './assets/images crypto/usdc-logo.jpg'
 function Crypto() {
     const history = useHistory();
     return (
+
         <div className="crypto">
             <div className="banner-content">
                 <div className="banner">
-
                     <Caroussel />
-
-
-                    {/* <Carousel fade>
-                        <Carousel.Item>
-                            <img
-                            className="d-block w-100"
-                            src={img1}
-                            alt="First slide"
-                            />
-                            <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                            className="d-block w-100"
-                            src={img2}
-                            alt="Second slide"
-                            />
-
-                            <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                            className="d-block w-100"
-                            src={img3}
-                            alt="Third slide"
-                            />
-
-                            <Carousel.Caption>
-                            <h3>disponible sans aucun delai de paiement</h3>
-                            <p>votre partenaire ideale.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    </Carousel> */}
+                </div>
+            </div>
+            <Service />
+            <div className="container">
+                <div className="row">
+                    <div className="col col-md-3"></div>
+                    <div className="col col-md-3"></div>
+                    <div className="col col-md-3"></div>
+                    <div className="col col-md-3"></div>
                 </div>
             </div>
             <div className="partners">
@@ -88,23 +54,24 @@ function Crypto() {
                     <img className='partner1' src={crp1} alt='crypto' />
                 </div>
             </div>
-            <div className="trade py-4 ">
+            <div className="trad pt-5 ">
+                <h1 className='text-center '>Découvrez nos services CRYPTOS</h1>
+                <p className='text-center mb-0'>Nous mettons à la disposition de nos membres,<br/> les services et des avantages particuliers :</p>
+            </div>
+            <div className="trade pb-4 ">
                 <div className="trade-left pt-3 p-4 p-md-0">
-                    <h1>Nos services sur Blockchain</h1>
-                    <p>Avec notre nouveau programme d'affiliation, vous aurez<br/> les outils les plus avancés du marché qui<br/>vous permettra de promouvoir Pursa et de générer des commissions avec nous !</p>
                     <dl>
-                        <dt>INFOS CRYPTO</dt>
-                        <dd>Initiation, perfectionnement et mise à jour des connaissances sur les plates-formes Crypto.</dd>
-
-                        <dt>HOLDING.</dt>
-                        <dd>N’achetez pas aveuglement toute crypto, faites confiance aux professionnels pour<br/>
-                             vous aider à investir sur les projets les plus rentables. Il est exclusivement réservé aux abonnés actifs.<br/>
+                        <dt>HOLDING</dt>
+                        <dd>En suivant nos conseils,  vous N’achèterez pas aveuglement toute crypto.<br/>
+                        Nous vous indiquons les projets les plus rentables sur le long terme, en utilisant les stratégies les plus performantes<br/>
+                        Ce service est réservé exclusivement aux abonnés VIP. Il coûte 100 USDT par AN.<br/><br/>
                             <button onClick={()=>history.push('/Help')} className="btn-crypto py-2 my-2">En savoir plus</button> 
                         </dd>
-
-                        <dt>MONTH TRADING</dt>
-                        <dd>Ce service est destiné à tous ceux qui veulent gagner hebdomadairement et mensuellement de l’argent avec la cryptomonnaie. Il est exclusivement réservé aux abonnés actifs.<br/>
-                             Découvrez nos signaux d’achats et de vente et profitez pour faire le plein de cryptos<br/>
+                        <br />
+                        <dt>HOLDING MENSUEL</dt>
+                        <dd>Ce service est destiné à tous ceux qui veulent gagner hebdomadairement et mensuellement de l’argent avec la cryptomonnaie. Il est exclusivement réservé aux abonnés actifs.
+                            Découvrez nos signaux d’achats et de vente et profitez pour faire le plein de cryptos
+                            <br/><br/>
                             <button onClick={()=>history.push('/Help')} className="btn-crypto py-2 my-2">En savoir plus</button> 
                         </dd>
                     </dl>               
@@ -116,7 +83,7 @@ function Crypto() {
             <div className="container target">
                 <div className="row">
                     <div className="col-11 mr-4 col-md-8">
-                        <div className="row my-3">
+                        <div className="row my-5">
                             <div className="col-12 target-img1 col-md-4"></div>
                             <div className="col-12 col-md-8">
                                 <h5>Comment acheter des crypto-monnaies sur notre plate forme ?</h5>
@@ -124,7 +91,7 @@ function Crypto() {
                                 <button onClick={()=>history.push('/Buy')} className="btn btn-lg btn-warning">ACHETER CRYPTO</button>
                             </div>
                         </div><hr/>
-                        <div className="row my-3">
+                        <div className="row my-5">
                             <div className="col-12 target-img2 col-md-4"></div>
                             <div className="col-12 col-md-8">
                                 <h5>vous desirez revendre ou vendre votre crypto-monnaie !</h5>
@@ -133,13 +100,13 @@ function Crypto() {
                             </div>
                         </div><hr/>
                     </div>
-                    <div className="col-11 text-sm-center target-bg my-4 col-md-4">
-                        <div class="card" style={{width:'400px'}}>
-                            <img class="card-img-top" src={tof} alt="Card image" />
-                            <div class="card-body">
-                                <h6 class="card-title">Court de la crypto 24/24 et 7jours.</h6>
-                                <p class="card-text">abonnez vous à notre FAQ </p>
-                                <a onClick={()=>history.push('/Help')} class="btn btn-crypto">En Savoir Plus</a>
+                    <div className="col-11 text-sm-center target-bg my-4 col-md-4 pt-5">
+                        <div className="card mt-5">
+                            <img className="card-img-top img-car" src={tof} alt="Card image" />
+                            <div className="card-body">
+                                <h6 className="card-title">Court de la crypto 24/24 et 7jours.</h6>
+                                <p className="card-text">abonnez vous à notre FAQ </p>
+                                <a onClick={()=>history.push('/Help')} className="btn btn-crypto">En Savoir Plus</a>
                             </div>
                         </div>
                     </div>
@@ -151,14 +118,14 @@ function Crypto() {
                     <div className="credit-card"><img src={carte} alt='carte credit' /></div>
                 </div>
                 <div className="credit-right">
-                    <h5>Nous sommes toujours disponibles pour que vous puissiez acheter une cryto-monnaie de chez vous chez nous.<br />
+                    <h5 className='text-title'>Nous sommes toujours disponibles pour que vous puissiez acheter une cryto-monnaie de chez vous chez nous.<br />
                          même les jours fériés lorsque
                          les banques sont fermées. Nous pouvons recharger votre carte bancaire pour vos operations</h5>
-                    <p>Les transactions sont effectuées en quelques secondes lorsque vous échangez du
+                    <p className='text-title'>Les transactions sont effectuées en quelques secondes lorsque vous échangez du
                          bitcoin (BTC) vers votre devise locale (fiat) et vice versa.
                     </p>
                         <div className='btn-credit'>
-                            <h1 onClick={()=>history.push('/Credit')} className='btn btn-lg credit-title mt-5'>Achat Carte de Credit</h1>
+                            <h1 onClick={()=>history.push('/Card')} className='btn btn-lg credit-title mt-5'>Achat Carte de Credit</h1>
                         </div> 
                 </div>
             </div>
@@ -166,6 +133,7 @@ function Crypto() {
 
             </div>
         </div>
+     
     )
 }
 

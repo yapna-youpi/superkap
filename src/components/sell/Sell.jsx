@@ -102,19 +102,19 @@ function Sell() {
                                         <option value="Autres-p6">Autre Pays</option>
                                     </select>
                                 </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="name">Montant à Vendre: </label>
+                                    <input type="number" name="amount" class="form-control input-buy" placeholder="montant crypto en $" required onChange={(e)=>handleChange(e.target)} />
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="name">Adresse de réception Superkap </label>
+                                    <input type="text"  name="wallet" class="form-control input-buy" placeholder="Entrez l'adresse de votre wallet" required onChange={(e)=>handleChange(e.target)}  disabled={true} />
+                                </div>
                                 <div className="form-group my-4">
                                     <label className='label' htmlFor="select">Mode de paiement</label>
                                     <select className="form-select" name="payment" aria-label="Default select example" onChange={(e)=>handleChange(e.target)}>
                                         {setPaymentsWays()}
                                     </select>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label class="label" for="name">Je dispose de: </label>
-                                    <input type="number" name="amount" class="form-control input-buy" placeholder="montant crypto en $" required onChange={(e)=>handleChange(e.target)} />
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label class="label" for="name">Adresse wallet</label>
-                                    <input type="text"  name="wallet" class="form-control input-buy" placeholder="Entrez l'adresse de votre wallet" required onChange={(e)=>handleChange(e.target)}/>
                                 </div>
                                 {
                                     (state.payment.indexOf("CB")+1) ? (
@@ -137,22 +137,6 @@ function Sell() {
                 <div className=" col-md-12 col-lg-6  main-w3layouts wrapper">
                     <div className="main-sell">
                         <div className="agileits-top">
-                            {/* <form action="#" method="post" className='form-group' onSubmit={(e)=>handleSubmit(e)} > */}
-                                {/* <div class="form-group mb-3">
-                                    <label class="label" for="name">Adresse du dépot </label>
-                                    <input type="number" name="amount" class="form-control input-sell" placeholder="montant correspondant a la quandite de btc" required onChange={(e)=>handleChange(e.target)} />
-                                </div> */}
-                                {/* <div className="row">
-                                    <div className="col-6">Montant net en CFA</div>
-                                    <div className="col-6">Montant net en devise crypto</div>
-                                </div>
-                                <div className="input-group">
-                                    <input type="text" className="form-control" placeholder='montant net' required/>
-                                    <div className="input-group-prepend">
-                                        <span className="input-group-text">-</span>
-                                    </div> 
-                                    <input type="text" className="form-control" placeholder='devise net' required/>
-                                </div> */}
                                 <div class="form-group mb-3">
                                     <label class="label" for="name">Montant a recevoir en XAF : </label>
                                     <input type="tel" name="phone" class="form-control input-buy" placeholder="Telephone"

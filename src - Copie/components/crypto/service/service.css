@@ -1,0 +1,11 @@
+#services{
+    padding: 140px 0 0 0!important;
+    overflow: hidden;
+    background-color: #f2f9f8;
+}
+@media only screen and (min-width: 768px){
+    #services{
+        padding: 70px 0 0 0!important;
+        margin-top: 2.8rem!important;
+    }
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import { MdLocationPin } from 'react-icons/md' 
 import { BsTelephoneFill } from 'react-icons/bs' 
 import { HiMail } from 'react-icons/hi' 
+import img1 from './call-center.jpg'
 // import Mape from './Map.jsx'
 
 
@@ -78,6 +79,7 @@ function Help() {
                 
                 <div className="col-11 col-md-5 mx-auto d-none d-md-block mt-sm-5 help-right">
                     <div className="map">
+                        <img className='mt-5' src={img1} alt='call-center' />
                         {/* <Mape /> */}
                     </div>
                 </div>

@@ -1,17 +1,28 @@
 import React from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
+import { useHistory } from 'react-router-dom'
 
-import './home.css'
 import Maison from './home-maison/Maison.jsx'
-import Card from '../business/card/Card.jsx'
+import Card from '../business/components/card/Card'
 import Services from './services/Services.jsx'
 import Formation from './formation/Formation'
+
+import './home.css'
+import busi3 from '../business/assets/images/tof9.jpg'
+
 
 
 
 
 function Home() {
-    
+    let history = useHistory();
+
+    const Modalite3 = {
+        titre: 'Chaine de venise',
+        prix: '12000.00 XAF ou 50 Ussd',
+        image: busi3
+    }
+
     return (
         <div className='home' id='home'>
                 {/* -- banner section-- */}
@@ -29,12 +40,11 @@ function Home() {
             <main id="main" >
 
                 {/*--ours services -- */}
-                <Services />
-
+               <Services />
                <Maison />
-
-                <Card />
-                <Formation />
+               <Card name={"Nouveaux produits"} Modalite={Modalite3} />
+               <h6 onClick={()=>history.push('/Business')} className='btn btn-lg bg-info d-block mx-auto my-5 w-50'>Voir Plus de Produits</h6>
+               <Formation />
                 
             
             </main>

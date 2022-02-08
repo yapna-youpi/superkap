@@ -54,25 +54,24 @@ function Crypto() {
                     <img className='partner1' src={crp1} alt='crypto' />
                 </div>
             </div>
-            <div className="trad pt-5">
-                <h1 className='text-center '>Nos services sur Blockchain</h1>
-                <p className='text-center mb-0'>Avec notre nouveau programme d'affiliation, vous aurez<br/> les outils les plus avancés du marché qui<br/>vous permettront de promouvoir Superkap et de générer des commissions avec nous !</p>
+            <div className="trad pt-5 ">
+                <h1 className='text-center '>Découvrez nos services CRYPTOS</h1>
+                <p className='text-center mb-0'>Nous mettons à la disposition de nos membres,<br/> les services et des avantages particuliers :</p>
             </div>
             <div className="trade pb-4 ">
                 <div className="trade-left pt-3 p-4 p-md-0">
                     <dl>
-                        <dt>INFOS CRYPTO</dt>
-                        <dd>Initiation, perfectionnement et mise à jour des connaissances sur les plates-formes Crypto.</dd>
-
-                        <dt>HOLDING.</dt>
-                        <dd>N’achetez pas aveuglement toute crypto, faites confiance aux professionnels pour<br/>
-                             vous aider à investir sur les projets les plus rentables. Il est exclusivement réservé aux abonnés actifs.<br/>
+                        <dt>HOLDING</dt>
+                        <dd>En suivant nos conseils,  vous N’achèterez pas aveuglement toute crypto.<br/>
+                        Nous vous indiquons les projets les plus rentables sur le long terme, en utilisant les stratégies les plus performantes<br/>
+                        Ce service est réservé exclusivement aux abonnés VIP. Il coûte 100 USDT par AN.<br/><br/>
                             <button onClick={()=>history.push('/Help')} className="btn-crypto py-2 my-2">En savoir plus</button> 
                         </dd>
-
-                        <dt>MONTH TRADING</dt>
-                        <dd>Ce service est destiné à tous ceux qui veulent gagner hebdomadairement et mensuellement de l’argent avec la cryptomonnaie. Il est exclusivement réservé aux abonnés actifs.<br/>
-                             Découvrez nos signaux d’achats et de vente et profitez pour faire le plein de cryptos<br/>
+                        <br />
+                        <dt>HOLDING MENSUEL</dt>
+                        <dd>Ce service est destiné à tous ceux qui veulent gagner hebdomadairement et mensuellement de l’argent avec la cryptomonnaie. Il est exclusivement réservé aux abonnés actifs.
+                            Découvrez nos signaux d’achats et de vente et profitez pour faire le plein de cryptos
+                            <br/><br/>
                             <button onClick={()=>history.push('/Help')} className="btn-crypto py-2 my-2">En savoir plus</button> 
                         </dd>
                     </dl>               
@@ -84,7 +83,7 @@ function Crypto() {
             <div className="container target">
                 <div className="row">
                     <div className="col-11 mr-4 col-md-8">
-                        <div className="row my-3">
+                        <div className="row my-5">
                             <div className="col-12 target-img1 col-md-4"></div>
                             <div className="col-12 col-md-8">
                                 <h5>Comment acheter des crypto-monnaies sur notre plate forme ?</h5>
@@ -92,7 +91,7 @@ function Crypto() {
                                 <button onClick={()=>history.push('/Buy')} className="btn btn-lg btn-warning">ACHETER CRYPTO</button>
                             </div>
                         </div><hr/>
-                        <div className="row my-3">
+                        <div className="row my-5">
                             <div className="col-12 target-img2 col-md-4"></div>
                             <div className="col-12 col-md-8">
                                 <h5>vous desirez revendre ou vendre votre crypto-monnaie !</h5>
@@ -101,8 +100,8 @@ function Crypto() {
                             </div>
                         </div><hr/>
                     </div>
-                    <div className="col-11 text-sm-center target-bg my-4 col-md-4">
-                        <div className="card">
+                    <div className="col-11 text-sm-center target-bg my-4 col-md-4 pt-5">
+                        <div className="card mt-5">
                             <img className="card-img-top img-car" src={tof} alt="Card image" />
                             <div className="card-body">
                                 <h6 className="card-title">Court de la crypto 24/24 et 7jours.</h6>

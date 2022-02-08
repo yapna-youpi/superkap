@@ -7,7 +7,11 @@ Author: blackCoders
 
  }
   
-  
+ .sell .main-sell{
+  width: 90%;
+  margin: 3em auto;
+  background: rgba(0, 0, 0, 0.18);
+ }
 
  /*-- end reset --*/
  .sell {
@@ -38,9 +42,9 @@ Author: blackCoders
   .sell .input-group{
     width: 95%!important;
   }
-  .sell .form-select{
+  /* .sell .form-select{
     width: 95%!important;
-  }
+  } */
   
   /*-- main --*/
   
