@@ -5,9 +5,9 @@ import './formulaire-immo.css'
 function FormullaireImmo() {
   return (
       <div className='formulaireI w-100 mt-5 pt-5'>
-                <h1 className='text-center'>Programmer Un Appartement</h1>
-            <div className="formulaire-content w-75 w-md-75 d-flex justify-content-center align-items-center">
-                <form>
+                <h1 className='text-center'>Commander Votre Carte</h1>
+            <div className="formulaire-content ">
+                <form className=''>
                     <div class="form-group mb-3">
                         <label class="label" for="Prénom">Prénom</label>
                         <input type="text"  name="Prénom" class="form-control input-buy" placeholder="Prénom" required />
