@@ -43,8 +43,8 @@ function FormulaireC() {
                           <input type="number"  name="Mobile" class="form-control input-buy" placeholder="Mobile" required />
                         </div>
                         <div class="form-group mb-3">
-                          <label class="label" for="Pays">Pays</label>
-                          <input type="text"  name="Pays" class="form-control input-buy" placeholder="Pays" required />
+                          <label class="label" for="Boite Postale">Boite Postale</label>
+                          <input type="text"  name="Boite Postale" class="form-control input-buy" placeholder="Boite Postale" required />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 shadow p-4">

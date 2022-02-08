@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaStar } from 'react-icons/fa'
 import { AiOutlineHome } from 'react-icons/ai'
 import { useHistory } from 'react-router-dom'
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 import './details.css'
 import fot1 from '../../assets/fot1.jpg'
@@ -11,7 +13,16 @@ import fot4 from '../../assets/fot4.jpg'
 import fot5 from '../../assets/fot5.jpg'
 
 function Details() {
+
+    const [show, setShow] = useState(false);
+  
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     let history = useHistory();
+    const handle = () =>{
+        handleClose();
+        history.push('/');
+    }
     return (
         <div className="appart-details">
             <div className="head">
@@ -58,9 +69,35 @@ function Details() {
                   <div className="col d-none d-sm-block"></div>
                   <div className="col">
                     <p style={{fontSize:"12px"}}>Pour protéger votre paiement, ne transférez jamais d'argent et ne communiquez pas en dehors du site ou de l'application Airbnb.</p>
-                    <button onClick={()=> history.push('/FormulaireC')} className='btn btn-outline-secondary'>contacter l'hôte</button>
+                    <button onClick={handleShow} className='btn btn-outline-secondary'>contacter l'hôte</button>
                   </div>
               </div>
+            </div>
+
+            <div className='mt-5'>
+                <Modal
+                    show={show}
+                    onHide={handleClose}
+                    backdrop="static"
+                    keyboard={false}
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                >
+                    <Modal.Header closeButton >
+                    <Modal.Title>Modal title</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        Felicitation vous venez de reserver un Logement chez Superkap!
+                        <p>Nous vous contacterons d'ici peut merci!</p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                    <Button variant="primary" onClick={handle} >
+                        fermer
+                    </Button>
+                        
+                    </Modal.Footer>
+                </Modal>
+                
             </div>
         </div>
     )
