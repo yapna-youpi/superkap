@@ -28,7 +28,7 @@ function FormullaireImmo() {
                         <label class="label" for="Boite Postale">Boite Postale</label>
                         <input type="text"  name="Boite Postale" class="form-control input-buy" placeholder="Boite Postale" required />
                     </div>
-                    <button className='btn btn-outline-success '>Passer Votre Commande</button>
+                    <button className='btn btn-outline-info '>Passer Votre Commande</button>
                 </form>
           </div>
       </div>

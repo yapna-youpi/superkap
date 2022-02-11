@@ -7,12 +7,12 @@
 }
 .caroussel .slider{
     width: 100%;
-    height: 400px;
+    height: 500px;
     overflow: hidden;
 }
 .caroussel .slides{
     width: 500%;
-    height: 400px;
+    height: 500px;
     display: flex;
 }
 .caroussel .slides input{
@@ -32,7 +32,7 @@ display: none;
     position: absolute;
     width: 100%;
     display: flex;
-    margin-top: 350px;
+    margin-top: 450px;
     justify-content: center;
 }
 .caroussel .navigation-manual .manual-btn{
@@ -67,7 +67,7 @@ display: none;
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 350px;
+    margin-top: 450px;
 }
 .caroussel .navigation-auto div{
     border: 2px solid yellowgreen;
@@ -89,5 +89,31 @@ display: none;
 }
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background: yellowgreen;
+}
+@media screen and (max-width:600px) {
+    .caroussel .slider{
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+    }
+    .caroussel .slides{
+        width: 500%;
+        height: 400px;
+        display: flex;
+    }
+    .caroussel .navigation-manual{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        margin-top: 350px;
+        justify-content: center;
+    }
+    .caroussel .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 350px;
+    }   
 }
 

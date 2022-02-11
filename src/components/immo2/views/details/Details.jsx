@@ -5,12 +5,15 @@ import { useHistory } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
+import Caroussel from '../../components/bootstrapSlide/SlideB'
+
 import './details.css'
 import fot1 from '../../assets/fot1.jpg'
 import fot2 from '../../assets/fot2.jpg'
 import fot3 from '../../assets/fot3.jpg'
 import fot4 from '../../assets/fot4.jpg'
 import fot5 from '../../assets/fot5.jpg'
+import logo from './logo-superkap.png'
 
 function Details({match}) {
     const [show, setShow] = useState(false);
@@ -45,7 +48,8 @@ function Details({match}) {
                 </div>
                 <div className="images">
                     <div className="poster">
-                        <img className='img-detail' src={fot1} alt=""/>
+                        {/* <img className='img-detail' src={fot1} alt=""/> */}
+                        <Caroussel />
                     </div>
                     <div className="thumbnails">
                         <img className='img-detail' src={fot2} alt=""/>
@@ -95,14 +99,14 @@ function Details({match}) {
                     centered
                 >
                     <Modal.Header closeButton >
-                    <Modal.Title>Superkap</Modal.Title>
+                    <Modal.Title><img style={{width:'150px'}} src={logo} /></Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        Felicitation vous venez de reserver un Logement chez Superkap!
-                        <p>Nous vous contacterons d'ici peut merci!</p>
+                        <h5>Felicitation vous venez de reserver un Logement chez Superkap!</h5>
+                        <h5>Nous vous contacterons d'ici peut merci!</h5>
                     </Modal.Body>
                     <Modal.Footer>
-                    <Button variant="primary" onClick={handle} >
+                    <Button variant="success" onClick={handle} >
                         fermer
                     </Button>
                         

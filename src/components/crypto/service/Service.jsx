@@ -7,7 +7,7 @@ function Service() {
             <div id="services" className="services section-bg pt-5  pb-0 pb-sm-5  mt-5 mt-sm-0  ">
             <div className="container">
 
-                <div className="section-title" data-aos="fade-up">
+                <div className="section-title mt-0 mt-md-5" data-aos="fade-up">
                 <h2 style={{fontWeight:'bold'}}>Pourquoi la Cryptomonnaie ?</h2>
                 <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit.</p>
                 </div>

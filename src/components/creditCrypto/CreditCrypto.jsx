@@ -5,7 +5,7 @@ import carte from './assets/carte.png'
 import vignette from './assets/vignette.jpg'
 import banq1 from './assets/banq1.jpg'
 import banq3 from './assets/banq3.jpg'
-import visa from './assets/banq1.jpg'
+import ico from './assets/ico.jpg'
 
 
 function Credit() {
@@ -74,20 +74,20 @@ function Credit() {
                     <div className="block-blog text-left">
                         <a href="#"><img src={banq1} alt="img-3"/></a>
                         <div className="content-blog">
-                        <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-                        <span>05, juin 2017</span>
-                        <a className="float-end readmore" href="#">read more</a>
+                            <h4><a href="#">Effectuer vos réservations de voyage en ligne.</a></h4>
+                            <span>05, janvier 2022</span>
+                            <a className="float-end readmore" href="#">En savoir plus</a>
                         </div>
                     </div>
                     </div>
 
                     <div className="col-md-6 col-lg-4">
                     <div className="block-blog text-left">
-                        <a href="#"><img src={vignette} className="img-responsive" alt="img-1"/></a>
+                        <a href="#"><img src={ico} className="img-responsive" alt="img-1"/></a>
                         <div className="content-blog">
-                        <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-                        <span>05, juin 2017</span>
-                        <a className="float-end readmore" href="#">read more</a>
+                            <h4><a href="#">retirer de l'argent dans les guichets automatiques VISA</a></h4>
+                            <span>02, janvier 2022</span>
+                            <a className="float-end readmore" href="#">En savoir plus</a>
                         </div>
                     </div>
                     </div>
@@ -96,9 +96,9 @@ function Credit() {
                     <div className="block-blog text-left">
                         <a href="#"><img src={banq3} className="img-responsive" alt="img-2"/></a>
                         <div className="content-blog">
-                        <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-                        <span>05, juin 2017</span>
-                        <a className="float-end readmore" href="#">read more</a>
+                            <h4><a href="#">Effectuer les achats en ligne</a></h4>
+                            <span>04, janvier 2022</span>
+                            <a className="float-end readmore" href="#">En savoir plus</a>
                         </div>
                     </div>
                     </div>
@@ -224,8 +224,8 @@ function Credit() {
                             et les paiements sur tous les TPE VISA en plus des sites marchands.
                             </p>
                         </div>
-                            <div className="col d-none d-md-block .col-md-6 ">
-                                <img src={visa} style={{height:'350px',width:'100%'}} alt="visa-crypto" />
+                            <div className="col d-none d-md-block .col-md-6">
+                                <img src={vignette} style={{height:'350px',width:'80%'}} alt="visa-crypto" />
                             </div>
                         </div>
                     </div>
