@@ -181,6 +181,10 @@
     white-space: nowrap;
     transition: 0.3s;
     position: relative;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
   }
   .navbar a i, .navbar a:focus i {
     font-size: 12px;
