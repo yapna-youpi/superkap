@@ -82,7 +82,7 @@ function Header() {
                     <div><div onClick={()=>navLink("/Academy")}  className="col-12 lien">Academie</div></div>
                     <div><div className="col-12 lien"><i className="bi bi-person-circle"></i> &nbsp; User</div></div>
                         <div><div onClick={()=>navLink("/Login")} className='liste'>Connexion</div></div>
-                        <div><div onClick={()=>navLink("/SingUp")} className='liste'>S'inscrire</div></div>
+                        <div><div onClick={()=>navLink("/Signup")} className='liste'>S'inscrire</div></div>
                     <div><div onClick={()=>navLink("/Help")}  className="col-12 lien">Support</div></div>
                 </div>
             {/* <!-- End Header --> */}

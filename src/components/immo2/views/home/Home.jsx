@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import ReactLoading from 'react-loading'
 
-import './home.css'
 import AppartMin from '../../components/AppartMin'
+
+import './home.css'
 import fot1 from '../../assets/fot1.jpg';
 import fot2 from '../../assets/fot2.jpg';
 import fot3 from '../../assets/fot3.jpg';
@@ -15,9 +16,12 @@ const Loader = () => (
 )
 
 function Home() {
+    
     const [loader, setLoader]=useState(false)
+    
     const [state, setState]=useState([{}])
-    useEffect(()=>{
+
+    useLayoutEffect(()=>{
         fetch('https://superkap-admin.herokuapp.com/immobiliers.json')
             .then(response=>response.json()).then(data=>{
                 console.log("the data ", data)

@@ -20,8 +20,9 @@
     line-height: 55px;
 }
 .signup .social-media{
-    display: none!important;
-}
+    display: flex;
+    margin-bottom: 15px;
+ }
 .signup .signup-form .label{
     display: none;
 }
@@ -54,6 +55,20 @@
     color: inherit;
 }
 
+.signup .social-media .social-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    margin-right: 5px;
+    border-radius: 50%; 
+}
+.signup .social-media .social-icon:hover {
+    background: #2dd143;
+    color: var(--sk-white);
+}
 
 @media only screen and (min-width:768px){
     .bg-signup{
@@ -97,20 +112,6 @@
         justify-content: space-between;
         padding: 25px auto;
         line-height: 55px;
-    }
-    .signup .social-media .social-icon {
-        display: block;
-        width: 40px;
-        height: 40px;
-        background: transparent;
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        font-size: 16px;
-        margin-right: 5px;
-        border-radius: 50%; 
-    }
-    .signup .social-media .social-icon:hover {
-        background: #2dd143;
-        color: var(--sk-white);
     }
     .signup .btn-white{
         cursor: pointer;
