@@ -1,12 +1,17 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom'
 import { RiArrowRightUpFill } from 'react-icons/ri'
-
 import SlideB from '../bootstrapSlide/SlideB';
+import { connect } from 'react-redux';
 
 import './businessDetail.css'
-function BusinessDetail() {
-    let history = useHistory();
+
+
+function BusinessDetail({ User }) {
+    let history = useHistory()
+    if(!User.nom) {
+        history.push('/login')
+    }
 
   return (
         <div className='businesDetail'>
@@ -50,4 +55,6 @@ function BusinessDetail() {
     )
 }
 
-export default BusinessDetail;
+const mapStateToProps=state=>({User: state.User})
+
+export default connect(mapStateToProps)(BusinessDetail)

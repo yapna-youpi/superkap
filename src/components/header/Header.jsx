@@ -4,11 +4,12 @@ import { IoMdLogIn } from 'react-icons/io'
 import { FaUserCircle } from 'react-icons/fa'
 import { RiWhatsappFill } from 'react-icons/ri'
 import { BsTelephoneOutboundFill } from 'react-icons/bs'
+import { connect } from 'react-redux'
 
 import './header.css'
 import logo from './assets/logo-superkap.png'
 
-function Header() {
+function Header({User}) {
     const [visible, setVisible] = useState(false);
     const myref = React.createRef();
 
@@ -29,7 +30,7 @@ function Header() {
         }
     }
 
-
+    console.log("the user ", User)
     return (
         <div className="header">
             
@@ -90,4 +91,6 @@ function Header() {
     )
 }
 
-export default Header
+const mapStateToProps=state=>({User: state.User})
+
+export default connect(mapStateToProps)(Header)

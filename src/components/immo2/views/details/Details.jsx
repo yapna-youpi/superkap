@@ -4,6 +4,7 @@ import { AiOutlineHome } from 'react-icons/ai'
 import { useHistory } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { connect } from 'react-redux';
 
 import './details.css'
 import fot1 from '../../assets/fot1.jpg'
@@ -12,19 +13,13 @@ import fot3 from '../../assets/fot3.jpg'
 import fot4 from '../../assets/fot4.jpg'
 import fot5 from '../../assets/fot5.jpg'
 
-function Details({match}) {
-    const [show, setShow] = useState(false);
-  
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-    const handle= ()=>{
-        handleClose();
-        history.push('/');
+function Details({ User, match }) {
+    const history =  useHistory();
+    if(!User.nom) {
+        history.push('/login')
     }
-
+    const [show, setShow] = useState(false);
     const [state, setState]=useState({})
-    let history = useHistory();
     useEffect(()=>{
         fetch(`https://superkap-admin.herokuapp.com/immobiliers/${match.params.id[1]}.json`)
             .then(response=>response.json()).then(data=>{
@@ -33,15 +28,23 @@ function Details({match}) {
             })
     }, [])
 
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const handle= ()=>{
+        handleClose();
+        history.push('/');
+    }
+
     console.log("the state ", match, state)
     return (
         <div className="appart-details">
             <div className="head">
                 <h1>{state.titre}</h1>
                 <div className="info">
-                    <span> <FaStar className="star" size={15} color="#00B67A" /> {state.parking && "Parking"} </span>
-                    <span>info 2 sans gras</span>
-                    <span>info 3 </span>
+                    <span> <FaStar className="star" size={15} color="#00B67A" /> &ensp; <b>{state.parking && "Parking"} </b></span>
+                    <span><b> { state.nombre_douche && " Salle de bain " } </b></span>
+                    <span><b> { state.cuisine && " Cuisine " } </b></span>
                 </div>
                 <div className="images">
                     <div className="poster">
@@ -79,7 +82,7 @@ function Details({match}) {
               <div className="col col-md-6 d-block d-sm-flex pt-3">
                   <div className="col d-none d-sm-block"></div>
                   <div className="col">
-                    <p style={{fontSize:"12px"}}>Pour protéger votre paiement, ne transférez jamais d'argent et ne communiquez pas en dehors du site ou de l'application Airbnb.</p>
+                    <p style={{fontSize:"12px"}}>Pour protéger votre paiement, ne transférez jamais d'argent et ne communiquez pas en dehors du site ou de l'application.</p>
                     <button onClick={handleShow} className='btn btn-outline-secondary'>contacter l'hôte</button>
                   </div>
               </div>
@@ -114,4 +117,6 @@ function Details({match}) {
     )
 }
 
-export default Details
+const mapStateToProps=state=>({User: state.User})
+
+export default connect(mapStateToProps)(Details)

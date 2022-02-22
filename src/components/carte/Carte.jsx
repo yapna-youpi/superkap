@@ -1,5 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 import './carte.css'
 import carte from './assets/banner.png'
@@ -7,8 +8,11 @@ import carteb from './assets/carte-bsic.png'
 import cartec from './assets/carte-crypto.png'
 
 
-function Credit() {
-let history = useHistory();
+function Credit({ User }) {
+    const history =  useHistory();
+    if(!User.nom) {
+        history.push('/login')
+    }
 
     return (
         <div className='sk-credit'>
@@ -69,4 +73,6 @@ let history = useHistory();
     )
 }
 
-export default Credit
+const mapStateToProps=state=>({User: state.User})
+
+export default connect(mapStateToProps)(Credit)
