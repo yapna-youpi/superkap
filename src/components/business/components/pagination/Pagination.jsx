@@ -1,9 +1,9 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Typography from '@mui/material/Typography';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
+import React, { useState, useLayoutEffect } from 'react'
+import PropTypes from 'prop-types'
+import Tabs from '@mui/material/Tabs'
+import Typography from '@mui/material/Typography'
+import Tab from '@mui/material/Tab'
+import Box from '@mui/material/Box'
 
 import Card from '../card/Card'
 import busi3 from '../../assets/images/tof9.jpg'
@@ -12,8 +12,13 @@ import ordi1 from '../../assets/informatique/tof6.jpg'
 import tel1 from '../../assets/informatique/tof9.jpg'
 import chauss1 from '../../assets/chaussures/tof7.jpg'
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+
+const checkDate=(date)=>{
+	let week=588000000 // une semaine en milisecondes
+	return (+new Date)-(+new Date(date))>week
+}
+
+function TabPanel({ children, value, index, ...props }) {
 
   return (
     <div
@@ -21,7 +26,7 @@ function TabPanel(props) {
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
-      {...other}
+      {...props}
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
@@ -32,13 +37,9 @@ function TabPanel(props) {
   );
 }
 
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
 
-function a11yProps(index) {
+
+function a11yProps(index) {credits
   return {
     id: `simple-tab-${index}`,
     'aria-controls': `simple-tabpanel-${index}`,
@@ -46,86 +47,76 @@ function a11yProps(index) {
 }
 
 export default function BasicTabs() {
+	const [items, setItems]=useState({ new: [], old: []})
+	const [value, setValue] = useState(0);
+	useLayoutEffect(() => {
+		getItems()
+	}, [])
 
-  const Modalite1 = {
-    titre: 'Veste de venise',
-    prix: '5000.00 XAF ou 15 Ussd',
-    image: busi3
-  }
-  const Modalite2 = {
-    titre: 'Parfum pachini',
-    prix: '7000.00 XAF ou 25 Ussd',
-    image: null1
-  }
-  const Modalite3 = {
-    titre: 'Laptop core-i7',
-    prix: '12000.00 XAF ou 50 Ussd',
-    image: ordi1
-  }
-  const Modalite4 = {
-    titre: 'Telephone samsung S21 ultra',
-    prix: '9000.00 XAF ou 35 Ussd',
-    image: tel1
-  }
-  const Modalite5 = {
-    titre: 'Chaussure dain bleu nuit',
-    prix: '4000.00 XAF ou 10 Ussd',
-    image: chauss1
-  }
+	const getItems=()=>{
+        fetch('https://superkap-admin.herokuapp.com/categories/5.json')
+            .then(response=>response.json()).then(data=>{
+				console.log("les data ", data)
+				parseItems(data)
+            })
+            .catch(error=>{
+                console.log("une erreur est survenue ", error)
+            })
+		}
+	const Cats=["Vêtements", "Beauté", "informatique", "Télephones", "Chaussures",
+		"Voitures", "Accessoires", "Loisirs","Meubles", "Pieces détaché" ]
 
+	const handleChange = (event, newValue) => {
+		setValue(newValue);
+	}
+	const parseItems=(items)=>{
+		console.log("parse item ", items)
+		let tab1=[], tab2=[]
+		items.forEach(item => {
+			if(checkDate(item.created_at)) tab1.push({...item, image: busi3})
+			else tab2.push({...item, image: busi3})
+		});
+		setItems({new: tab1, old: tab2})
+	}
 
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  console.log("the items ", items)
 
   return (
     <Box sx={{ maxWidth: '100%' , bgcolor: 'background.paper' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} aria-label="basic tabs example"  variant="scrollable" aria-label="scrollable force tabs example"
-              onChange={handleChange}
-              scrollButtons
-              allowScrollButtonsMobile>
-          <Tab label="Vêtements" {...a11yProps(0)} />
-          <Tab label="Beauté" {...a11yProps(1)} />
-          <Tab label="informatique" {...a11yProps(2)} />
-          <Tab label="Télephones" {...a11yProps(3)} />
-          <Tab label="Chaussures" {...a11yProps(4)} />
-          <Tab label="Voitures" {...a11yProps(5)} />
-          <Tab label="Accessoires" {...a11yProps(6)} />
-          <Tab label="Loisirs" {...a11yProps(7)} />
-          <Tab label="Meubles" {...a11yProps(8)} />
-          <Tab label="Pieces détachés" {...a11yProps(9)} />
+            onChange={handleChange}  scrollButtons allowScrollButtonsMobile
+        >
+          { Cats.map((cat, i)=><Tab label={cat} {...a11yProps(i)} key={`cat${i}`} />) }
         </Tabs>
       </Box>
 
         <TabPanel value={value} index={0}>
-          <Card name={"Nouveaux Vêtements"} Modalite={Modalite1}/>
-          <Card name={"Nouveaux Vêtements"} Modalite={Modalite1}/>
-          <Card name={"Nouveaux Vêtements"} Modalite={Modalite1}/>
+			{  items.old.length ?  <><Card name={"Nouveaux Vêtements"} Modalite={items.new} />
+			<Card name={"Anciens Vetements"} Modalite={items.old} /></> : <></> }
+          
         </TabPanel>
 
         <TabPanel value={value} index={1}>
-          <Card name={"Nouveaux produits"} Modalite={Modalite2}/>
-          <Card name={"Nouveaux produits"} Modalite={Modalite2}/>
+          {/* <Card name={"Nouveaux produits"} Modalite={modality[1]}/>
+          <Card name={"Nouveaux produits"} Modalite={modality[1]}/> */}
         </TabPanel>
 
         <TabPanel value={value} index={2}>
-          <Card name={"Laptop octa-core"} Modalite={Modalite3}/>
-          <Card name={"Laptop octa-core"} Modalite={Modalite3}/>
-          <Card name={"Laptop octa-core"} Modalite={Modalite3}/>
+          {/* <Card name={"Laptop octa-core"} Modalite={modality[2]}/>
+          <Card name={"Laptop octa-core"} Modalite={modality[2]}/>
+          <Card name={"Laptop octa-core"} Modalite={modality[2]}/> */}
         </TabPanel>
 
         <TabPanel value={value} index={3}>
-          <Card name={"Telephones d'origines"} Modalite={Modalite4}/>
-          <Card name={"Telephones d'origines"} Modalite={Modalite4}/>
+          {/* <Card name={"Telephones d'origines"} Modalite={modality[3]}/>
+          <Card name={"Telephones d'origines"} Modalite={modality[3]}/> */}
         </TabPanel>
 
         <TabPanel value={value} index={4}>
-        <Card name={"Chaussures de Marques"} Modalite={Modalite5}/>
-        <Card name={"Chaussures de Marques"} Modalite={Modalite5}/>
-        <Card name={"Chaussures de Marques"} Modalite={Modalite5}/>
+        {/* <Card name={"Chaussures de Marques"} Modalite={modality[4]}/>
+        <Card name={"Chaussures de Marques"} Modalite={modality[4]}/>
+        <Card name={"Chaussures de Marques"} Modalite={modality[4]}/> */}
         </TabPanel>
 
         <TabPanel value={value} index={5}>
@@ -151,3 +142,31 @@ export default function BasicTabs() {
     </Box>
   );
 }
+
+const modality=[
+  {
+    titre: 'Veste de venise',
+    prix: '5000.00 XAF ou 15 Ussd',
+    image: busi3
+  },
+  {
+    titre: 'Parfum pachini',
+    prix: '7000.00 XAF ou 25 Ussd',
+    image: null1
+  },
+  {
+    titre: 'Laptop core-i7',
+    prix: '12000.00 XAF ou 50 Ussd',
+    image: ordi1
+  },
+  {
+    titre: 'Telephone samsung S21 ultra',
+    prix: '9000.00 XAF ou 35 Ussd',
+    image: tel1
+  },
+  {
+    titre: 'Chaussure dain bleu nuit',
+    prix: '4000.00 XAF ou 10 Ussd',
+    image: chauss1
+  }
+]
