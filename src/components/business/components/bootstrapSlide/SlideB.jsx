@@ -11,36 +11,36 @@ function SlideB() {
         <Carousel>
           <Carousel.Item>
             <img
-              className="d-block w-75"
+              className="d-block w-75 mx-auto"
               src={img1}
               alt="First slide"
             />
             <Carousel.Caption>
-              <h3>First slide label</h3>
+              <h3>Chemise de venise</h3>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-75"
+              className="d-block w-75 mx-auto"
               src={img2}
               alt="Second slide"
             />
 
             <Carousel.Caption>
-              <h3>Second slide label</h3>
+              <h3>Blouson jean</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-75"
+              className="d-block w-75 mx-auto"
               src={img3}
               alt="Third slide"
             />
 
             <Carousel.Caption>
-              <h3>Third slide label</h3>
+              <h3>vetement enfant</h3>
               <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
             </Carousel.Caption>
           </Carousel.Item>

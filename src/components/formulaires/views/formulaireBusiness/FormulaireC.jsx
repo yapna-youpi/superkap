@@ -1,5 +1,4 @@
 import React from 'react';
-import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -8,6 +7,11 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 
 import './formulairec.css'
+import bitcoin from './bitcoin.png'
+import payeer from './payeer.png'
+import usdt from './usdt.png'
+import carte from './carte.png'
+import mobile from './mobile.png'
 
 function FormulaireC() {
     
@@ -99,11 +103,11 @@ function FormulaireC() {
                     value={value}
                     onChange={handleChange}
                 >
-                    <FormControlLabel value="Bitcoin" control={<Radio />} label="Bitcoin" />
-                    <FormControlLabel value="Usdt" control={<Radio />} label="Usdt" />
-                    <FormControlLabel value="Payeer" control={<Radio />} label="Payeer" />
-                    <FormControlLabel value="Carte de credit" control={<Radio />} label="Carte de credit" />
-                    <FormControlLabel value="Paiement Mobile" control={<Radio />} label="Paiement Mobile" />
+                   <p className='pa'><FormControlLabel value="Bitcoin" control={<Radio />} label="Bitcoin" /><img className='imagi' src={bitcoin} alt="bitcoin" /></p>
+                   <p className='pa'><FormControlLabel value="Usdt" control={<Radio />} label="Usdt" /><img style={{width:"80px"}} src={payeer} alt="payeer"  /></p>
+                   <p className='pa'><FormControlLabel value="Payeer" control={<Radio />} label="Payeer" /><img style={{width:"40px"}} src={usdt} alt="usdt" /></p>
+                   <p className='pa'><FormControlLabel value="Carte de credit" control={<Radio />} label="Carte de credit" /><img style={{width:"65px"}} src={carte} alt="carte" /></p>
+                   <p className='pa'><FormControlLabel value="Paiement Mobile" control={<Radio />} label="Paiement Mobile" /><img style={{width:"55px"}} src={mobile} alt="mobile" /></p>
                 </RadioGroup>
               </FormControl>
               <button className='btn btn-lg mt-3 bg-success w-100'>Confirmer la Commande</button>

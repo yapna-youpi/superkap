@@ -8,7 +8,7 @@ import banq3 from './assets/banq3.jpg'
 import visa from './assets/banner.png'
 
 
-function Credit() {
+function Credit(props) {
     return (
         <div className='sk-credit'>
             <div className="banner-credit">
@@ -20,7 +20,7 @@ function Credit() {
             <div className="command">
                 <div className="command-option">
                 <a href='https://www.gtpsecurecard.com/BSIC/'><h1 className="btn btn-lg teal command-solde">Consulter son Solde</h1></a>
-                    <h1 className="btn btn-lg  second command-solde">Reconduire</h1>
+                    <h1 onClick={()=>props.history.push("/FormulaireI")} className="btn btn-lg  second command-solde">Reconduire</h1>
                     <h1 className=" btn btn-lg bg-success command-solde">Recharger</h1>
                 </div>
                 <div className='command-head'>
@@ -31,7 +31,7 @@ function Credit() {
                                 <h1 className='title-n1'><span className='command-title'>VOS CARTES</span> BANCAIRES</h1>
                             </div>
                             <div className="col text-center command-head-right">
-                                <h1 className='btn btn-lg bg-info'>COMMANDER</h1>
+                                <h1 onClick={()=>props.history.push("/FormulaireRecond")} className='btn btn-lg bg-info'>COMMANDER</h1>
                             </div>
                         </div>
                     </div>

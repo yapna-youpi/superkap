@@ -8,7 +8,6 @@ import Modal from 'react-bootstrap/Modal';
 import Caroussel from '../../components/bootstrapSlide/SlideB'
 
 import './details.css'
-import fot1 from '../../assets/fot1.jpg'
 import fot2 from '../../assets/fot2.jpg'
 import fot3 from '../../assets/fot3.jpg'
 import fot4 from '../../assets/fot4.jpg'
