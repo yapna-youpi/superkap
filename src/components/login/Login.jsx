@@ -47,8 +47,8 @@ function Login({dispatch}) {
 			{fail && <alert><h1>Erreur de login</h1></alert>}
                 <div class="login-head">
 					<h3 class='login-title'>Sign In</h3>
-					<p class="social-media d-flex justify-content-end">
-						<a href="#" class="social-icon d-flex align-items-center justify-content-center"><RiFacebookFill/></a>
+					<p class="social-media  d-flex justify-content-end">
+						<a href="https://www.facebook.com/Superkap-102254418642682" class="social-icon d-flex align-items-center justify-content-center"><RiFacebookFill/></a>
 						<a href="#" class="social-icon d-flex align-items-center justify-content-center"><RiTwitterFill /></a>
 					</p>
 			    </div>
@@ -65,7 +65,7 @@ function Login({dispatch}) {
 							<button type="submit" class="form-control btn btn-succes submit px-3">Sign In</button>
 						</div>
 						<div class="login-down form-group">
-							<a href="#">
+							<a href="/signup">
 								<div class="down-left">
 									Sign up
 								</div>

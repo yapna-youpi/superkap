@@ -1,18 +1,18 @@
 .bg-login{
     background-color: #f8f9fd;
-    padding: 50px 0 0 0
+    padding: 50px 0 20px 0
 }
 
 .login .login-left{
     margin: 30px auto;
-    padding: 12px;
+    padding: 27px;
     text-align: left;
     width: 85%;
     background-color: #ffffff;
 }
 .login .login-left .login-title{
     padding-top: 35px;
-    padding-bottom: 20px;
+    font-weight: bold;
 }
 .login .login-head{
     text-align: center;
@@ -20,13 +20,14 @@
     line-height: 55px;
 }
 .login .social-media{
-    display: none!important;
+   display: flex;
+   margin-bottom: 15px;
 }
 .login .login-form .label{
     display: none;
 }
 .login input{
-    margin: 22px auto;
+    margin: 31px auto;
     border-radius: 50px!important;
 }
 .login .form-control:focus{
@@ -52,9 +53,27 @@
     text-decoration: none;
     color: inherit;
 }
-
+.login .social-media .social-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    margin-right: 5px;
+    border-radius: 50%; 
+}
+.login .social-media .social-icon:hover {
+    background: #2dd143;
+    color: var(--sk-white);
+}
 
 @media only screen and (min-width:768px){
+    .login .login-left .login-title{
+        padding-top: 35px;
+        font-weight: inherit;
+        padding-bottom: 20px;
+    }
     .bg-login{
         background-color: #f8f9fd;
         padding: 100px 0 40px 0;
@@ -97,20 +116,6 @@
         justify-content: space-between;
         padding: 25px auto;
         line-height: 55px;
-    }
-    .login .social-media .social-icon {
-        display: block;
-        width: 40px;
-        height: 40px;
-        background: transparent;
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        font-size: 16px;
-        margin-right: 5px;
-        border-radius: 50%; 
-    }
-    .login .social-media .social-icon:hover {
-        background: #2dd143;
-        color: var(--sk-white);
     }
     .login .btn-white{
         cursor: pointer;

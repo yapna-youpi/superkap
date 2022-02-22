@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-do
 import Header from '../components/header/Header.jsx'
 import Home from '../components/home/Home.jsx'
 import Crypto from '../components/crypto/Crypto.jsx'
-// import Immo from '../components/immo/Immo.jsx'
 import Business from '../components/business/view/Business'
 import Academy from '../components/academy/Academy.jsx'
 import Login from '../components/login/Login.jsx'
@@ -16,7 +15,6 @@ import Footer from '../components/footer/Footer'
 import Credit from '../components/credit/Credit'
 import CreditCrypto from '../components/creditCrypto/CreditCrypto'
 import Carte from '../components/carte/Carte'
-import ProduitDetail from '../components/immo/produitDetail/ProduitDetail.jsx'
 import FormulaireC from '../components/formulaires/views/formulaireC/FormulaireC'
 import FormulaireI from '../components/formulaires/views/formulaireImmo/FormullaireImmo'
 import Home2 from '../components/immo2/views/home/Home'
@@ -42,7 +40,6 @@ function Navigation() {
                     <Route exact path='/Carte'  component={Carte} />
                     <Route exact path='/Credit'  component={Credit} />
                     <Route exact path='/CreditCrypto'  component={CreditCrypto} />
-                    <Route exact path='/ProduitDetail'  component={ProduitDetail} />
                     <Route exact path='/Help'  component={Help} />
                     <Route exact path='/immo2'  component={Home2} />
                     <Route exact path='/immo2/details2/:id'  component={Details} />

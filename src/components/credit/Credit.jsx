@@ -45,25 +45,25 @@ function Credit() {
                 </div>
                 <div className="container d-flex justify-content-between avantages">
                     <div className="avantages-left">
-                    <h3>Les principaux avantages</h3>
-                    <ol>
-                        <li>La carte Visa prépayée BSIC n’exige aucune vérification de solvabilité.</li>
-                        <li>La carte Visa prépayée BSIC offre plusieurs options de recharge faciles et rapides en étant un outil efficace pour mieux gérer vos achats.</li>
-                        <li>La carte Visa prépayée BSIC offre une grande flexibilité d’utilisation et plus d'autonomie dans vos dépenses.</li>
-                    </ol>
-                    <br/>
-                    <p>Vous pouvez aussi l'utiliser pour:</p>
-                    <ul>
-                        <li>Pour éffectuer vos réservations de voyage en ligne.</li>
-                        <li>Pour vos achats en ligne (Facebook, Abonnement, Compte Iphone, Les paris sportifs et jeux, Casino, Etc.).</li>
-                        <li>Pour les retraits d'argent dans plus de 1,7 million de guichets automatiques VISA dans le monde.</li>
-                    </ul>
-                </div>
+                        <h3>Les principaux avantages</h3>
+                        <ol>
+                            <li>La carte Visa prépayée BSIC n’exige aucune vérification de solvabilité.</li>
+                            <li>La carte Visa prépayée BSIC offre plusieurs options de recharge faciles et rapides en étant un outil efficace pour mieux gérer vos achats.</li>
+                            <li>La carte Visa prépayée BSIC offre une grande flexibilité d’utilisation et plus d'autonomie dans vos dépenses.</li>
+                        </ol>
+                        <br/>
+                        <p>Vous pouvez aussi l'utiliser pour:</p>
+                        <ul>
+                            <li>Pour éffectuer vos réservations de voyage en ligne.</li>
+                            <li>Pour vos achats en ligne (Facebook, Abonnement, Compte Iphone, Les paris sportifs et jeux, Casino, Etc.).</li>
+                            <li>Pour les retraits d'argent dans plus de 1,7 million de guichets automatiques VISA dans le monde.</li>
+                        </ul>
+                    </div>
                     <div className="advantages-right">
                         <div className='d-flex justify-content-center align-items-center'><img className="credit-card" src={carte} alt='carte credit' /></div>
                     </div>
                 </div>
-                
+
                 <div className="container d-flex tableau justify-content-around mb-5 mt-5">
                     <div className="tableau-n1">
                         <h3 className='tableau-title'>Frais de votre carte BSIC</h3>
@@ -167,7 +167,7 @@ function Credit() {
                 <div className="container" data-aos="fade-up">
                     <div className="section-title text-center">
 
-                        <h2>Latest posts</h2>
+                        <h2>Comment utiliser la carte ?</h2>
                         <p className="separator">Integer cursus bibendum augue ac cursus .</p>
                     </div>
 
@@ -177,9 +177,9 @@ function Credit() {
                         <div className="block-blog text-left">
                             <a href="#"><img src={banq1} alt="img-3"/></a>
                             <div className="content-blog">
-                            <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-                            <span>05, juin 2017</span>
-                            <a className="float-end readmore" href="#">read more</a>
+                            <h4><a href="#">Effectuer vos réservations de voyage en ligne.</a></h4>
+                            <span>05, janvier 2022</span>
+                            <a className="float-end readmore" href="#">En savoir plus</a>
                             </div>
                         </div>
                         </div>
@@ -188,9 +188,9 @@ function Credit() {
                         <div className="block-blog text-left">
                             <a href="#"><img src={vignette} className="img-responsive" alt="img-1"/></a>
                             <div className="content-blog">
-                            <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-                            <span>05, juin 2017</span>
-                            <a className="float-end readmore" href="#">read more</a>
+                            <h4><a href="#">retirer de l'argent dans les guichets automatiques VISA</a></h4>
+                            <span>02, janvier 2022</span>
+                            <a className="float-end readmore" href="#">En savoir plus</a>
                             </div>
                         </div>
                         </div>
@@ -199,9 +199,9 @@ function Credit() {
                         <div className="block-blog text-left">
                             <a href="#"><img src={banq3} className="img-responsive" alt="img-2"/></a>
                             <div className="content-blog">
-                            <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-                            <span>05, juin 2017</span>
-                            <a className="float-end readmore" href="#">read more</a>
+                            <h4><a href="#">Effectuer les achats en ligne</a></h4>
+                            <span>04, janvier 2022</span>
+                            <a className="float-end readmore" href="#">En savoir plus</a>
                             </div>
                         </div>
                         </div>
