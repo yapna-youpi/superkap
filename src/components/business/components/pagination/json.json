@@ -1,0 +1,134 @@
+[
+    {
+    "id": 1,
+    "nom": "produits de beauté",
+    "created_at": "2022-02-11T13:13:09.998Z",
+    "updated_at": "2022-02-11T13:13:09.998Z",
+    "articles": [
+    {
+    "id": 4,
+    "nom": "chaussures vans  ",
+    "prix": 150000,
+    "description": "paire  au design tres chic et bien executer dans la fabrication et le coloriage",
+    "quantite": 12,
+    "category_id": 1,
+    "created_at": "2022-02-11T13:32:52.713Z",
+    "updated_at": "2022-02-11T13:32:52.713Z",
+    "images": []
+    },
+    {
+    "id": 5,
+    "nom": "telephone Iphone 13 MAX pro",
+    "prix": 750000,
+    "description": "LOREMPDGVHJ  SHCGQS   SQKHGQI",
+    "quantite": null,
+    "category_id": 1,
+    "created_at": "2022-02-22T10:34:47.885Z",
+    "updated_at": "2022-02-22T10:34:47.885Z",
+    "images": []
+    },
+    {
+    "id": 6,
+    "nom": "SAMSUNG 22 LITE",
+    "prix": 800000,
+    "description": "BEAU ET ELEGANT PRISE EN MAIN FLEXIBLE",
+    "quantite": 12,
+    "category_id": 1,
+    "created_at": "2022-02-22T10:35:53.615Z",
+    "updated_at": "2022-02-22T10:35:53.615Z",
+    "images": []
+    },
+    {
+    "id": 7,
+    "nom": "LG THINK V60 ",
+    "prix": 535000,
+    "description": "FACILE POUR LA PRISE EN MAIN",
+    "quantite": 14,
+    "category_id": 1,
+    "created_at": "2022-02-22T10:36:46.359Z",
+    "updated_at": "2022-02-22T10:36:46.359Z",
+    "images": []
+    }
+    ],
+    "url": "https://superkap-admin.herokuapp.com/categories/1.json"
+    },
+    {
+    "id": 2,
+    "nom": "vêtements",
+    "created_at": "2022-02-11T13:14:13.274Z",
+    "updated_at": "2022-02-11T13:14:13.274Z",
+    "articles": [
+    {
+    "id": 8,
+    "nom": "pantanlon jean slim",
+    "prix": 25000,
+    "description": "prês a emporter sur commande",
+    "quantite": 10,
+    "category_id": 2,
+    "created_at": "2022-02-22T10:37:58.237Z",
+    "updated_at": "2022-02-22T10:37:58.237Z",
+    "images": []
+    }
+    ],
+    "url": "https://superkap-admin.herokuapp.com/categories/2.json"
+    },
+    {
+    "id": 3,
+    "nom": "informatique",
+    "created_at": "2022-02-11T13:14:35.466Z",
+    "updated_at": "2022-02-11T13:14:35.466Z",
+    "articles": [],
+    "url": "https://superkap-admin.herokuapp.com/categories/3.json"
+    },
+    {
+    "id": 4,
+    "nom": "meubles",
+    "created_at": "2022-02-11T13:15:01.527Z",
+    "updated_at": "2022-02-11T13:15:01.527Z",
+    "articles": [
+    {
+    "id": 3,
+    "nom": "veste de luxe ",
+    "prix": 45000,
+    "description": "veste de couleur tres prisée , pret du corps et fait avec un tissu de premier choix ",
+    "quantite": 7,
+    "category_id": 4,
+    "created_at": "2022-02-11T13:22:49.341Z",
+    "updated_at": "2022-02-11T13:22:49.341Z",
+    "images": []
+    }
+    ],
+    "url": "https://superkap-admin.herokuapp.com/categories/4.json"
+    },
+    {
+    "id": 5,
+    "nom": "accessoires",
+    "created_at": "2022-02-11T13:15:13.084Z",
+    "updated_at": "2022-02-11T13:15:13.084Z",
+    "articles": [
+    {
+    "id": 1,
+    "nom": "Parfum Dolce hermes",
+    "prix": 22500,
+    "description": "Du chic au delir , parfum pour les hommes tendres de tous les horizons. dolce ermes ",
+    "quantite": 24,
+    "category_id": 5,
+    "created_at": "2022-02-11T13:18:55.377Z",
+    "updated_at": "2022-02-11T13:18:55.377Z",
+    "images": []
+    },
+    {
+    "id": 2,
+    "nom": "Eau de toilette bio-pharma",
+    "prix": 9700,
+    "description": "eau pure qui rafraichit la peau et adoussit la surface de votre corps.",
+    "quantite": 31,
+    "category_id": 5,
+    "created_at": "2022-02-11T13:20:52.938Z",
+    "updated_at": "2022-02-11T13:20:52.938Z",
+    "images": []
+    }
+    ],
+    "url": "https://superkap-admin.herokuapp.com/categories/5.json"
+    }
+    ]
