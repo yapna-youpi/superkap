@@ -5,9 +5,7 @@ import { MdOutlineShoppingCart } from 'react-icons/md'
 import Brique from '../brique/Brique'
 
 import './card.css'
-import busi2 from './assets/images/tof8.jpg'
-import busi3 from './assets/images/tof9.jpg'
-import busi4 from './assets/images/tof2.jpg'
+
 
 function Card({name, Modalite}) {
     let history = useHistory();

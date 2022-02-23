@@ -19,9 +19,16 @@ root
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444444;
+  color: #333333;
   scrollbar-width: 5px; /* "auto" or "thin" */
   scrollbar-color: var(--sk-green) var(--sk-orange); /* scroll thumb and track */
+}
+p, .paragraph {
+  font-weight: 400;
+  color: #333;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Montserrat", sans-serif;
 }
 
 a {

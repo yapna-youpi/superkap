@@ -26,7 +26,7 @@ function BusinessDetail({ User, match }) {
         <div className='businesDetail'>
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-md-6 mt-5 pt-5">
+                    <div className="col-12 col-md-6 mt-5 p-md-0 pt-md-5 p-lg-5 four">
                         <SlideB />
                     </div>                  
                     <div className="col-12 col-md-6 d-md-flex justify-content-around mt-5 pt-5">
@@ -39,7 +39,7 @@ function BusinessDetail({ User, match }) {
                                 <hr/>
                                 <p style={{fontSize:'15px'}}>vous noterez que nos produits apres commande ne sont ni repris , ni échangés.</p>
                             </div>
-                            <button  className="btn btn-lg btn-secondary my-5 mx-auto d-block"
+                            <button  className="btn btn-lg btn-secondary my-5 mx-auto d-block "
                                      onClick={()=>history.push('/FormulaireC')}    
                             >     
                                 Contacter le fournisseur

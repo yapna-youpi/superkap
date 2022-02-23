@@ -15,8 +15,9 @@ import Footer from '../components/footer/Footer'
 import Credit from '../components/credit/Credit'
 import CreditCrypto from '../components/creditCrypto/CreditCrypto'
 import Carte from '../components/carte/Carte'
-import FormulaireC from '../components/formulaires/views/formulaireC/FormulaireC'
-import FormulaireI from '../components/formulaires/views/formulaireImmo/FormullaireImmo'
+import FormulaireC from '../components/formulaires/views/formulaireBusiness/FormulaireC'
+import FormulaireI from '../components/formulaires/views/formulaireC/FormullaireImmo'
+import FormulaireRecond from '../components/formulaires/views/formulaireReconduct/FormullaireReconduct'
 import Home2 from '../components/immo2/views/home/Home'
 import Details from '../components/immo2/views/details/Details'
 import BusinessDetail from '../components/business/components/businessDetail/BusinessDetail'
@@ -32,6 +33,7 @@ function Navigation() {
                     <Route exact path='/Crypto'  component={Crypto} />
                     {/* <Route exact path='/Immo'  component={Immo} /> */}
                     <Route exact path='/Business'  component={Business} />
+                    <Route exact path='/BusinessDetail/:id'  component={BusinessDetail} />
                     <Route exact path='/Academy'  component={Academy} />
                     <Route exact path='/Login'  component={Login} />
                     <Route exact path='/Signup'  component={Signup} />
@@ -45,7 +47,7 @@ function Navigation() {
                     <Route exact path='/immo2/details2/:id'  component={Details} />
                     <Route exact path='/FormulaireC'  component={FormulaireC} />
                     <Route exact path='/FormulaireI'  component={FormulaireI} />
-                    <Route exact path='/BusinessDetail/:id'  component={BusinessDetail} />
+                    <Route exact path='/FormulaireRecond'  component={FormulaireRecond} />)
                     <Redirect to="/" />
                 </Switch>
                 <Footer />

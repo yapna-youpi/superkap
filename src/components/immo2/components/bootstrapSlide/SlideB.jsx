@@ -4,6 +4,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import img1 from '../../assets/fot1.jpg'
 import img2 from '../../assets/fot2.jpg'
 import img3 from '../../assets/fot3.jpg'
+import img4 from '../../assets/fot5.jpg'
 
 function SlideB() {
   return (
@@ -36,6 +37,18 @@ function SlideB() {
             <img
               className="d-block w-100"
               src={img3}
+              alt="Third slide"
+            />
+
+            <Carousel.Caption>
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={img4}
               alt="Third slide"
             />
 

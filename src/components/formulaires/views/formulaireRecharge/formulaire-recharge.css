@@ -1,0 +1,28 @@
+.formulaireI{
+    
+}
+.formulaire-content{
+    width: 100%;
+}
+.formu{
+    box-shadow: 0px 15px 60px rgb(62 62 62 / 10%) !important;
+    border-radius: 8px;
+    padding: 20px;
+}
+.get-started-icon-card {
+    font-size: 26px;
+    font-weight: bold;
+    /* background: var(--sk-orange); */
+    width: 70px;
+    padding: 7px;
+    color: #fff;
+    border-radius: 50%;
+    position: relative;
+    z-index: 5; 
+}
+.formu-left{
+    width: 48%;
+}
+.formu-right{
+    width: 48%;
+}
