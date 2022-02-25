@@ -41,6 +41,18 @@ function Home() {
     console.log("the state ", state)
     return (
         <div className="immo-home">
+            <div className="immo-content p-5 m-5">
+                <h2 className='immo-title text-center'>Où rêvez-vous de vivre?</h2>
+                <div className="immo-search d-flex justify-content-center">
+                    <form className="d-flex justify-content-center" >
+                        <div className="input-group mb-3 input-group-lg w-75 mb-2">
+                            <input type="text" className="form-control " placeholder='Maison Appartement ...'/>
+                            <span className="input-group-text btn">Rechercher</span>
+                            <h6 className='mt-3'>1,525,363 annonces immobilières au Cameroun sur le grand site Superkap ! </h6>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <div className="brand">
                 <h1> Où rêvez-vous de vivre ? </h1>
                 <div className="search">

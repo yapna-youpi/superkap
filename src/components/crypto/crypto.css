@@ -2,13 +2,21 @@
     width: 100%;
 }
 .trad{
-    background: yellowgreen;
+    background-color: #f2f9f8;
+}
+.ligne-c{
+    height: 3px!important;
+    color: orangered;
+    margin: 0 auto;
 }
 .trade{
     display: block;
     margin: 0 auto 10px auto;
     padding: 5px auto;
     background: yellowgreen;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url('./assets/bg.jpg');
 }
 .trade .trade-left{
     width: 95%;
@@ -17,21 +25,31 @@
 }
 .trade .trade-right{
     display: none;
-    
+}
+.crypto dt{
+    color: white;
+}
+.crypto dd{
+    font-weight: bolder;
+    color:rgb(37, 37, 2)
 }
 
 .crypto .btn-crypto{
-    padding: 4px 45px;
-    border: 1px solid var(--sk-orange);
-    color: var(--sk-orange);
+    padding: 6px 15px;
+    background: var(--sk-orange);
+    border: 1px solid var(--sk-white);
+    color: var(--sk-white);
+    font-style: 20px;
     border-radius: 50px;
 }
 .crypto .btn-crypto:hover{
-    color: var(--sk-green);
-    background: var(--sk-orange);
-    border: 1px solid var(--sk-white);
+    background-color: rgb(110, 148, 36);
+    border: 1px solid rgb(110, 148, 36) ;
 }
 /*---styling buy and sell---*/
+.crypto .target{
+    background-color: #f2f9f8;
+}
 .crypto .target-form{
     display: block;
     width: 100%;
@@ -145,6 +163,12 @@
 
 /*-------------site grand ecran-------------*/
 @media (min-width: 992px) {
+    .btn-crypto2{   
+    padding: 6px 15px!important;
+    background: var(--sk-orange)!important;
+    color: var(--sk-white)!important;
+    font-style: 20px!important;
+    }
     .crypto .banner-content{
         width: 100%;  
     }
@@ -167,7 +191,7 @@
     .trade .trade-right{
         width: 45%;
         height: 350px;
-        background: url('./assets/tof1.jpeg');
+        background: url('./assets/tof3.jpg');
         margin-left: 5%;
         margin-right: 5%;
         display: block;
@@ -187,28 +211,30 @@
     /*--styling buy and sell--*/
 
     .crypto .target-img1{
-       background-image: url('./assets/crypt6.jpg');
-       border: 1px solid #000;
-       border-radius: 8px;
-       height: 180px;
-       background-position: center;
-       background-size: 100%;
-       transition: all 0.4s; 
+    background-image: url('./assets/crypt6.jpg');
+    border-radius: 8px;
+    height: 200px;
+    /* background: no-repeat; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.4s;
     }
     .crypto .target-img2{
-        background-image: url('./assets/crypt1.jpg');
-        border: 1px solid #000;
-        border-radius: 8px;
-        height: 180px;
-        background-position: center;
-        background-size: 100%;
-        transition: all 0.4s; 
+    background-image: url('./assets/crypt1.jpg');
+    border-radius: 8px;
+    height: 200px;
+    /* background: no-repeat; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.4s;
     }
     .crypto .target-img1:hover{
         background-size: 110%;
     }
     .crypto .target-img2:hover{
-        background-size: 110%;
+        transform: scale3d(0.1);
     }
     .crypto .target-bg{
         height: 100%;
@@ -222,12 +248,19 @@
     .crypto .target .btn:hover{
         transform:translateY(-4px);
     }
-    .crypto .btn-crypto{
-        margin: 5px 12px ;
-    }
     .crypto .partners .partner-container img{
         margin: 0px 80px 10px 80px;
         width: 120px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 1;
+        filter: brightness( 100% ) contrast( 100% ) saturate( 100% ) ;
+        
+    }
+    .crypto .partners .partner-container img:hover{
+        opacity: 0.9;
+        filter: brightness( 100% ) contrast( 100% ) saturate( 10% ) ;
     }
     .crypto .partners .partner-container{
         display: flex;

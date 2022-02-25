@@ -51,18 +51,26 @@ function Caroussel() {
                         <label htmlFor="radio3" className='manual-btn'></label>
                         <label htmlFor="radio4" className='manual-btn'></label>
                     </div>
+                   
                     <div className="slide first">
-                    <img src={img4} alt="imge slide1"/>
-                </div>
-                <div className="slide">
-                    <img src={img2} alt="imge slide2"/>
-                </div>
-                <div className="slide">
-                    <img src={img3} alt="imge slide3"/>
-                </div>
-                <div className="slide">
-                    <img src={img1} alt="imge slide4"/>
-                </div>
+                        <div className="d-block text-center position-absolute mt-5 pt-5 w-100 mx-auto">
+                            <h3 className='w-100 mt-5 px-auto '>
+                                <p className='text-center texe1'>Achetez, vendez vos crypto-monnaies</p>
+                                <br/>
+                                <p className='text-center texe3'>instantanément & à moindre coût</p>
+                            </h3>
+                        </div>
+                        <img src={img4} alt="imge slide1"/>
+                    </div>
+                    <div className="slide">
+                        <img src={img2} alt="imge slide2"/>
+                    </div>
+                    <div className="slide">
+                        <img src={img3} alt="imge slide3"/>
+                    </div>
+                    <div className="slide">
+                        <img src={img1} alt="imge slide4"/>
+                    </div>
                 </div>
                 
             </div>

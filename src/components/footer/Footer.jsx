@@ -1,10 +1,12 @@
 import React from 'react'
 import { RiFacebookFill,RiTwitterFill,RiWhatsappFill,RiInstagramFill,RiLinkedinFill } from 'react-icons/ri'
+import { useHistory } from 'react-router-dom'
 
 import './footer.css'
 import logo from './assets/logo-superkap.png'
 
 function Footer() {
+    let history = useHistory();
 
     return (
         <div id="footer">
@@ -15,7 +17,7 @@ function Footer() {
                         <div className="col-lg-3 col-md-6">
                             <div className="footer-info">
                                 <h3 className='logo mx-auto mx-md-0'>
-                                    <img className='logo' src={logo} alt="logo" />
+                                    <img onClick={()=>history.push('/')} className='logo' src={logo} alt="logo" />
                                 </h3>
                                 <p>
                                     polyclinic tsinga <br/>

@@ -54,9 +54,10 @@ function Crypto() {
                     <img className='partner1' src={crp1} alt='crypto' />
                 </div>
             </div>
-            <div className="trad pt-5 ">
-                <h1 className='text-center '>Découvrez nos services CRYPTOS</h1>
-                <p className='text-center mb-0'>Nous mettons à la disposition de nos membres,<br/> les services et des avantages particuliers :</p>
+            <div className="trad pt-5 pb-2">
+                <h1 className='text-center '>Découvrez Nos Services Cryptos</h1>
+               <hr width="10%" className='ligne-c' />
+                <p className='text-center mb-5 mt-3'>Nous mettons à la disposition de nos membres, plusieurs services ainsi que des avantages particuliers :</p>
             </div>
             <div className="trade pb-4 ">
                 <div className="trade-left pt-3 p-4 p-md-0">
@@ -77,7 +78,7 @@ function Crypto() {
                     </dl>               
                 </div>
                 <div  className="trade-right">
-                    
+
                 </div>
             </div>
             <div className="container target">
@@ -86,27 +87,27 @@ function Crypto() {
                         <div className="row my-5">
                             <div className="col-12 target-img1 col-md-4"></div>
                             <div className="col-12 col-md-8">
-                                <h5>Comment acheter des crypto-monnaies sur notre plate forme ?</h5>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi obcaecati saepe expedita!</p>
+                                <h3>Comment acheter des crypto-monnaies sur notre plate forme ?</h3>
+                                <h6 className='mb-4 '>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi obcaecati saepe expedita!</h6>
                                 <button onClick={()=>history.push('/Buy')} className="btn btn-lg btn-warning">ACHETER CRYPTO</button>
                             </div>
                         </div><hr/>
                         <div className="row my-5">
                             <div className="col-12 target-img2 col-md-4"></div>
                             <div className="col-12 col-md-8">
-                                <h5>vous desirez revendre ou vendre votre crypto-monnaie !</h5>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi obcaecati saepe expedita!</p>
+                                <h3>vous desirez revendre ou vendre votre crypto-monnaie !</h3>
+                                <h6  className='mb-4'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi obcaecati saepe expedita!</h6>
                                 <button onClick={()=>history.push('/Sell')} className="btn btn-lg btn-success">VENDRE CRYPTO</button>
                             </div>
                         </div><hr/>
                     </div>
                     <div className="col-11 text-sm-center target-bg my-4 col-md-4 pt-5">
                         <div className="card mt-5">
-                            <img className="card-img-top img-car" src={tof} alt="Card image" />
+                            <img className="card-img-top img-car" src={tof} alt="Card" />
                             <div className="card-body">
                                 <h6 className="card-title">Court de la crypto 24/24 et 7jours.</h6>
                                 <p className="card-text">abonnez vous à notre FAQ </p>
-                                <a onClick={()=>history.push('/Help')} className="btn btn-crypto">En Savoir Plus</a>
+                                <span onClick={()=>history.push('/Help')} className="btn btn-crypto2">En Savoir Plus</span>
                             </div>
                         </div>
                     </div>

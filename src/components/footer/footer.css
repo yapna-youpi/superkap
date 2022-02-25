@@ -89,7 +89,7 @@
     text-decoration: none;
   }
   #footer .logo{
-    width: 55px;
+    width: 155px;
   }
   #footer .footer-top .footer-links ul a:hover {
     color: var(--sk-green);
@@ -139,6 +139,7 @@
   }
   #footer .logo{
     color: var(--sk-orange);
+    cursor: pointer;
   }
   #footer .fot-link:hover{
       color: var(--sk-orange);
