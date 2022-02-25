@@ -33,6 +33,7 @@ function Navigation() {
                     <Route exact path='/Crypto'  component={Crypto} />
                     {/* <Route exact path='/Immo'  component={Immo} /> */}
                     <Route exact path='/Business'  component={Business} />
+                    <Route exact path='/BusinessDetail/:id'  component={BusinessDetail} />
                     <Route exact path='/Academy'  component={Academy} />
                     <Route exact path='/Login'  component={Login} />
                     <Route exact path='/Signup'  component={Signup} />
@@ -44,10 +45,9 @@ function Navigation() {
                     <Route exact path='/Help'  component={Help} />
                     <Route exact path='/immo2'  component={Home2} />
                     <Route exact path='/immo2/details2/:id'  component={Details} />
-                    <Route exact path='/FormulaireC'  component={FormulaireC} />
-                    <Route exact path='/FormulaireI'  component={FormulaireI} />)
+                    <Route exact path='/FormulaireC/:id'  component={FormulaireC} />
+                    <Route exact path='/FormulaireI'  component={FormulaireI} />
                     <Route exact path='/FormulaireRecond'  component={FormulaireRecond} />)
-                    <Route exact path='/BusinessDetail'  component={BusinessDetail} />
                     <Redirect to="/" />
                 </Switch>
                 <Footer />

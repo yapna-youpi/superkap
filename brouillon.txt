@@ -12,7 +12,7 @@ import ordi1 from '../../assets/informatique/tof6.jpg'
 import tel1 from '../../assets/informatique/tof9.jpg'
 import chauss1 from '../../assets/chaussures/tof7.jpg'
 
-import Categs from './json.json' // here
+import Categs from './json.json'
 
 
 const checkDate=(date)=>{
@@ -47,36 +47,30 @@ function a11yProps(index) {
 }
 
 export default function BasicTabs() {
-	const [value, setValue] = useState(0);
-	// const [Categs, setCategs]=useState([]) here
 	const [items, setItems]=useState({ new: [], old: []})
+	const [value, setValue] = useState(0);
 	useLayoutEffect(() => {
-		getItems()
-		console.log("useLayoutEffect")
-	}, [value])
+		// getItems()
+	}, [])
 
-	const getItems=async()=>{
-		if(Categs.length) {
-			parseItems(Categs[value].articles)
-		} else {
-			console.log("here we get items")
-			fetch('https://superkap-admin.herokuapp.com/categories.json')
-				.then(response=>response.json()).then(data=>{
-					// setCategs(data) here
-					console.log("les data ", data)
-					parseItems(data[value].articles)
-				})
-				.catch(error=>{
-					console.log("une erreur est survenue ", error)
-				})
+	const getItems=()=>{
+        fetch('https://superkap-admin.herokuapp.com/categories/5.json')
+            .then(response=>response.json()).then(data=>{
+				console.log("les data ", data)
+				parseItems(data)
+            })
+            .catch(error=>{
+                console.log("une erreur est survenue ", error)
+            })
 		}
-	}
+	const Cats=["Vêtements", "Beauté", "informatique", "Télephones", "Chaussures",
+		"Voitures", "Accessoires", "Loisirs","Meubles", "Pieces détaché" ]
 
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
 	}
 	const parseItems=(items)=>{
-		console.log("the items to parse ", items)
+		console.log("parse item ", items)
 		let tab1=[], tab2=[]
 		items.forEach(item => {
 			if(checkDate(item.created_at)) tab1.push({...item, image: busi3})
@@ -85,7 +79,8 @@ export default function BasicTabs() {
 		setItems({new: tab1, old: tab2})
 	}
 
-	console.log("the index an categ ", value, Categs[value])
+	console.log("the value ", value)
+	console.log("the categs ", Categs)
 
   return (
     <Box sx={{ maxWidth: '100%' , bgcolor: 'background.paper' }}>
@@ -97,14 +92,56 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
 
-        <TabPanel value={value} index={value}>
-			{  items.new.length || items.old.length ?  <><Card name={"Nouveaux Articles"} Modalite={items.new} />
-			<Card name={"En Stocks"} Modalite={items.old} /></> : <>Nothing To show</> }
+        <TabPanel value={value} index={0}>
+			{  items.old.length ?  <><Card name={"Nouveaux Vêtements"} Modalite={items.new} />
+			<Card name={"Anciens Vetements"} Modalite={items.old} /></> : <></> }
           
         </TabPanel>
 
+        <TabPanel value={value} index={1}>
+          {/* <Card name={"Nouveaux produits"} Modalite={modality[1]}/>
+          <Card name={"Nouveaux produits"} Modalite={modality[1]}/> */}
+        </TabPanel>
+
+        <TabPanel value={value} index={2}>
+          {/* <Card name={"Laptop octa-core"} Modalite={modality[2]}/>
+          <Card name={"Laptop octa-core"} Modalite={modality[2]}/>
+          <Card name={"Laptop octa-core"} Modalite={modality[2]}/> */}
+        </TabPanel>
+
+        <TabPanel value={value} index={3}>
+          {/* <Card name={"Telephones d'origines"} Modalite={modality[3]}/>
+          <Card name={"Telephones d'origines"} Modalite={modality[3]}/> */}
+        </TabPanel>
+
+        <TabPanel value={value} index={4}>
+        {/* <Card name={"Chaussures de Marques"} Modalite={modality[4]}/>
+        <Card name={"Chaussures de Marques"} Modalite={modality[4]}/>
+        <Card name={"Chaussures de Marques"} Modalite={modality[4]}/> */}
+        </TabPanel>
+
+        <TabPanel value={value} index={5}>
+          Item Three
+        </TabPanel>
+
+        <TabPanel value={value} index={6}>
+          Item Three
+        </TabPanel>
+
+        <TabPanel value={value} index={7}>
+          Item Three
+        </TabPanel>
+        
+        <TabPanel value={value} index={8}>
+          Item Three
+        </TabPanel>
+        
+        <TabPanel value={value} index={9}>
+          Item Three
+        </TabPanel>
+
     </Box>
-  )
+  );
 }
 
 const modality=[

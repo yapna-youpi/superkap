@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import ReactLoading from 'react-loading'
+import { connect } from 'react-redux'
 
 import './buy.css'
+
 const PaymentWays={
     p1: [{lab: 'Carte Visa UBA cameroun', val: 'CB'}, {lab: 'MTN Mobile money', val: 'Mtn'}, {lab: 'Orange Money Cameroun', val: 'OM'}, {lab: 'MTN MOMO FLOAT CAMEROUN', val: 'MTNF'}, {lab: 'Carte Visa Crypto SuperKap', val: 'CBSK'}],
     p2: [{lab: 'MOMO international', val: 'MOMO international'}],
@@ -13,8 +15,11 @@ const PaymentWays={
 
 }
 
-function Buy() {
+function Buy({ User }) {
     const history =  useHistory();
+    if(!User.nom) {
+        history.push('/login')
+    }
 
     const [loader,setLoader] = useState(false);
 
@@ -188,4 +193,6 @@ function Buy() {
     )
 }
 
-export default Buy
+const mapStateToProps=state=>({User: state.User})
+
+export default connect(mapStateToProps)(Buy)

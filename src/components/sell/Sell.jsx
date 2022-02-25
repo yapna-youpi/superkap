@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import ReactLoading from 'react-loading'
+import { connect } from 'react-redux'
 
 import './sell.css'
 const PaymentWays={
@@ -13,7 +14,11 @@ const PaymentWays={
 
 }
 
-function Sell() {
+function Sell({ User }) {
+    let history = useHistory()
+    if(!User.nom) {
+        history.push('/login')
+    }
 
     const [state, setState]=useState({amount: "", fees: "", crypto: "Bitcoin", country: 'CAMEROUN-p1', payment: "CB", wallet: "", numAccount: "", names: "", phone: ""})
     const [transaction, setTransaction]=useState(null)
@@ -180,4 +185,6 @@ function Sell() {
     )
 }
 
-export default Sell
+const mapStateToProps=state=>({User: state.User})
+
+export default connect(mapStateToProps)(Sell)

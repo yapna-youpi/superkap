@@ -7,7 +7,7 @@ import './appartmin.css'
 function AppartMin({data}) {
     let history=useHistory()
     return (
-        <div className="appart-min" onClick={()=>history.push('/immo2/details2/:1')}>
+        <div className="appart-min" onClick={()=>history.push(`/immo2/details2/:${data.id}`)}>
             <img src={fot} alt="Coin"/>
             <div className="details">
                 <div className="line">

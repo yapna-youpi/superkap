@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { RiFacebookFill,RiTwitterFill } from 'react-icons/ri'
 import { useHistory } from 'react-router-dom'
-import styles from './login.css'
+import { connect } from 'react-redux'
 
-function Login() {
+import styles from './login.css'
+import { setUser } from '../../store/actions'
+
+function Login({dispatch}) {
 
 	const [state, setState]=useState({email: "", password: ""})
 	const [fail, setFail]=useState(false)
@@ -22,15 +25,21 @@ function Login() {
 			},
 			"body": JSON.stringify(state)
 		}).then(response=>{
-			if(response.status===200)
-				history.push('/')
+			if(response.status===200) return response.json() 
 			else setFail(true)
+		}).then(data=>{
+			if(data) {
+				console.log("the data ", data)
+				dispatch(setUser(data[0]))
+				history.push('/')
+
+			}
 		})
 		.catch(error=>console.log("sign up error ", error))
 		return false
 	}
 
-	console.log("the state ", state)
+	// console.log("the state ", dispatch)
     return (
 		<div className="bg-login">
         <div className='login pt-5 pt-md-0 pb-sm-3 pb-md-0 shadow'>
@@ -81,4 +90,6 @@ function Login() {
     )
 }
 
-export default Login
+const mapStateToProps=state=>({User: state.User})
+
+export default connect(mapStateToProps)(Login)

@@ -1,17 +1,35 @@
-.formulaireC{
-    color: #282c3f!important;
+.formulaireC {
+    color: #282c3f !important;
 }
 
-.command-right{
+.command-right {
     background-color: #fafafa;
     border: 1px solid #ececec;
     color: #282c3f;
 }
-.command-left{
-}
-.imagi{
+
+.command-left {}
+
+.imagi {
     width: 30px;
 }
-.pa{
-    margin-bottom: 0!important;
+
+.pa {
+    margin-bottom: 0 !important;
+}
+
+.product-details {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-details img {
+    display: block;
+    width: 60%;
+}
+
+.product-details span {
+    color: var(--sk-green);
 }
