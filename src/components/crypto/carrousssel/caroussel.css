@@ -90,6 +90,24 @@ display: none;
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background: yellowgreen;
 }
+
+.texe1{
+    font-weight: bold;
+    font-size: 55px;
+    color: antiquewhite;
+}
+.texe2{
+    font-size: 40px;
+    color: antiquewhite!important;
+    font-weight: bold;
+}
+.texe3{
+    font-size: 40px;
+    font-weight: bold;
+    color: orange!important;
+}
+
+/* mode telephone */
 @media screen and (max-width:600px) {
     .caroussel .slider{
         width: 100%;
@@ -115,5 +133,6 @@ display: none;
         justify-content: center;
         margin-top: 350px;
     }   
+
 }
 

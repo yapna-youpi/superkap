@@ -8,4 +8,13 @@
         padding: 70px 0 0 0!important;
         margin-top: 2.8rem!important;
     }
+    .row .col-md-6  .icon{
+        color: #919191!important;
+    }
+    .ico1{
+        color: #919191!important;
+    }
+    .ico1:hover{
+        color: pink;
+    }
 }
