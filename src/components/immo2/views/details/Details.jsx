@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { FaStar } from 'react-icons/fa'
 import { AiOutlineHome } from 'react-icons/ai'
 import { useHistory } from 'react-router-dom'
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import { connect } from 'react-redux';
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
+import { connect } from 'react-redux'
 
 import Caroussel from '../../components/bootstrapSlide/SlideB'
 
@@ -16,11 +16,11 @@ import fot5 from '../../assets/fot5.jpg'
 import logo from './logo-superkap.png'
 
 function Details({ User, match }) {
-    const history = useHistory();
+    const history = useHistory()
     if (!User.nom) {
         history.push('/login')
     }
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(false)
     const [state, setState] = useState({})
     useEffect(() => {
         fetch(`https://superkap-admin.herokuapp.com/immobiliers/${match.params.id[1]}.json`)
@@ -34,8 +34,8 @@ function Details({ User, match }) {
     const handleShow = () => setShow(true)
 
     const handle = () => {
-        setShow(false);
-        history.push('/');
+        setShow(false)
+        history.goBack()
     }
     const reserver = () => {
         const body = {
@@ -50,15 +50,15 @@ function Details({ User, match }) {
             "body": JSON.stringify(body)
         })
             .then(response => {
-                if (response.status !== 200) alert("echec de la commande")
+                if (response.status!==201) alert("echec de la commande")
                 else {
                     setShow(true)
                 }
-                console.log(response);
+                console.log(response)
             })
             .catch(err => {
                 alert("echec de la commande")
-            });
+            })
     }
 
     console.log("the state ", match, state)
@@ -67,7 +67,7 @@ function Details({ User, match }) {
             <div className="head">
                 <h1>{state.titre}</h1>
                 <div className="info">
-                    <span> <FaStar className="star" size={15} color="#00B67A" /> &ensp; <b>{state.parking && "Parking"} </b></span>
+                    <span> <FaStar className="star" size={15} color="#00B67A" /> &ensp <b>{state.parking && "Parking"} </b></span>
                     <span><b> {state.nombre_douche && " Salle de bain "} </b></span>
                     <span><b> {state.cuisine && " Cuisine "} </b></span>
                 </div>
@@ -117,7 +117,7 @@ function Details({ User, match }) {
             <div className='mt-5'>
                 <Modal
                     show={show}
-                    onHide={handleClose}
+                    onHide={handle}
                     backdrop="static"
                     keyboard={false}
                     aria-labelledby="contained-modal-title-vcenter"
@@ -130,12 +130,6 @@ function Details({ User, match }) {
                         <h5>Felicitation vous venez de reserver un Logement chez Superkap!</h5>
                         <h5>Nous vous contacterons d'ici peut merci!</h5>
                     </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="success" onClick={handle} >
-                            fermer
-                        </Button>
-
-                    </Modal.Footer>
                 </Modal>
 
             </div>
