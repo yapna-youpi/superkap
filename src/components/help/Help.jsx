@@ -79,6 +79,10 @@ function Help() {
                 
                 <div className="col-11 col-md-5 mx-auto d-none d-md-block mt-sm-5 help-right">
                     <div className="map">
+                    <div class="pulse">
+                        <div class="pulse1"></div>
+                        <div class="pulse2"></div>
+                    </div> 
                         <img className='mt-5 ' src={img1} alt='call-center' />
                         {/* <Mape /> */}
                     </div>
