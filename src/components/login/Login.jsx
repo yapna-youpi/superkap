@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { RiFacebookFill,RiTwitterFill } from 'react-icons/ri'
 import { useHistory } from 'react-router-dom'
 import { connect } from 'react-redux'
+import ReactLoading from 'react-loading'
 
 import styles from './login.css'
 import { setUser } from '../../store/actions'
@@ -10,6 +11,7 @@ function Login({dispatch}) {
 
 	const [state, setState]=useState({email: "", password: ""})
 	const [fail, setFail]=useState(false)
+	const [loading, setLoading]=useState(false)
 
 	let history=useHistory()
 
@@ -18,6 +20,7 @@ function Login({dispatch}) {
 	}
 	const handleSubmit=(e)=>{
 		e.preventDefault()
+		setLoading(true)
 		fetch('https://superkap-admin.herokuapp.com/login', {
 			"method": "POST",
 			"headers": {
@@ -32,10 +35,13 @@ function Login({dispatch}) {
 				console.log("the data ", data)
 				dispatch(setUser(data[0]))
 				history.push('/')
-
+				setLoading(false)
 			}
 		})
-		.catch(error=>console.log("sign up error ", error))
+		.catch(error=>{
+			console.log("sign up error ", error)
+			setLoading(true)
+		})
 		return false
 	}
 
@@ -62,7 +68,9 @@ function Login({dispatch}) {
 							<input type="password" name="password" class="form-control" placeholder="Password" required onChange={(e)=>handleChange(e.target)} />
 						</div>
 						<div class="form-group">
-							<button type="submit" class="form-control btn btn-succes submit px-3">Sign In</button>
+							<button type="submit" class="form-control btn btn-succes submit px-3 text-center ">
+								{ loading ? (<ReactLoading type="spin" color="#f79323" />):"Login" }
+							</button>
 						</div>
 						<div class="login-down form-group">
 							<a href="/signup">

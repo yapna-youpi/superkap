@@ -2,16 +2,21 @@ import React, {useState} from 'react';
 import { useHistory } from 'react-router-dom';
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
 import ReactLoading from 'react-loading'
+import { connect } from 'react-redux';
 
 import './formulaire-reconduction.css'
 
-function FormullaireReconduction(props) {
+function FormullaireReconduction({ User }) {
+    const history = useHistory()
+    if (!User.nom) {
+        history.push('/login')
+    }
     const [state, setState] = useState({
-        prenom: "", nom: "", proffession: "", birthday: "",
+        prenom: "", nom: "", profession: "", birthday: "", nature_piece: "",
         adresse: "", bp: "", pays: "CAMEROUN", region: "", ville: "", telephone: ""
     })
     const [loading, setLoading]=useState(false)
-    let history = useHistory()
+    const [fail, setFail]=useState(false)
 
     const handleChange = (target) => {
         console.log(target.name)
@@ -20,36 +25,48 @@ function FormullaireReconduction(props) {
     const handleSubmit=(e)=>{
 		e.preventDefault()
         setLoading(true)
-        setTimeout(() => {
-            e.target.reset()
-            setLoading(false)
-        }, 3000);
+        setFail(false)
+        let params={
+            user_id: 1, date_naissance: state.birthday, nature_piece: state.nature_piece,
+            adresse: state.adresse, profession: state.profession, operation_type: 'Reconduction'
+        }
+		fetch('https://superkap-admin.herokuapp.com/buy_cards.json', {
+			"method": "POST",
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"body": JSON.stringify(params)
+		}).then(response=>{
+            if(!(response.status===200 || response.status===201)) setFail(true)
+            else history.goBack()
+        })
         return false
     }
 
     console.log("the state ", state)
     return (
         <div className='formulaireRecond w-100 mt-5 py-5 bg-light'>
-            <h6 onClick={() => props.history.push('/Carte')} className='text-success d-block my-3 mx-auto px-5 w-75 txte'>
+            <h6 onClick={() => history.push('/Carte')} className='text-success d-block my-3 mx-auto px-5 w-75 txte'>
                 <i className="bx bxs-right-arrow-alt get-started-icon-recond">< MdOutlineKeyboardBackspace /></i>
                 <span className='fs-5 rec-text'>&nbsp; Retour</span>
             </h6>
             <div className="formulaire-content-rec ">
                 <form className='bg-white w-75 mx-auto formu-rec ' onSubmit={(e)=>handleSubmit(e)}>
-                    <h4 className='rec-text text-center'>Commander Votre Carte</h4>
+                    <h4 className='rec-text text-center'>Reconduisez Votre Carte</h4>
+                    {fail &&<h5>Echec de la requete</h5>}
 
                     {/* partie de gauche du formulaire */}
                     <div className='formu-content mt-4 d-flex justify-content-around row'>
                         <div className="formu-left col-12 col-md-6">
                             <div class="form-group mb-3">
                                 <label class="label" for="Prénom">Prénom</label>
-                                <input type="text" name="prenom" class="form-control input-buy" placeholder="Prénom" required 
+                                <input type="text" name="prenom" class="form-control input-buy" placeholder="Prénom" 
                                     onChange={(e)=>handleChange(e.target)}
                                 />
                             </div>
                             <div class="form-group mb-3">
                                 <label class="label" for="Nom">Nom</label>
-                                <input type="text" name="nom" class="form-control input-buy" placeholder="Nom" required 
+                                <input type="text" name="nom" class="form-control input-buy" placeholder="Nom" 
                                     onChange={(e)=>handleChange(e.target)}
                                 />
                             </div>
@@ -73,7 +90,7 @@ function FormullaireReconduction(props) {
                             </div>
                             <div class="form-group mb-3">
                                 <label class="label" for="Code Postale">Code Postale</label>
-                                <input type="text" name="bp" class="form-control input-buy" placeholder="Code Postale" required 
+                                <input type="text" name="bp" class="form-control input-buy" placeholder="Code Postale" 
                                     onChange={(e)=>handleChange(e.target)}
                                 />
                             </div>
@@ -93,13 +110,13 @@ function FormullaireReconduction(props) {
                             </div>
                             <div class="form-group mb-3">
                                 <label class="label" for="region">region</label>
-                                <input type="text" name="region" class="form-control input-buy" placeholder="region" required 
+                                <input type="text" name="region" class="form-control input-buy" placeholder="region" 
                                     onChange={(e)=>handleChange(e.target)}
                                 />
                             </div>
                             <div class="form-group mb-3">
                                 <label class="label" for="ville">ville</label>
-                                <input type="text" name="ville" class="form-control input-buy" placeholder="ville" required 
+                                <input type="text" name="ville" class="form-control input-buy" placeholder="ville" 
                                     onChange={(e)=>handleChange(e.target)}
                                 />
                             </div>
@@ -111,14 +128,14 @@ function FormullaireReconduction(props) {
                             </div>
                             <div class="form-group mb-3">
                                 <label class="label" for="Email">Email</label>
-                                <input type="text" name="email" class="form-control input-buy" placeholder="Email" required 
+                                <input type="text" name="email" class="form-control input-buy" placeholder="Email" 
                                     onChange={(e)=>handleChange(e.target)}
                                 />
                             </div>
                             <div class="form-group mb-3">
                                 <label class="label" for="name">Télephone</label>
                                 <input type="tel" name="telephone" class="form-control input-buy" placeholder="Telephone"
-                                    required onChange={(e)=>handleChange(e.target)}
+                                     onChange={(e)=>handleChange(e.target)}
                                 />
                             </div>
                         </div>
@@ -133,4 +150,6 @@ function FormullaireReconduction(props) {
     )
 }
 
-export default FormullaireReconduction;
+const mapStateToProps = state => ({ User: state.User })
+
+export default connect(mapStateToProps)(FormullaireReconduction)
