@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { RiFacebookFill,RiTwitterFill } from 'react-icons/ri'
 import { useHistory } from 'react-router-dom'
 import { connect } from 'react-redux'
+import Alert from 'react-bootstrap/Alert';
 
 import styles from './login.css'
 import { setUser } from '../../store/actions'
@@ -10,6 +11,7 @@ function Login({dispatch}) {
 
 	const [state, setState]=useState({email: "", password: ""})
 	const [fail, setFail]=useState(false)
+	const [show, setShow] = useState(true);
 
 	let history=useHistory()
 
@@ -44,7 +46,16 @@ function Login({dispatch}) {
 		<div className="bg-login">
         <div className='login pt-5 pt-md-0 pb-sm-3 pb-md-0 shadow'>
             <div className="shadow shadow-md-none login-left">
-			{fail && <alert><h1>Erreur de login</h1></alert>}
+			{fail && (<Alert variant="danger" onClose={() => {setShow(!show); setFail(!fail)}} dismissible>
+							<Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+							<p>
+							Change this and that and try again. Duis mollis, est non commodo
+							luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+							Cras mattis consectetur purus sit amet fermentum.
+							</p>
+						</Alert>)
+
+			}
                 <div class="login-head">
 					<h3 class='login-title'>Sign In</h3>
 					<p class="social-media  d-flex justify-content-end">
@@ -93,3 +104,7 @@ function Login({dispatch}) {
 const mapStateToProps=state=>({User: state.User})
 
 export default connect(mapStateToProps)(Login)
+
+
+
+
