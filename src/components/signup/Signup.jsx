@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { RiFacebookFill,RiTwitterFill } from 'react-icons/ri'
 import { useHistory } from 'react-router-dom'
+import Alert from 'react-bootstrap/Alert';
+
 import './signup.css'
 
 function Signup() {
+	const [show, setShow] = useState(true);
 	const [state, setState]=useState({nom: "", prenom: "", email: "", password: "", confirm: "", ville: "", pays: "", telephone: ""})
 	const [errors, setErrors]=useState({password: false})
 	const [fail, setFail]=useState(false)
@@ -45,69 +48,78 @@ function Signup() {
 		<div className="bg-signup">
         <div className='pb-sm-3 pb-md-0 signup shadow'>
             <div className="signup-left">
-                <div class="signup-head">
-					<h3 class='signup-title'>Sign up</h3>
-					<p class="social-media d-flex justify-content-end">
-						<a href="https://www.facebook.com/Superkap-102254418642682" class="social-icon d-flex align-items-center justify-content-center"><RiFacebookFill/></a>
-						<a href="#" class="social-icon d-flex align-items-center justify-content-center"><RiTwitterFill /></a>
+                <div className="signup-head">
+					<h3 className='signup-title'>Sign up</h3>
+					<p className="social-media d-flex justify-content-end">
+						<a href="https://www.facebook.com/Superkap-102254418642682" className="social-icon d-flex align-items-center justify-content-center"><RiFacebookFill/></a>
+						<a href="#" className="social-icon d-flex align-items-center justify-content-center"><RiTwitterFill /></a>
 					</p>
 			    </div>
-                <form action="#" class="signup-form" onSubmit={(e)=>handleSubmit(e)} >
-					{fail && <alert><h1>Erreur de login</h1></alert>}
-							<div class="form-group mb-2">
-								<label class="label" for="name">Name</label>
-								<input type="text" name="nom" class="name" class="form-control" placeholder="Name" required onChange={(e)=>handleChange(e.target)} />
+                <form action="#" className="signup-form" onSubmit={(e)=>handleSubmit(e)} >
+					{fail && (<Alert variant="danger" onClose={() => {setShow(!show); setFail(!fail)}} dismissible>
+							<Alert.Heading>Oups! Vous avez une Erreur!</Alert.Heading>
+							<p>
+							Veuillez reprendre la procedure d'inscription en utilisant vos veritables arguments.
+							</p>
+						</Alert>)
+					
+					}
+
+
+							<div className="form-group mb-2">
+								<label className="label" for="name">Name</label>
+								<input type="text" name="nom" className="form-control" placeholder="Name" required onChange={(e)=>handleChange(e.target)} />
 							</div>
-							<div class="form-group mb-2">
-								<label class="label" for="name">prenom</label>
-								<input type="text" name="prenom" class="name" class="form-control" placeholder="Name" required onChange={(e)=>handleChange(e.target)} />
+							<div className="form-group mb-2">
+								<label className="label" for="name">prenom</label>
+								<input type="text" name="prenom" className="form-control" placeholder="Name" required onChange={(e)=>handleChange(e.target)} />
 							</div>
-							<div class="form-group mb-2">
-								<label class="label" for="name">Email</label>
-								<input type="email" name="email" id="email" class="form-control" placeholder="Email" required onChange={(e)=>handleChange(e.target)} />
+							<div className="form-group mb-2">
+								<label className="label" for="name">Email</label>
+								<input type="email" name="email" id="email" className="form-control" placeholder="Email" required onChange={(e)=>handleChange(e.target)} />
 							</div>
-							<div class="form-group mb-2">
-								<label class="label" for="name">Telephone</label>
-								<input type="phone" name="telephone" id="phone" class="form-control" placeholder="Email" required onChange={(e)=>handleChange(e.target)} />
+							<div className="form-group mb-2">
+								<label className="label" for="name">Telephone</label>
+								<input type="phone" name="telephone" id="phone" className="form-control" placeholder="Email" required onChange={(e)=>handleChange(e.target)} />
 							</div>
-							<div class="form-group mb-2">
-								<label class="label" for="name">Ville</label>
-								<input type="text" name="ville" class="name" class="form-control" placeholder="Ville" required onChange={(e)=>handleChange(e.target)} />
+							<div className="form-group mb-2">
+								<label className="label" for="name">Ville</label>
+								<input type="text" name="ville" className="form-control" placeholder="Ville" required onChange={(e)=>handleChange(e.target)} />
 							</div>
-							<div class="form-group mb-2">
-								<label class="label" for="name">Pays</label>
-								<input type="text" name="pays" class="name" class="form-control" placeholder="Pays" required onChange={(e)=>handleChange(e.target)} />
+							<div className="form-group mb-2">
+								<label className="label" for="name">Pays</label>
+								<input type="text" name="pays" className="form-control" placeholder="Pays" required onChange={(e)=>handleChange(e.target)} />
 							</div>
-							<div class="form-group mb-2">
-								<label class="label" for="name">Password</label>
-								<input type="password" name="password" class="form-control" placeholder="password" required onChange={(e)=>handleChange(e.target)} />
+							<div className="form-group mb-2">
+								<label className="label" for="name">Password</label>
+								<input type="password" name="password" className="form-control" placeholder="password" required onChange={(e)=>handleChange(e.target)} />
 							</div>
-							<div class="form-group mb-2">
-								<label class="label" for="password">Confirm Password</label>
-								<input type="password" name="confirm" class="form-control" placeholder="confirm Password" required onChange={(e)=>handleChange(e.target)} />
-								{errors.password && state.confirm && <span className="text-danger">should match to password</span>}
+							<div className="form-group mb-2">
+								<label className="label" for="password">Confirm Password</label>
+								<input type="password" name="confirm" className="form-control" placeholder="confirm Password" required onChange={(e)=>handleChange(e.target)} />
+								{errors.password && state.confirm && <span classNameName="text-danger">should match to password</span>}
 							</div>
-							<div class="form-group">
-								<button type="submit" class="form-control btn btn-succes submit px-3">Sign up</button>
+							<div className="form-group">
+								<button type="submit" className="form-control btn btn-succes submit px-3">Sign up</button>
 							</div>
-							<div class="signup-down form-group">
+							<div className="signup-down form-group">
 								<a href="#">
-									<div class="down-left">
+									<div className="down-left">
 										{/* connection */}
 									</div>
 								</a>
-								<div class="down-right">
+								<div className="down-right">
 									{/* <a href="#">Forgot Password</a> */}
 								</div>
 							</div>
 						</form>
             </div>
-			<div className="signup-right d-flex">
-				<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center">
-					<div class="text w-100">
+			<div classNameName="signup-right d-flex">
+				<div className="text-wrap p-4 p-lg-5 text-center d-flex align-items-center">
+					<div className="text w-100">
 						<h2>Welcome to signup</h2>
 						<p>already registered login ?</p>
-						<a href="/login" class="btn btn-white">login</a>
+						<a href="/login" className="btn btn-white">login</a>
 					</div>
 				</div>
 			</div>
