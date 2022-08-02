@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom'
 import TextField from '@mui/material/TextField';
 import Radio from '@mui/material/Radio';
@@ -7,6 +7,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { connect } from 'react-redux';
+import { Modal } from 'react-bootstrap';
 
 import './formulairec.css'
 import bitcoin from './assets/bitcoin.png'
@@ -15,14 +16,15 @@ import usdt from './assets/usdt.png'
 import carte from './assets/carte.png'
 import mobile from './assets/mobile.png'
 import tof3 from '../../assets/tof3.jpg'
+import logo from './logo-superkap.png'
 
 function FormulaireC({User, match }) {
     const history =  useHistory();
     if(!User.nom) {
         history.push('/login')
     }
-	const [payment, setPayment] = React.useState({});
-	const [value, setValue] = React.useState('female');
+	const [payment, setPayment] = React.useState('')
+	const [show, setShow]=useState(true)
 	const [item, setItem] = React.useState({})
 	React.useEffect(() => {
 		fetch(`https://superkap-admin.herokuapp.com/articles/${match.params.id[1]}.json`)
@@ -36,7 +38,7 @@ function FormulaireC({User, match }) {
 		setPayment(event.target.value);
 	}
 	const command = () => {
-		if (!payeer) alert("vous devez choisir um mode de payement")
+		if (!payment) alert("vous devez choisir um mode de payement")
 		else {
 			const body={
 				user_id: User.id,
@@ -51,19 +53,43 @@ function FormulaireC({User, match }) {
 				"body": JSON.stringify(body)
 			})
 				.then(response => {
-					if(response.status!==200) alert("echec de la commande")
-					console.log(response);
+					if(response.status!==201) alert("echec de la commande")
+					else setShow(true)
 				})
 				.catch(err => {
 					alert("echec de la commande")
 				});
 		}
 	}
+	const closeModal=()=>{
+		setShow(false)
+		history.goBack()
+	}
 
 	console.log("the item ", item, payment)
 
 	return (
 		<>
+			<div className='mt-5'>
+				<Modal
+					show={show}
+					onHide={closeModal}
+					backdrop="static"
+					keyboard={false}
+					aria-labelledby="contained-modal-title-vcenter"
+					centered
+				>
+					<Modal.Header closeButton >
+						<Modal.Title><img style={{ width: '150px' }} src={logo} /></Modal.Title>
+					</Modal.Header>
+					<Modal.Body>
+						<h2>Commande effectuee !</h2>
+						<h3> Nous vous contacterons d'ici peut merci! </h3>
+					</Modal.Body>
+				</Modal>
+
+			</div>
+
 			<h1 className='mt-5 pt-5 text-center' style={{ color: '#282c3f' }}>Commander Vos Articles</h1>
 			<div className="formulairec container-fluid mt-5 d-md-flex justify-content-around">
 				<div className="command-left col-12 col-md-8">

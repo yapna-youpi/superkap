@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import { RiFacebookFill,RiTwitterFill } from 'react-icons/ri'
 import { useHistory } from 'react-router-dom'
 import { connect } from 'react-redux'
+
+import ReactLoading from 'react-loading'
 import Alert from 'react-bootstrap/Alert';
+
 
 import styles from './login.css'
 import { setUser } from '../../store/actions'
@@ -11,8 +14,10 @@ function Login({dispatch}) {
 
 	const [state, setState]=useState({email: "", password: ""})
 	const [fail, setFail]=useState(false)
-	const [show, setShow] = useState(true);
 
+	const [loading, setLoading]=useState(false)
+
+	const [show, setShow] = useState(true);
 	let history=useHistory()
 
 	const handleChange=(target)=>{
@@ -20,6 +25,7 @@ function Login({dispatch}) {
 	}
 	const handleSubmit=(e)=>{
 		e.preventDefault()
+		setLoading(true)
 		fetch('https://superkap-admin.herokuapp.com/login', {
 			"method": "POST",
 			"headers": {
@@ -34,10 +40,13 @@ function Login({dispatch}) {
 				console.log("the data ", data)
 				dispatch(setUser(data[0]))
 				history.push('/')
-
+				setLoading(false)
 			}
 		})
-		.catch(error=>console.log("sign up error ", error))
+		.catch(error=>{
+			console.log("sign up error ", error)
+			setLoading(true)
+		})
 		return false
 	}
 
@@ -70,8 +79,12 @@ function Login({dispatch}) {
 							<label className="label" for="password">Password</label>
 							<input type="password" name="password" className="form-control" placeholder="Password" required onChange={(e)=>handleChange(e.target)} />
 						</div>
+						<div class="form-group">
+							<button type="submit" class="form-control btn btn-succes submit px-3 text-center ">
+								{ loading ? (<ReactLoading type="spin" color="#f79323" />):"Login" }
+							</button>
 						<div className="form-group">
-							<button type="submit" className="form-control btn btn-succes submit px-3">Sign In</button>
+							<button type="submit" className="form-control btn btn-succes submit px-
 						</div>
 						<div className="login-down form-group">
 							<a href="/signup">

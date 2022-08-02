@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { RiFacebookFill,RiTwitterFill } from 'react-icons/ri'
 import { useHistory } from 'react-router-dom'
+
+import ReactLoading from 'react-loading'
 import Alert from 'react-bootstrap/Alert';
 
 import './signup.css'
@@ -10,6 +12,7 @@ function Signup() {
 	const [state, setState]=useState({nom: "", prenom: "", email: "", password: "", confirm: "", ville: "", pays: "", telephone: ""})
 	const [errors, setErrors]=useState({password: false})
 	const [fail, setFail]=useState(false)
+	const [loading, setLoading]=useState(false)
 	let history=useHistory()
 
 	const handleChange=(target)=>{
@@ -27,6 +30,7 @@ function Signup() {
 			setErrors({password: true})
 			return
 		} else {
+			setLoading(true)
 			fetch('https://superkap-admin.herokuapp.com/users.json', {
 				"method": "POST",
 				"headers": {
@@ -35,9 +39,13 @@ function Signup() {
 				"body": JSON.stringify(state)
 			}).then(response=>response.json()).then(data=>{
 				console.log("signup response ", data)
+				setLoading(false)
 				history.push('/login')
 			})
-			.catch(error=>console.log("sign up error ", error))
+			.catch(error=>{
+				console.log("sign up error ", error)
+				setLoading(true)
+			})
 
 		}
 		return false
@@ -99,8 +107,13 @@ function Signup() {
 								<input type="password" name="confirm" className="form-control" placeholder="confirm Password" required onChange={(e)=>handleChange(e.target)} />
 								{errors.password && state.confirm && <span classNameName="text-danger">should match to password</span>}
 							</div>
+							<div class="form-group">
+								<button type="submit" class="form-control btn btn-succes submit px-3">
+									{ loading ? (<ReactLoading type="spin" height={10} color="#f79323" />):"Sign Up" }
+								</button>
 							<div className="form-group">
 								<button type="submit" className="form-control btn btn-succes submit px-3">Sign up</button>
+
 							</div>
 							<div className="signup-down form-group">
 								<a href="#">
