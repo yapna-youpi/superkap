@@ -1,5 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
+import AOS from 'aos';
 
 import './crypto.css'
 import Caroussel from './carrousssel/Caroussel'
@@ -17,7 +18,11 @@ import crp8 from './assets/images crypto/usdc-logo.jpg'
 
 
 function Crypto() {
+
+    AOS.init();
+
     const history = useHistory();
+    
     return (
 
         <div className="crypto">
@@ -62,22 +67,35 @@ function Crypto() {
             <div className="trade pb-4 ">
                 <div className="trade-left pt-3 p-4 p-md-0">
                     <dl>
-                        <dt>HOLDING</dt>
-                        <dd>En suivant nos conseils,  vous N’achèterez pas aveuglement toute crypto.<br/>
-                        Nous vous indiquons les projets les plus rentables sur le long terme, en utilisant les stratégies les plus performantes<br/>
-                        Ce service est réservé exclusivement aux abonnés VIP. Il coûte 100 USDT par AN.<br/><br/>
-                            <button onClick={()=>history.push('/Help')} className="btn-crypto py-2 my-2">En savoir plus</button> 
+                        <dt data-aos="fade-right" data-aos-delay="0">HOLDING</dt>
+                        <dd data-aos="fade-right" >
+                            <span >En suivant nos conseils,  vous N’achèterez pas aveuglement toute crypto.<br/>
+                                Nous vous indiquons les projets les plus rentables sur le long terme, en utilisant les stratégies les plus performantes<br/>
+                                Ce service est réservé exclusivement aux abonnés VIP. Il coûte 100 USDT par AN.
+                            </span><br/><br/>
+                            <button 
+                                className="btn-crypto py-2 my-2"
+                                onClick={()=>history.push('/Help')} data-aos="fade-right"  
+                            >
+                                En savoir plus
+                            </button> 
                         </dd>
                         <br />
-                        <dt>HOLDING MENSUEL</dt>
-                        <dd>Ce service est destiné à tous ceux qui veulent gagner hebdomadairement et mensuellement de l’argent avec la cryptomonnaie. Il est exclusivement réservé aux abonnés actifs.
-                            Découvrez nos signaux d’achats et de vente et profitez pour faire le plein de cryptos
-                            <br/><br/>
-                            <button onClick={()=>history.push('/Help')} className="btn-crypto py-2 my-2">En savoir plus</button> 
+                        <dt data-aos="fade-right" data-aos-delay="40">HOLDING MENSUEL</dt>
+                        <dd data-aos="fade-right">
+                            <span>Ce service est destiné à tous ceux qui veulent gagner hebdomadairement et mensuellement de l’argent avec la cryptomonnaie. Il est exclusivement réservé aux abonnés actifs.
+                                Découvrez nos signaux d’achats et de vente et profitez pour faire le plein de cryptos
+                            </span><br/><br/>
+                            <button 
+                                className="btn-crypto py-2 my-2"
+                                onClick={()=>history.push('/Help')} data-aos="fade-right" data-aos-delay="30"
+                                >
+                                    En savoir plus
+                            </button> 
                         </dd>
                     </dl>               
                 </div>
-                <div  className="trade-right">
+                <div  className="trade-right" data-aos="zoom-in">
 
                 </div>
             </div>

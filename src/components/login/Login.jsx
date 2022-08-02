@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import { RiFacebookFill,RiTwitterFill } from 'react-icons/ri'
 import { useHistory } from 'react-router-dom'
 import { connect } from 'react-redux'
+
 import ReactLoading from 'react-loading'
+import Alert from 'react-bootstrap/Alert';
+
 
 import styles from './login.css'
 import { setUser } from '../../store/actions'
@@ -11,8 +14,10 @@ function Login({dispatch}) {
 
 	const [state, setState]=useState({email: "", password: ""})
 	const [fail, setFail]=useState(false)
+
 	const [loading, setLoading]=useState(false)
 
+	const [show, setShow] = useState(true);
 	let history=useHistory()
 
 	const handleChange=(target)=>{
@@ -50,46 +55,55 @@ function Login({dispatch}) {
 		<div className="bg-login">
         <div className='login pt-5 pt-md-0 pb-sm-3 pb-md-0 shadow'>
             <div className="shadow shadow-md-none login-left">
-			{fail && <alert><h1>Erreur de login</h1></alert>}
-                <div class="login-head">
-					<h3 class='login-title'>Sign In</h3>
-					<p class="social-media  d-flex justify-content-end">
-						<a href="https://www.facebook.com/Superkap-102254418642682" class="social-icon d-flex align-items-center justify-content-center"><RiFacebookFill/></a>
-						<a href="#" class="social-icon d-flex align-items-center justify-content-center"><RiTwitterFill /></a>
+			{fail && (<Alert variant="danger" onClose={() => {setShow(!show); setFail(!fail)}} dismissible>
+							<Alert.Heading>Oups! Vous avez une Erreur!</Alert.Heading>
+							<p>
+								veuillez reprendre la procedure de connexion en utilisant vos veritables arguments.
+							</p>
+						</Alert>)
+
+			}
+                <div className="login-head">
+					<h3 className='login-title'>Sign In</h3>
+					<p className="social-media  d-flex justify-content-end">
+						<a href="https://www.facebook.com/Superkap-102254418642682" className="social-icon d-flex align-items-center justify-content-center"><RiFacebookFill/></a>
+						<a href="#" className="social-icon d-flex align-items-center justify-content-center"><RiTwitterFill /></a>
 					</p>
 			    </div>
-                <form action="#" class="login-form" onSubmit={(e)=>handleSubmit(e)}>
-						<div class="form-group mb-3">
-							<label class="label" for="name">Email</label>
-							<input type="email" name="email" class="form-control " placeholder="Username" required onChange={(e)=>handleChange(e.target)} />
+                <form action="#" className="login-form" onSubmit={(e)=>handleSubmit(e)}>
+						<div className="form-group mb-3">
+							<label className="label" for="name">Email</label>
+							<input type="email" name="email" className="form-control " placeholder="Username" required onChange={(e)=>handleChange(e.target)} />
 						</div>
-						<div class="form-group mb-3">
-							<label class="label" for="password">Password</label>
-							<input type="password" name="password" class="form-control" placeholder="Password" required onChange={(e)=>handleChange(e.target)} />
+						<div className="form-group mb-3">
+							<label className="label" for="password">Password</label>
+							<input type="password" name="password" className="form-control" placeholder="Password" required onChange={(e)=>handleChange(e.target)} />
 						</div>
 						<div class="form-group">
 							<button type="submit" class="form-control btn btn-succes submit px-3 text-center ">
 								{ loading ? (<ReactLoading type="spin" color="#f79323" />):"Login" }
 							</button>
+						<div className="form-group">
+							<button type="submit" className="form-control btn btn-succes submit px-
 						</div>
-						<div class="login-down form-group">
+						<div className="login-down form-group">
 							<a href="/signup">
-								<div class="down-left">
+								<div className="down-left">
 									Sign up
 								</div>
 							</a>
-							<div class="down-right">
+							<div className="down-right">
 								<a href="#">Forgot Password</a>
 							</div>
 						</div>
 				</form>
             </div>
 			<div className="login-right d-flex">
-				<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center">
-					<div class="text w-100">
+				<div className="text-wrap p-4 p-lg-5 text-center d-flex align-items-center">
+					<div className="text w-100">
 						<h2>Welcome to login</h2>
 						<p>Don't have an account?</p>
-						<a href="/signup" class="btn btn-white">Sign Up</a>
+						<a href="/signup" className="btn btn-white">Sign Up</a>
 					</div>
 				</div>
 			</div>
@@ -101,3 +115,7 @@ function Login({dispatch}) {
 const mapStateToProps=state=>({User: state.User})
 
 export default connect(mapStateToProps)(Login)
+
+
+
+

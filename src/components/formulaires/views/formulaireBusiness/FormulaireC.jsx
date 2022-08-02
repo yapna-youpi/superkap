@@ -10,11 +10,11 @@ import { connect } from 'react-redux';
 import { Modal } from 'react-bootstrap';
 
 import './formulairec.css'
-import bitcoin from './bitcoin.png'
-import payeer from './payeer.png'
-import usdt from './usdt.png'
-import carte from './carte.png'
-import mobile from './mobile.png'
+import bitcoin from './assets/bitcoin.png'
+import payeer from './assets/payeer.png'
+import usdt from './assets/usdt.png'
+import carte from './assets/carte.png'
+import mobile from './assets/mobile.png'
 import tof3 from '../../assets/tof3.jpg'
 import logo from './logo-superkap.png'
 
